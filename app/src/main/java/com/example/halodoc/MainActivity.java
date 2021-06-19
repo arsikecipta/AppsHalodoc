@@ -1,4 +1,4 @@
-package com.example.appshalodoc;
+package com.example.halodoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
