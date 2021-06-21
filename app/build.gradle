@@ -4,7 +4,9 @@ plugins {
 
 android {
     compileSdkVersion 30
-
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
     defaultConfig {
         applicationId "com.example.halodoc"
         minSdkVersion 23
