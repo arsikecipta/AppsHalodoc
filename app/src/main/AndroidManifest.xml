@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.halodoc" >
+    package="com.example.halodoc">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".BuatJanjiRS" >
-        </activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".LihatSemuaRS"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Layanan_rs" />
+        <activity
+            android:name=".BuatJanjiRS"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Lihat_semua_artikel"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".SplashScreen"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SplashScreen"
             android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,8 +33,8 @@
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".Artikel_detail"
-            android:theme="@style/AppTheme"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

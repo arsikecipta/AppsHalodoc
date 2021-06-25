@@ -10,13 +10,13 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name ="background_all">#e91e63</color>
+    <color name ="background_all">#E6005C</color>
     <color name="color1">#424549</color>
     <color name="color2">#7e455e</color>
     <color name="color3">#796e25</color>
     <color name="color4">#59717c</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorDivider">#ECECEC</color>
+    <color name="colorDivider">#FCFCFC</color>
     <color name ="background_text">#ffeadb</color>
     <color name ="black_text">#666666</color>
 </resources>

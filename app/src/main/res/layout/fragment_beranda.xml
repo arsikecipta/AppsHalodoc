@@ -210,16 +210,16 @@
 
             <Button
                 android:id="@+id/btn_lihatsemua_artikel"
-                android:layout_width="130dp"
+                android:layout_width="100dp"
                 android:layout_height="55dp"
                 android:layout_below="@+id/main"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:backgroundTint="@color/colorDivider"
+                android:backgroundTint="@color/background_all"
                 android:text="lihat semua"
                 android:textAllCaps="false"
-                android:textColor="@color/background_all" />
+                android:textColor="@color/colorWhite" />
 
 
         </LinearLayout>
