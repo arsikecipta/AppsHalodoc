@@ -1,6 +1,7 @@
 package com.example.halodoc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,8 +13,9 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class BuatJanjiRS extends AppCompatActivity {
-    RecyclerView rs_recycler;
+    RecyclerView rs_recycler, layanan_recycler;
     RecyclerView.Adapter adapter;
+    private ArrayList<model_all_layanan> model_all_layananArrayList;
     private ArrayList<model_rs> modelArrayList;
     public Button btn_all;
     @Override
@@ -22,6 +24,10 @@ public class BuatJanjiRS extends AppCompatActivity {
         setContentView(R.layout.activity_buat_janji_rs);
         getSupportActionBar().setTitle("Janji RS");
         rs_recycler=findViewById(R.id.recyclerview_rs);
+        layanan_recycler=findViewById(R.id.rec_all_layanan);
+        layanan_recycler();
+        layanan_recycler.setHasFixedSize(true);
+        layanan_recycler.setLayoutManager(new LinearLayoutManager(this));
         rs_recycler();
         rs_recycler.setHasFixedSize(true);
         rs_recycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -38,6 +44,22 @@ public class BuatJanjiRS extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void layanan_recycler() {
+        model_all_layananArrayList = new ArrayList<>();
+        model_all_layanan layanan = new model_all_layanan( "Tes COVID-19",R.drawable.tescovid);
+        model_all_layananArrayList.add(layanan);
+        model_all_layanan layanan2 = new model_all_layanan( "Vaksinasi COVID-19",R.drawable.vaksin);
+        model_all_layananArrayList.add(layanan2);
+        model_all_layanan layanan3 = new model_all_layanan( "Poliklinik Penyakit Dalam",R.drawable.penyakitdalam);
+        model_all_layananArrayList.add(layanan3);
+        Adapter_all_layanan adapter_lay = new Adapter_all_layanan(model_all_layananArrayList,BuatJanjiRS.this);
+        layanan_recycler.setAdapter(adapter_lay);
+        layanan_recycler.addItemDecoration
+                (new DividerItemDecoration
+                        (getApplicationContext(), DividerItemDecoration.VERTICAL)
+                );
     }
 
     private void rs_recycler() {

@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Layanan_rs">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/foto_rs"
+            android:layout_width="410dp"
+            android:layout_height="200dp"
+            android:background="#2d2d2d"
+            android:scaleType="centerCrop"
+            ></ImageView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/nama_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:text="Nama Rumah sakit"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jenisrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="5dp"
+            android:text="Jenis"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/alamatrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="left"
+            android:text="Alamat Rs"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/notelp_rs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="left"
+            android:text="Nomor telepon Rs"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+</ScrollView>
+
