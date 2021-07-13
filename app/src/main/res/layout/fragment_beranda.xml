@@ -9,7 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
 
-        ></androidx.cardview.widget.CardView>
+        >
+        <TextView
+            android:id="@+id/masuk_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Masuk/Daftar"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            ></TextView>
+    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -73,18 +83,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Yuk konsultasikan kesehatanmu dengan dokter!"></TextView>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="80dp"
+                android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/btn_janji"
                     android:layout_gravity="right"
-                    android:layout_marginTop="20dp"
-                    android:textSize="12dp"
-                    android:layout_marginRight="10dp"
                     android:text="Selengkapnya"
-                    android:layout_width="130dp"
+                    android:layout_width="90dp"
+                    android:textColor="@color/background_all"
                     android:textAllCaps="false"
                     android:layout_height="20dp"></TextView>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/ic_next"
+                    ></ImageView>
 
+            </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -134,7 +154,28 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="Kini beli obat gak perlu ribet lagi! "></TextView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/selengkapnya"
+                            android:layout_gravity="right"
+                            android:text="Selengkapnya"
+                            android:layout_width="90dp"
+                            android:textColor="@color/background_all"
+                            android:textAllCaps="false"
+                            android:layout_height="20dp"></TextView>
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="-5dp"
+                            android:src="@drawable/ic_next"
+                            ></ImageView>
 
+                    </LinearLayout>
 
                 </LinearLayout>
             </LinearLayout>
@@ -186,7 +227,28 @@
                         android:layout_marginLeft="10dp"
                         android:text="Buat janji RS mudah dan cepat!"></TextView>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginLeft="80dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/selengkapnya_buatjanjirs"
+                            android:layout_gravity="right"
+                            android:text="Selengkapnya"
+                            android:textColor="@color/background_all"
+                            android:layout_width="90dp"
+                            android:textAllCaps="false"
+                            android:layout_height="20dp"></TextView>
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="-5dp"
+                            android:src="@drawable/ic_next"
+                            ></ImageView>
 
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -208,18 +270,6 @@
                 android:textSize="18dp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btn_lihatsemua_artikel"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:layout_below="@+id/main"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:backgroundTint="@color/background_all"
-                android:text="lihat semua"
-                android:textAllCaps="false"
-                android:textColor="@color/colorWhite" />
 
 
         </LinearLayout>
@@ -241,7 +291,7 @@
                     android:id="@+id/but_1"
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/stroke"
                     android:text="Semua"
                     android:textAllCaps="false"
@@ -251,7 +301,7 @@
                     android:id="@+id/but_2"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="5dp"
                     android:text="Kecantikan"
                     android:textAllCaps="false"
                     android:background="@drawable/stroke"
@@ -261,7 +311,7 @@
                     android:id="@+id/but_3"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/stroke"
                     android:text="Makanan Sehat"
                     android:textAllCaps="false"
@@ -273,7 +323,7 @@
                     android:id="@+id/but_4"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="5dp"
                     android:background="@drawable/stroke"
                     android:text="Pola Asuh Anak"
                     android:textAllCaps="false"
@@ -305,19 +355,19 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rec_artikel"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="20dp"
+            android:clipToPadding="false"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="9dp"
-            android:clipToPadding="false"
             android:foregroundGravity="center"
             android:overScrollMode="never"></androidx.recyclerview.widget.RecyclerView>
         <Button
             android:id="@+id/button_artikel_seeall"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"

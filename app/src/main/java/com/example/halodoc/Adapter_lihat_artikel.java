@@ -18,11 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter_lihat_artikel extends RecyclerView.Adapter<Adapter_lihat_artikel.ViewHolder> implements Filterable {
-    List<model_artikel> modelArtikels;
-    List<model_artikel>modelArtikelsFull;
-    //    model_artikel[] modelArtikels;
-    List<String>artikelList;
-    List<String>artikelListAll;
+    private  List<model_artikel> modelArtikels;
+    private List<model_artikel>modelArtikelsFull;
+
     private Context context;
 
     public Adapter_lihat_artikel( List<model_artikel>modelArtikels, Context context){

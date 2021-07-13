@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
     private Context context;
     ArrayList<model_rs> modelRs;
+    private final int limit = 3;
     //final private ListItemClickListener mOnClickListener;
 
     public Adapter_rs(ArrayList<model_rs> modelRs,BuatJanjiRS activity){
@@ -27,7 +28,7 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
     @NonNull
 
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rs, parent, false);
         return new ViewHolder(view);
 
@@ -50,12 +51,15 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
                 intent.putExtra("NamaLayanan", modelRs.get(position).getLayanan());
                 intent.putExtra("NamaLayanan2", modelRs.get(position).getLayanan2());
                 intent.putExtra("FotoLayanan",modelRs.get(position).getFoto_layanan());
+                intent.putExtra("FotoLayanan2",modelRs.get(position).getFoto_layanan2());
                 intent.putExtra("AlamatRS",modelRs.get(position).getAlamat_rs());
-                intent.putExtra("NotelpRS",modelRs.get(position).getNotelp_rs());
+                intent.putExtra("InfoRS",modelRs.get(position).getInfo_rs());
                 intent.putExtra("Penjelasan1",modelRs.get(position).getPenjelasan1());
                 intent.putExtra("Penjelasan2",modelRs.get(position).getPenjelasan2());
                 intent.putExtra("Jenislayanan",modelRs.get(position).getJenis_layanan());
+                intent.putExtra("Jenislayanan2",modelRs.get(position).getJenis_layanan2());
                 intent.putExtra("Hargalayanan",modelRs.get(position).getHarga_layanan());
+                intent.putExtra("Hargalayanan2",modelRs.get(position).getHarga_layanan2());
                 context.startActivity(intent);
             }
         });
@@ -64,7 +68,13 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return modelRs.size();
+        if(modelRs.size() > limit){
+            return limit;
+        }
+        else
+        {
+            return modelRs.size();
+        }
     }
     public interface ListItemClickListener {
         void onRsListClick(int clickedItemIndex);

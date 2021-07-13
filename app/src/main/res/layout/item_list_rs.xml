@@ -5,9 +5,10 @@
     android:orientation="vertical"
     android:layout_height="wrap_content">
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_rs_semua"
         android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="5dp"
         app:cardBackgroundColor="#FFFFFF"
@@ -21,7 +22,7 @@
                 android:scaleType="centerCrop"
                 android:id="@+id/imageview_rs"
                 android:layout_width="140dp"
-                android:layout_height="160dp">
+                android:layout_height="150dp">
             </ImageView>
             <LinearLayout
                 android:layout_weight="1"
@@ -59,14 +60,17 @@
                     android:id="@+id/btn_janji"
                     android:layout_gravity="right"
                     android:background="@drawable/shape_button_rad"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="20dp"
                     android:textSize="12dp"
                     android:layout_marginRight="10dp"
                     android:text="Buat janji"
                     android:textColor="#ffffff"
-                    android:layout_width="120dp"
+                    android:layout_width="130dp"
                     android:textAllCaps="false"
-                    android:layout_height="35dp"></Button>
+                    android:labelFor="@+id/buat_janji_rs"
+                    android:contentDescription="tombol janji rs"
+
+                    android:layout_height="40dp"></Button>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

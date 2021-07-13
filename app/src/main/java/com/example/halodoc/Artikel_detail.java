@@ -11,25 +11,30 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Artikel_detail extends AppCompatActivity {
-    private TextView tv_judul_artikel, tv_topik_artikel, tv_dokter_artikel;
+    private TextView tv_judul_artikel, tv_topik_artikel, tv_dokter_artikel, tv_paragraph1, tv_paragraph2, tv_paragraph3;
     private ImageView img_artikel_detail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Detail Artikel");
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_detail_artikel);
         tv_judul_artikel= (TextView) findViewById(R.id.judul_artikel_detail);
         img_artikel_detail=(ImageView)findViewById(R.id.image_artikel_detail);
         tv_topik_artikel=(TextView)findViewById(R.id.artikel_topik_detail);
         tv_dokter_artikel=(TextView)findViewById(R.id.nama_dokter_penulis);
+        tv_paragraph1=(TextView)findViewById(R.id.paragraph1);
+
 
         //receive data
         Intent intent =getIntent();
         String judulArtikel = intent.getExtras().getString("JudulArtikel");
         int imageArtikel = intent.getExtras().getInt("FotoArtikel");
         String topikArtikel = intent.getExtras().getString("TopikArtikel");
+        getSupportActionBar().setTitle(topikArtikel);
         String dokterArtikel = intent.getExtras().getString("DokterArtikel");
+        String isiArtikel = intent.getExtras().getString("IsiParagraph");
+
 
 
 
@@ -38,6 +43,8 @@ public class Artikel_detail extends AppCompatActivity {
         img_artikel_detail.setImageResource(imageArtikel);
         tv_topik_artikel.setText(topikArtikel);
         tv_dokter_artikel.setText(dokterArtikel);
+        tv_paragraph1.setText(isiArtikel);
+
     }
 
     @Override
@@ -58,7 +65,11 @@ public class Artikel_detail extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
                 startActivity(Intent.createChooser(intent,"Share Using"));
                 break;
+            case android.R.id.home:
+                finish();
+                return true;
         }
         return true;
     }
+
 }

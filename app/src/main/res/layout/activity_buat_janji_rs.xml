@@ -48,7 +48,7 @@
       android:layout_height="60dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="371dp"
+        android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
         app:cardCornerRadius="2dp"
@@ -56,9 +56,9 @@
       <ImageView
           android:layout_width="25dp"
           android:layout_height="25dp"
-        android:layout_marginTop="10dp"
+          android:layout_marginTop="10dp"
           android:layout_marginLeft="20dp"
-        android:src="@drawable/ic_search2"></ImageView>
+          android:src="@drawable/ic_search2"></ImageView>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -74,117 +74,104 @@
       android:layout_height="wrap_content"
       android:orientation="vertical"
       >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
-
-  <TextView
-      android:id="@+id/layanan_lainnya"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="10dp"
-      android:layout_marginLeft="20dp"
-      android:textStyle="bold"
-      android:textSize="18dp"
-      android:text="Rekomendasi RS"/>
-  <Button
-      android:id="@+id/btn_lihatsemua"
-      android:layout_width="110dp"
-      android:layout_height="48dp"
-      android:text="Lihat semua"
-      android:layout_marginLeft="100dp"
-    android:layout_marginTop="10dp"
-      android:background="#eceff1"
-      android:bottomRightRadius="10dp"
-      android:bottomLeftRadius="10dp"
-      android:topLeftRadius="10dp"
-      android:topRightRadius="10dp"
-      android:textStyle="normal"
-      android:textColor="@color/design_default_color_error"
-      android:textAllCaps="false"
-      android:layout_alignParentLeft="true"
-      />
-
-</LinearLayout>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginTop="10dp"
-      >
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="vertical"
+          android:orientation="horizontal"
           >
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_rs"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp">
-        </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/layanan_lainnya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="Rekomendasi RS"/>
+        <!--                <Button-->
+        <!--                    android:id="@+id/btn_lihatsemua"-->
+        <!--                    android:layout_width="110dp"-->
+        <!--                    android:layout_height="48dp"-->
+        <!--                    android:text="Lihat semua"-->
+        <!--                    android:layout_marginLeft="100dp"-->
+        <!--                    android:layout_marginTop="10dp"-->
+        <!--                    android:background="#eceff1"-->
+        <!--                    android:bottomRightRadius="10dp"-->
+        <!--                    android:bottomLeftRadius="10dp"-->
+        <!--                    android:topLeftRadius="10dp"-->
+        <!--                    android:topRightRadius="10dp"-->
+        <!--                    android:textStyle="normal"-->
+        <!--                    android:textColor="@color/design_default_color_error"-->
+        <!--                    android:textAllCaps="false"-->
+        <!--                    android:layout_alignParentLeft="true"-->
+        <!--                    />-->
+
       </LinearLayout>
-    </ScrollView>
-  </LinearLayout>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginTop="5dp"
-      >
 
-    <TextView
-        android:id="@+id/all_layanan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:text="Semua Layanan"/>
-    <Button
-        android:id="@+id/btn_lihatsemua_layanan"
-        android:layout_width="110dp"
-        android:layout_height="48dp"
-        android:text="Lihat semua"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="10dp"
-        android:background="#eceff1"
-        android:bottomRightRadius="10dp"
-        android:bottomLeftRadius="10dp"
-        android:topLeftRadius="10dp"
-        android:topRightRadius="10dp"
-        android:textStyle="normal"
-        android:textColor="@color/design_default_color_error"
-        android:textAllCaps="false"
-        android:layout_alignParentLeft="true"
-        />
-  </LinearLayout>
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/rec_all_layanan"
-      android:layout_width="match_parent"
-      android:layout_height="300dp"
-      android:layout_alignParentBottom="true"
-      android:layout_marginTop="10dp"
-      android:layout_marginLeft="10dp"
-      android:layout_marginRight="10dp"
-      android:layout_marginBottom="9dp"
-      android:clipToPadding="false"
-      android:foregroundGravity="center"
-      android:overScrollMode="never"></androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recyclerview_rs"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp">
+      </androidx.recyclerview.widget.RecyclerView>
+
+      <Button
+          android:id="@+id/btn_lihatsemua"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:textColor="@color/colorWhite"
+          android:background="@drawable/shape_button_rad"
+          android:text="Lihat Semua"
+          ></Button>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="5dp"
+          >
+
+        <TextView
+            android:id="@+id/all_layanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="Semua Layanan"/>
+
+      </LinearLayout>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rec_all_layanan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginBottom="9dp"
+          android:clipToPadding="false"
+          android:foregroundGravity="center"
+          ></androidx.recyclerview.widget.RecyclerView>
+      <Button
+          android:id="@+id/btn_all_layanan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:textColor="@color/colorWhite"
+          android:background="@drawable/shape_button_rad"
+          android:text="Lihat Semua"
+          ></Button>
+    </LinearLayout>
   </ScrollView>
 </LinearLayout>

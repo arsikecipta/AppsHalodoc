@@ -34,12 +34,32 @@ public class Adapter_all_layanan extends RecyclerView.Adapter<Adapter_all_layana
         final model_all_layanan model_all_layanan_list = modelLayanans.get(position);
         holder.layanan_name.setText(model_all_layanan_list.getNama_layanan());
         holder.img_layanan.setImageResource(model_all_layanan_list.getGambar_layanan());
+        holder.penjelasan_lay.setText(model_all_layanan_list.getPenjelasan_layanan());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, Artikel_detail.class);
-                intent.putExtra("GambarLayanan", modelLayanans.get(position).getGambar_layanan());
+                Intent intent = new Intent(context, ListSemuaLayanan.class);
                 intent.putExtra("NamaLayanan", modelLayanans.get(position).getNama_layanan());
+                intent.putExtra("NamaLayanan2", modelLayanans.get(position).getNama_layanan2());
+                intent.putExtra("NamaLayanan3", modelLayanans.get(position).getNama_layanan3());
+                intent.putExtra("NamaLayanan4", modelLayanans.get(position).getNama_layanan4());
+                intent.putExtra("GambarLayanan", modelLayanans.get(position).getGambar_layanan());
+                intent.putExtra("GambarRS", modelLayanans.get(position).getGambar_rs());
+                intent.putExtra("GambarRS2", modelLayanans.get(position).getGambar_rs2());
+                intent.putExtra("GambarRS3", modelLayanans.get(position).getGambar_rs3());
+                intent.putExtra("JenisLayanan", modelLayanans.get(position).getJenis_layanan());
+                intent.putExtra("JenisLayanan2", modelLayanans.get(position).getJenis_layanan2());
+                intent.putExtra("JenisLayanan3", modelLayanans.get(position).getJenis_layanan3());
+                intent.putExtra("NamaRS", modelLayanans.get(position).getNama_rs());
+                intent.putExtra("NamaRS2", modelLayanans.get(position).getNama_rs2());
+                intent.putExtra("NamaRS3", modelLayanans.get(position).getNama_rs3());
+                intent.putExtra("AlamatRS", modelLayanans.get(position).getAlamat_rs());
+                intent.putExtra("AlamatRS2", modelLayanans.get(position).getAlamat_rs2());
+                intent.putExtra("AlamatRS3", modelLayanans.get(position).getAlamat_rs3());
+                intent.putExtra("HargaLayanan", modelLayanans.get(position).getHarga_layanan());
+                intent.putExtra("HargaLayanan2", modelLayanans.get(position).getHarga_layanan2());
+                intent.putExtra("HargaLayanan3", modelLayanans.get(position).getHarga_layanan3());
+                intent.putExtra("PenjelasanLayanan", modelLayanans.get(position).getPenjelasan_layanan());
 
                 context.startActivity(intent);
             }
@@ -54,11 +74,12 @@ public class Adapter_all_layanan extends RecyclerView.Adapter<Adapter_all_layana
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView img_layanan;
-        TextView layanan_name;
+        TextView layanan_name, penjelasan_lay;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             layanan_name = itemView.findViewById(R.id.layanan_name);
             img_layanan = itemView.findViewById(R.id.gambar_layanan);
+            penjelasan_lay=itemView.findViewById(R.id.penjelasanLayanan);
         }
     }
 }

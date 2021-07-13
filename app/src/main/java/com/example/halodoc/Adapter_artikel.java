@@ -17,6 +17,7 @@ import java.util.List;
 public class Adapter_artikel extends RecyclerView.Adapter<Adapter_artikel.ViewHolder>  {
     private Context context;
     ArrayList<model_artikel> model_artikels;
+    private final int limit = 3;
 
     public Adapter_artikel(List<model_artikel> model_artikels, Context context){
         this.model_artikels= (ArrayList<model_artikel>) model_artikels;
@@ -44,6 +45,7 @@ public class Adapter_artikel extends RecyclerView.Adapter<Adapter_artikel.ViewHo
                 intent.putExtra("JudulArtikel",model_artikels.get(position).getTitle_artikel());
                 intent.putExtra("TopikArtikel", model_artikels.get(position).getTopik_artikel());
                 intent.putExtra("DokterArtikel", model_artikels.get(position).getDokter_artikel());
+                intent.putExtra("IsiParagraph", model_artikels.get(position).getIsi_paragraph());
                 context.startActivity(intent);
             }
         });
@@ -53,7 +55,13 @@ public class Adapter_artikel extends RecyclerView.Adapter<Adapter_artikel.ViewHo
 
     @Override
     public int getItemCount() {
-        return model_artikels.size();
+        if(model_artikels.size() > limit){
+            return limit;
+        }
+        else
+        {
+            return model_artikels.size();
+        }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
