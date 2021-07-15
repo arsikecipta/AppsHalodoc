@@ -63,7 +63,7 @@ public class BerandaFragment extends Fragment {
         masuk_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(BerandaFragment.this.getActivity(), LengkapiProfil.class);
+                Intent intent= new Intent(BerandaFragment.this.getActivity(), Login.class);
                 startActivity(intent);
             }
         });
