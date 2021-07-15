@@ -4,4 +4,11 @@
     <string name="Halodoc"><b>Halodoc</b></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--  Start Sherly  -->
+    <string name="dr_febbyola_ramanda">dr. Febbyola Ramanda</string>
+    <string name="_99_0">99.0 %</string>
+    <string name="rp_10_000">Rp 10.000</string>
+    <string name="dokter_umum">Dokter Umum</string>
+    <string name="_5_tahun">5 Tahun</string>
+    <!-- End Sherly  -->
 </resources>

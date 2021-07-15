@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".lihat_semua_dokter">
+
+    <!--  list dokter rekomendasi  -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filter_lanjut"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/frame_loc">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="60dp"
+            android:fontFamily="@font/googlesansregular"
+            android:text="Filter Berdasarkan"
+            android:textColor="#616161"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="244dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="60dp"
+            android:fontFamily="@font/googlesansregular"
+            android:text="Hapus Semua Filter"
+            android:textColor="#9E9E9E"
+            android:textSize="16sp"></TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="60dp"
+                android:fontFamily="@font/googlesansmedium"
+                android:text="Pilih Filter"
+                android:textSize="18sp"></TextView>
+
+            <ImageView
+                android:id="@+id/lanjut"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5F5F5"
+                android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview_dokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="10dp">
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+            <!--      end list rekomendasi     -->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>

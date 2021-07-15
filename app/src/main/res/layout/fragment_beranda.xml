@@ -72,9 +72,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
-                    android:text="Chat Dokter"
+                    android:text="Chat Dengan Dokter"
                     android:textColor="#000"
-                    android:textStyle="bold"></TextView>
+                    android:textStyle="bold">
+                </TextView>
 
                 <TextView
                     android:id="@+id/txt_chatdokter"
@@ -82,7 +83,9 @@
                     android:layout_marginTop="5dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Yuk konsultasikan kesehatanmu dengan dokter!"></TextView>
+                    android:text="Sakit? jangan asal cari solusi.. \nyuk tanya ke ahlinya!">
+                </TextView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -141,11 +144,12 @@
                         android:id="@+id/toko_kesehatan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"
-                        android:text="Nama rs"
+                        android:layout_marginTop="10dp"
+                        android:text="Toko Kesehatan"
                         android:textColor="#000"
-                        android:textStyle="bold"></TextView>
+                        android:textStyle="bold">
+                    </TextView>
 
                     <TextView
                         android:id="@+id/jenis_rs"
@@ -153,11 +157,13 @@
                         android:layout_marginTop="5dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="Kini beli obat gak perlu ribet lagi! "></TextView>
+                        android:text="Kini beli obat gak perlu ribet lagi! ">
+                    </TextView>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="25dp"
                         android:layout_marginLeft="80dp"
                         android:layout_height="wrap_content">
                         <TextView

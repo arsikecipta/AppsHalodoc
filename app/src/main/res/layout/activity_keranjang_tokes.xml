@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Keranjang_tokes">
+
+    <!-- filter berdasarkan -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/pengiriman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Pengiriman"
+                    android:fontFamily="@font/googlesansbold"
+                    android:textColor="#404345"
+                    android:textSize="22sp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/instan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:gravity="center"
+                        android:text="Instan"
+                        android:textColor="#404345"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/instan_deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:gravity="center"
+                        android:text="Dikirim dalam 15 menit"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_baseline_check_circle_green" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/divider_card"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+
+                    <TextView
+                        android:id="@+id/reguler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:gravity="center"
+                        android:text="Reguler"
+                        android:textColor="#404345"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/reguler_deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="34dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:gravity="center"
+                        android:text="Dikirim dalam 1-2 hari"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_baseline_check_circle_disable" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/divider_pembayaran"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+
+                <!--Start obat-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_obat"
+                        android:layout_width="147dp"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/covidpackage">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/nama_obat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Nama Obat"
+                            android:textColor="#404345"
+                            android:textSize="16sp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <TextView
+                            android:id="@+id/jenis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:text="Per-strip"
+                            android:textColor="#6E6E6E"
+                            android:textSize="14sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/harga_obat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Harga"
+                            android:textColor="#595959"
+                            android:textSize="14sp"></TextView>
+
+                        <LinearLayout
+                            android:id="@+id/divider_list"
+                            android:layout_width="250dp"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/divider_card_dokter"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="8dp">
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="4dp"
+                                android:background="@drawable/phonecode"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal">
+
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:src="@drawable/ic_outline_indeterminate_check_box" />
+
+                                <TextView
+                                    android:id="@+id/tahun_detail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="8dp"
+                                    android:fontFamily="@font/googlesansmedium"
+                                    android:lineSpacingExtra="7sp"
+                                    android:text="2"
+                                    android:textColor="@color/judul"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:src="@drawable/ic_baseline_add_box" />
+
+
+                            </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:src="@drawable/ic_outline_delete" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--End-->
+
+                <!-- start back -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/phonecode"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/lain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:text="Butuh yang lain?"
+                        android:textColor="#404345"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tambah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:text="Tambahkan item lainya, jika kamu mau"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start" />
+
+                    <ImageView
+                        android:id="@+id/additem"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_twotone_add_circle" />
+
+                </RelativeLayout>
+
+                <!--       end         -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/divider_pembayaran"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:background="@color/judul">
+
+                    <TextView
+                        android:id="@+id/kirim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:gravity="center"
+                        android:text="Mengirim Ke"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="62dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/ic_baseline_location_on" />
+
+                            <TextView
+                                android:id="@+id/alamat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="62dp"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/googlesansregular"
+                                android:gravity="center"
+                                android:text="Jl. Sukabirus"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Catatan"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="110dp"
+                        android:textSize="18sp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="142dp"
+                        android:background="@drawable/phonecode"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Taruh di depan pagar saja"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:textColor="@color/judul"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="16/30"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_alignParentRight="true"
+                        android:textAlignment="viewEnd"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="200dp"
+                        android:textSize="14sp"
+                        android:layout_gravity="end" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="230dp"
+                        android:background="@drawable/phonecode"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_ubah"
+                        android:layout_width="82dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/primary_button"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Ubah"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="20sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/judul"
+                        android:layout_marginTop="244dp">
+
+                        <TextView
+                            android:id="@+id/lainya_akhir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:gravity="center"
+                            android:text="Total Pembayaran"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/akhir_deskripsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="44dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:gravity="center"
+                            android:text="Rp 400.000"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/akhir_deskripsi_kirim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="68dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:gravity="center"
+                            android:text="(termasuk biaya pengiriman)"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_bayar"
+                            android:layout_width="150dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/primary_button"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Bayar"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="20sp"/>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- end  -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

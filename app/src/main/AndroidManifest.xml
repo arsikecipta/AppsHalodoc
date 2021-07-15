@@ -13,6 +13,90 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- Start Sherly  -->
+        <activity android:name=".Address_tokes"></activity>
+        <activity android:name=".Filter_berdasarkan_spesialis"/>
+        <activity android:name=".Filter_berdasarkan"/>
+        <activity
+            android:name=".Lihat_semua_dokter_filter_spesialis"
+            android:parentActivityName=".Lihat_semua_dokter_spesialis"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".Detail_dokter_spesialis">
+            android:parentActivityName=".chat_dengan_dokter"
+            android:theme="@style/AppTheme"
+        </activity>
+        <activity
+            android:name=".Lihat_semua_dokter_spesialis"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Kategori_produk_utama"
+            android:parentActivityName=".toko_kesehatan"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Search_tokes"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Search_dokter"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Login_OTP"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".Keranjang_tokes"
+            android:parentActivityName=".Detail_produk_tokes"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Pembayaran_tokes"
+            android:parentActivityName=".Keranjang_tokes"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Detail_produk_tokes"
+            android:parentActivityName=".Kategori_Produk"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Kategori_Produk"
+            android:parentActivityName=".toko_kesehatan"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Lihat_dokter_spesialisasi"
+            android:parentActivityName=".chat_dengan_dokter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Lihat_semua_dokter_filter"
+            android:parentActivityName=".chat_dengan_dokter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Pembayaran_dokter"
+            android:parentActivityName=".Detail_dokter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Detail_dokter"
+            android:parentActivityName=".chat_dengan_dokter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".lihat_semua_tokes"
+            android:parentActivityName=".toko_kesehatan"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".toko_kesehatan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".lihat_semua_dokter"
+            android:parentActivityName=".chat_dengan_dokter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chat_dengan_dokter"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <!--  End Sherly  -->
+
         <activity android:name=".all_layanan"></activity>
         <activity android:name=".ListSemuaLayanan"
             android:parentActivityName=".BuatJanjiRS"

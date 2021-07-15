@@ -78,7 +78,7 @@ public class BerandaFragmentNew extends Fragment {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(BerandaFragmentNew.this.getActivity(), BuatJanjiRS.class);
+                Intent intent = new Intent(BerandaFragmentNew.this.getActivity(), chat_dengan_dokter.class);
                 startActivity(intent);
             }
         });
@@ -86,7 +86,7 @@ public class BerandaFragmentNew extends Fragment {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(BerandaFragmentNew.this.getActivity(), BuatJanjiRS.class);
+                Intent intent= new Intent(BerandaFragmentNew.this.getActivity(), toko_kesehatan.class);
                 startActivity(intent);
             }
         });
