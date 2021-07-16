@@ -5,10 +5,13 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +19,7 @@ import java.util.List;
 public class LihatSemuaRS extends AppCompatActivity {
     private Adapter_lihat_rs lihat_rs;
     private List<model_list_rs> modelListRs;
+    TextView nama_gone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,13 @@ public class LihatSemuaRS extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ListRs();
         setUpRecyclerView();
+//        //NAMA GONE
+//
+//        nama_gone=findViewById(R.id.nama_gone);
+//        Intent intent = getIntent();
+//        String namalengkap =intent.getExtras().getString("NamaLengkap");
+//        nama_gone.setText(namalengkap);
+
     }
 
     private void ListRs() {
@@ -61,6 +72,7 @@ public class LihatSemuaRS extends AppCompatActivity {
     private void setUpRecyclerView(){
         RecyclerView recyclerView =findViewById(R.id.recyclerview_rs);
         recyclerView.setHasFixedSize(true);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         lihat_rs = new Adapter_lihat_rs(modelListRs,LihatSemuaRS.this);
         recyclerView.setAdapter(lihat_rs);

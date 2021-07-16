@@ -21,7 +21,8 @@
         android:id="@+id/judul_artikel_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:fontFamily="@font/googlesansbold"
+        android:textColor="@color/judul"
         android:layout_marginLeft="20dp"
         android:layout_gravity="left"
         android:text="Judul Artikel"
@@ -36,7 +37,8 @@
         android:background="@drawable/shape_topik"
         android:paddingTop="4dp"
         android:text="Topik artikel"
-        android:textSize="13dp"
+        android:textSize="14dp"
+        android:fontFamily="@font/googlesansregular"
         android:textAlignment="center"
         android:textColor="#325288"></TextView>
     <LinearLayout
@@ -52,17 +54,20 @@
             android:layout_marginLeft="20dp"
             android:layout_gravity="left"
             android:text="Ditinjau oleh : "
-            android:textSize="15sp"
+            android:textSize="14dp"
+            android:fontFamily="@font/googlesansregular"
             />
         <TextView
             android:id="@+id/nama_dokter_penulis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            android:fontFamily="@font/googlesansregular"
             android:layout_gravity="left"
             android:layout_marginRight="20dp"
             android:text="Nama dokter "
-            android:textSize="15sp"
+
             android:textColor="@color/background_all"
             />
     </LinearLayout>
@@ -74,21 +79,35 @@
         android:layout_marginRight="20dp"
         android:layout_gravity="left"
         android:text="25 Mei 2021"
-        android:textSize="15sp"
+        android:textSize="14dp"
+        android:fontFamily="@font/googlesansregular"
+
         />
     <TextView
         android:id="@+id/paragraph1"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_gravity="left"
+        android:textStyle="bold"
         android:textAlignment="viewStart"
         android:text="Isi artikel"
         android:textSize="15sp"
         tools:ignore="RtlCompat" />
+       <TextView
+           android:id="@+id/paragraph2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_gravity="left"
+           android:textAlignment="viewStart"
+           android:text="Isi artikel"
+           android:textSize="15sp"
+           tools:ignore="RtlCompat" />
 
    </LinearLayout>
 

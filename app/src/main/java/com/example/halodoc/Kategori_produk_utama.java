@@ -1,29 +1,40 @@
 package com.example.halodoc;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Kategori_produk_utama extends AppCompatActivity {
 
-
+    private Adapter_kategori_produk_utama adapter_kategori_utama;
+    private List<Model_list_kategori_tokes> modelListObat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kategori_produk);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        RecyclerView recyclerView =findViewById(R.id.recyclerview_produk);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        ListObat();
+        SetUpRecyclerObat();
+
+
+
+
+    }
+
+    private void ListObat() {
         //receive data
         Intent intent =getIntent();
         String JudulKategori = intent.getExtras().getString("JudulKategori");
@@ -59,7 +70,7 @@ public class Kategori_produk_utama extends AppCompatActivity {
         int ImageObat6 = intent.getExtras().getInt("ImageObat6");
 
 
-        ArrayList<Model_list_kategori_tokes> modelListObat = new ArrayList<>();
+        modelListObat = new ArrayList<>();
         modelListObat.add(new Model_list_kategori_tokes (
                 JudulKategori,
                 NamaObat1,Jenis1,HargaObat1,ImageObat1,"Meningkatkan sistem kekebalan tubuh, terutama pada orang yang rentan terhadap penyakit.","Dewasa: 1 tablet sebanyak 2 kali/hari.","Sebaiknya dikonsumsi saat perut kosong atau 30 menit sebelum makan.","BPOM: SD202554171",
@@ -119,10 +130,35 @@ public class Kategori_produk_utama extends AppCompatActivity {
                 "Meningkatkan sistem kekebalan tubuh, terutama pada orang yang rentan terhadap penyakit.","Dewasa: 1 tablet sebanyak 2 kali/hari.","Sebaiknya dikonsumsi saat perut kosong atau 30 menit sebelum makan.","BPOM: SD111541821"));
 
 
+    }
 
-        Adapter_kategori_produk_utama adapter_obat = new Adapter_kategori_produk_utama (modelListObat, Kategori_produk_utama.this);
-        recyclerView.setAdapter(adapter_obat);
+    private void SetUpRecyclerObat() {
+        RecyclerView recyclerView =findViewById(R.id.recyclerview_produk);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter_kategori_utama = new Adapter_kategori_produk_utama (modelListObat, Kategori_produk_utama.this);
+        recyclerView.setAdapter(adapter_kategori_utama);
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query)
+            {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter_kategori_utama.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return  true;
     }
 }

@@ -13,16 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <!-- Start Sherly  -->
-        <activity android:name=".Address_tokes"></activity>
-        <activity android:name=".Filter_berdasarkan_spesialis"/>
-        <activity android:name=".Filter_berdasarkan"/>
+        <activity android:name=".List_all_layanan"
+            android:parentActivityName=".BuatJanjiRS"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".RiwayatTransaksi"
+            android:parentActivityName=".BuatJanjiRS"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SearchRs" /> <!-- Start Sherly -->
+        <activity android:name=".Address_tokes" />
+        <activity android:name=".Filter_berdasarkan_spesialis" />
+        <activity android:name=".Filter_berdasarkan" />
         <activity
             android:name=".Lihat_semua_dokter_filter_spesialis"
             android:parentActivityName=".Lihat_semua_dokter_spesialis"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity android:name=".Detail_dokter_spesialis">
             android:parentActivityName=".chat_dengan_dokter"
             android:theme="@style/AppTheme"
@@ -93,14 +98,11 @@
         <activity
             android:name=".chat_dengan_dokter"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme" />
-
-        <!--  End Sherly  -->
-
-        <activity android:name=".all_layanan"></activity>
-        <activity android:name=".ListSemuaLayanan"
-            android:parentActivityName=".BuatJanjiRS"
-            />
+            android:theme="@style/AppTheme" /> <!-- End Sherly -->
+        <activity android:name=".all_layanan" />
+        <activity
+            android:name=".ListSemuaLayanan"
+            android:parentActivityName=".BuatJanjiRS" />
         <activity android:name=".Pembayaran" />
         <activity android:name=".Detail_pasien" />
         <activity android:name=".Pilih_pasien" />
@@ -114,6 +116,7 @@
         <activity android:name=".Layanan_rs" />
         <activity
             android:name=".BuatJanjiRS"
+            android:parentActivityName=".BerandaFragmentNew"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Lihat_semua_artikel"
@@ -134,8 +137,7 @@
         <activity
             android:name=".CobaMain"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".Artikel_detail" />
+        <activity android:name=".Artikel_detail" />
     </application>
 
 </manifest>

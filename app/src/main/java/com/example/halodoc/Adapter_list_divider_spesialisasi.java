@@ -5,19 +5,24 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Adapter_list_divider_spesialisasi extends RecyclerView.Adapter<Adapter_list_divider_spesialisasi.ViewHolder> {
 
     private Context context;
-    ArrayList<Model_list_divider_all> modelListDokter;
-    public Adapter_list_divider_spesialisasi(ArrayList<Model_list_divider_all> modelList,Lihat_dokter_spesialisasi activity){
+    private List<Model_list_divider_all> modelListDokterFull;
+    private  List<Model_list_divider_all> modelListDokter;
+
+    public Adapter_list_divider_spesialisasi(List<Model_list_divider_all> modelList,Lihat_dokter_spesialisasi activity){
         this.modelListDokter = modelList;
         this.context = activity;
+        modelListDokterFull=new ArrayList<>(modelListDokter);
     }
 
     @NonNull
@@ -91,6 +96,38 @@ public class Adapter_list_divider_spesialisasi extends RecyclerView.Adapter<Adap
 
         return modelListDokter.size();
     }
+
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+    Filter exampleFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<Model_list_divider_all> filteredList =new ArrayList<>();
+            if(charSequence ==null || charSequence.length() == 0){
+                filteredList.addAll(modelListDokterFull);
+
+            }else{
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+                for(Model_list_divider_all item : modelListDokterFull){
+                    if(item.getJudul().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values=filteredList;
+            return  results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            modelListDokter.clear();
+            modelListDokter.addAll((List) filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView judul;

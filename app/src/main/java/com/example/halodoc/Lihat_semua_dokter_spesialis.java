@@ -2,36 +2,75 @@ package com.example.halodoc;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
 
     public CardView filter;
     public ImageView lanjut;
-
+    private Adapter_lihat_semua_dokter_spesialis adapter_spesialisasi;
+    private List<Model_list_dokter_spesialis> modelListDokter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_semua_dokter_spesialis);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        ListDokterSpesialis();
+       setUpRecyclerSpesialis();
 
-        RecyclerView recyclerView =findViewById(R.id.recyclerview_dokter);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+
+
+
+
+
+        filter =(CardView) findViewById(R.id.filter);
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Filter_berdasarkan_spesialis();
+            }
+
+            private void Filter_berdasarkan_spesialis() {
+                Intent intent= new Intent(Lihat_semua_dokter_spesialis.this, Filter_berdasarkan_spesialis.class);
+                startActivity(intent);
+            }
+        });
+
+        lanjut =(ImageView) findViewById(R.id.lanjut);
+        lanjut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Filter_berdasarkan_spesialis();
+            }
+
+            private void Filter_berdasarkan_spesialis() {
+                Intent intent= new Intent(Lihat_semua_dokter_spesialis.this, Filter_berdasarkan_spesialis.class);
+                startActivity(intent);
+
+            }
+        });
+
+    }
+
+
+    private void ListDokterSpesialis() {
         //receive data
         Intent intent =getIntent();
         String JudulKategori = intent.getExtras().getString("JudulKategori");
@@ -92,63 +131,50 @@ public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
         String Tahun6 = intent.getExtras().getString("Tahun6");
         String Suka6 = intent.getExtras().getString("Suka6");
         String HargaDokter6 = intent.getExtras().getString("HargaDokter6");
-        int ImageDokter6 = intent.getExtras().getInt("ImageDoktert6");
+        int ImageDokter6 = intent.getExtras().getInt("ImageDokter6");
         String Alumni6 = intent.getExtras().getString("Alumni6");
         String Praktik6 = intent.getExtras().getString("Praktik6");
         String STR6 = intent.getExtras().getString("STR6");
 
+        modelListDokter = new ArrayList<>();
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter1, Kategori1, Tahun1, Suka1, HargaDokter1, "Universitas Indonesia", "Poliklinik Madya", "1202175642", ImageDokter1));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter2, Kategori2, Tahun2, Suka2, HargaDokter2, "Universitas Brawijaya", "RS.Mayapada", "1202170987",  ImageDokter2));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter3, Kategori3, Tahun3, Suka3, HargaDokter3, "Universitas Soedirman", "RS.Bhayangkari", "1202174523",  ImageDokter3));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter4, Kategori4, Tahun4, Suka4, HargaDokter4, "Universitas Trisakti", "RS.Siloam", "1202178546",  ImageDokter4));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter5, Kategori5, Tahun5, Suka5, HargaDokter5, "Universitas Tarumanegara", "RS.Qadr", "1202177321",  ImageDokter5));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter6, Kategori6, Tahun6, Suka6, HargaDokter6, "Universitas Diponegoro", "Poliklinik Telkom", "1202173177",  ImageDokter6));
 
-        ArrayList<Model_list_dokter_spesialis> modelListdokter = new ArrayList<>();
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter1, Kategori1, Tahun1, Suka1, HargaDokter1, "Universitas Indonesia", "Poliklinik Madya", "1202175642", ImageDokter1));
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter2, Kategori2, Tahun2, Suka2, HargaDokter2, "Universitas Brawijaya", "RS.Mayapada", "1202170987",  ImageDokter2));
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter3, Kategori3, Tahun3, Suka3, HargaDokter3, "Universitas Soedirman", "RS.Bhayangkari", "1202174523",  ImageDokter3));
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter4, Kategori4, Tahun4, Suka4, HargaDokter4, "Universitas Trisakti", "RS.Siloam", "1202178546",  ImageDokter4));
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter5, Kategori5, Tahun5, Suka5, HargaDokter5, "Universitas Tarumanegara", "RS.Qadr", "1202177321",  ImageDokter5));
-        modelListdokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter6, Kategori6, Tahun6, Suka6, HargaDokter6, "Universitas Diponegoro", "Poliklinik Telkom", "1202173177",  ImageDokter6));
 
-        Adapter_lihat_semua_dokter_spesialis adapter_dokter = new Adapter_lihat_semua_dokter_spesialis (modelListdokter, Lihat_semua_dokter_spesialis.this);
-        recyclerView.setAdapter(adapter_dokter);
-
-        filter =(CardView) findViewById(R.id.filter);
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Filter_berdasarkan_spesialis();
-            }
-
-            private void Filter_berdasarkan_spesialis() {
-                Intent intent= new Intent(Lihat_semua_dokter_spesialis.this, Filter_berdasarkan_spesialis.class);
-                startActivity(intent);
-            }
-        });
-
-        lanjut =(ImageView) findViewById(R.id.lanjut);
-        lanjut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Filter_berdasarkan_spesialis();
-            }
-
-            private void Filter_berdasarkan_spesialis() {
-                Intent intent= new Intent(Lihat_semua_dokter_spesialis.this, Filter_berdasarkan_spesialis.class);
-                startActivity(intent);
-
-            }
-        });
 
     }
+    private void setUpRecyclerSpesialis() {
+        RecyclerView recyclerView =findViewById(R.id.recyclerview_dokter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter_spesialisasi = new Adapter_lihat_semua_dokter_spesialis (modelListDokter, Lihat_semua_dokter_spesialis.this);
+        recyclerView.setAdapter(adapter_spesialisasi);
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu,menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query)
+            {
+                return false;
+            }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return true;
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter_spesialisasi.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return  true;
     }
 }

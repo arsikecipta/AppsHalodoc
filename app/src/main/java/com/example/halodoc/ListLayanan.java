@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,12 +18,13 @@ import java.util.ArrayList;
 public class ListLayanan extends AppCompatActivity {
     private TextView tv_namalay, tv_jenislay, tv_namars, tv_alamatrs, tv_biayalay, tv_gambarlay, tv_penjelasan, txt_namalay;
     private ImageView imglay;
+    TextView nama_gone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_layanan);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        nama_gone=findViewById(R.id.nama_gone);
         tv_namalay=(TextView)findViewById(R.id.nama_list_layanan);
         tv_jenislay=(TextView)findViewById(R.id.jenis_list_layanan);
         tv_namars=(TextView)findViewById(R.id.layanan_list_rumahsakit);
@@ -32,12 +34,22 @@ public class ListLayanan extends AppCompatActivity {
         tv_penjelasan=(TextView) findViewById(R.id.txt_penjelasanlay);
         txt_namalay=(TextView)findViewById(R.id.nama_layananrs);
         RecyclerView recyclerView_list_layanan =findViewById(R.id.recyclerview_list_layanan);
+//        recyclerView_list_layanan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(ListLayanan.this, Jadwal_janji.class);
+//                intent.putExtra("NamaLengkap",nama_gone.getText());
+//                startActivity(intent);
+//            }
+//        });
         recyclerView_list_layanan.setHasFixedSize(true);
         recyclerView_list_layanan.setLayoutManager(new LinearLayoutManager(this));
 
         //receive data
         Intent intent =getIntent();
         String namaLayanan = intent.getExtras().getString("NamaLayanan");
+//        String namalengkap =intent.getExtras().getString("NamaLengkap");
+//        nama_gone.setText(namalengkap);
         getSupportActionBar().setTitle(namaLayanan);
         String jenisLayanan = intent.getExtras().getString("JenisLayanan");
         String namaRS = intent.getExtras().getString("RumahSakitLayanan");

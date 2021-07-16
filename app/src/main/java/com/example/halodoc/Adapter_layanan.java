@@ -65,6 +65,7 @@ public class Adapter_layanan extends RecyclerView.Adapter<Adapter_layanan.ViewHo
         ImageView image_lay;
         TextView nama_lay, penjelasan_lay, alamat_lay;
         CardView cardView_lay;
+
         public ViewHolder(@NonNull  View itemView) {
             super(itemView);
             image_lay=itemView.findViewById(R.id.imageview_layanan);

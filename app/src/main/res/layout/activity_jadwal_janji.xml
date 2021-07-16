@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,419 +8,619 @@
     android:orientation="vertical"
     tools:context=".Jadwal_janji">
 
-
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:id="@+id/foto_layanan"
-            android:layout_width="410dp"
-            android:layout_height="200dp"
-            android:background="#2d2d2d"
-            android:scaleType="centerCrop"
-            ></ImageView>
-        <TextView
-            android:id="@+id/layanan_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="left"
-            android:text="Nama Layanan"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-        <TextView
-            android:id="@+id/jenis_layrs"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
-            android:text="Jenis"
-            android:textSize="15sp"></TextView>
+        >
 
-        <TextView
-            android:id="@+id/nama_rs_lay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="left"
-            android:text="Nama Rs"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"></TextView>
-        <TextView
-            android:id="@+id/alamat_rs_lay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="left"
-            android:text="Alamat Rs"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"></TextView>
-        <TextView
-            android:id="@+id/hargalay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="left"
-            android:text="Harga Layanan"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"></TextView>
-        <FrameLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@color/background_text"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
             >
+            <ImageView
+                android:id="@+id/foto_layanan"
+                android:layout_width="410dp"
+                android:layout_height="200dp"
+                android:background="#2d2d2d"
+                android:scaleType="centerCrop"
+                ></ImageView>
             <TextView
-                android:id="@+id/txt_pilihjadwal"
+                android:id="@+id/layanan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
+                android:text="Nama Layanan"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:id="@+id/jenis_layrs"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/googlesansregular"
+                android:textColor="@color/deskripsi"
+                android:text="Jenis"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/nama_rs_lay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:textStyle="bold"
                 android:layout_gravity="left"
-                android:text="Pilih tanggal dan waktu kunjungan"
-                android:layout_marginTop="10dp"
-                android:textSize="18sp"></TextView>
-        </FrameLayout>
+                android:text="Nama Rs"
+                android:fontFamily="@font/googlesansregular"
+                android:textColor="@color/deskripsi"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"></TextView>
+            <TextView
+                android:id="@+id/alamat_rs_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:text="Alamat Rs"
+                android:fontFamily="@font/googlesansregular"
+                android:textColor="@color/deskripsi"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"></TextView>
+            <TextView
+                android:id="@+id/hargalay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:text="Harga Layanan"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
+                android:layout_marginTop="5dp"
+                android:textSize="18dp"></TextView>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/shapetopik"
+                >
+                <TextView
+                    android:id="@+id/txt_pilihjadwal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:fontFamily="@font/googlesansmedium"
+                    android:textColor="@color/judul"
+
+                    android:layout_gravity="left"
+                    android:text="Pilih tanggal dan waktu kunjungan"
+                    android:layout_marginTop="12dp"
+                    android:textSize="18sp"></TextView>
+            </FrameLayout>
 
 
-        <HorizontalScrollView
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scrollbars="none">
-            <LinearLayout
+            <HorizontalScrollView
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal">
-                <RadioGroup
-                    android:id="@+id/tanggal_janji"
-                    android:layout_width="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:orientation="horizontal"
-                    >
-
-                    <RadioButton
-                        android:id="@+id/txt_tgl1"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/tanggal_janji"
                         android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/txt_tgl1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="Senin 5 Juli"
+                            android:layout_marginHorizontal="8dp"
+                            android:background="@drawable/radio_selector2"
+                            android:elevation="4dp"
+                            android:checked="true"
+                            android:fontFamily="@font/googlesansregular"
+                           android:textSize="14sp"
+                            android:gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
+                        <RadioButton
+                            android:id="@+id/txt_tgl2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:text="Selasa 6 Juli"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/radio_selector"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textSize="14sp"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
+                        <RadioButton
+                            android:id="@+id/txt_tgl3"
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:text="Rabu 7Juli"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/radio_selector"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
+                    </RadioGroup>
+                    <Button
+                        android:id="@+id/tanggal_picker"
+                        android:layout_width="70dp"
                         android:layout_height="80dp"
-                        android:text="Senin 5 Juli"
-                        android:layout_marginHorizontal="8dp"
-                        android:background="@drawable/radio_selector2"
+                        android:text="Pilih"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
                         android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
-                    <RadioButton
-                        android:id="@+id/txt_tgl2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="80dp"
-                        android:text="Selasa 6 Juli"
-                        android:layout_marginHorizontal="5dp"
+                        android:textColor="@color/background_all"
                         android:background="@drawable/radio_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
-                    <RadioButton
-                        android:id="@+id/txt_tgl3"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
-                        android:text="Rabu 7Juli"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="@drawable/radio_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
-                </RadioGroup>
-                <Button
-                    android:id="@+id/tanggal_picker"
-                    android:layout_width="70dp"
-                    android:layout_height="80dp"
-                    android:text="Pilih"
-                    android:elevation="4dp"
-                    android:textColor="@color/background_all"
-                    android:background="@drawable/radio_selector"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
-                    >
-                </Button>
-            </LinearLayout>
-        </HorizontalScrollView>
-        <TextView
-            android:id="@+id/tanggal_fix"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="left"
-            android:text="Tanggal fix"
-            android:layout_marginTop="5dp"
-            android:textSize="14sp"></TextView>
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        >
+                    </Button>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/tanggal_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="left"
+                android:text="Tanggal fix"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"></TextView>
 
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_expand"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:paddingBottom="12dp"
-            android:layout_marginRight="20dp"
-            >
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_expand"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="12dp"
+                android:layout_marginRight="20dp"
+                >
 
-                <ImageView
-                    android:id="@+id/img_pagi"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/ic_pagi"></ImageView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="Pagi"
-                    android:textAlignment="center"
-                    android:textSize="18dp"></TextView>
+                    <ImageView
+                        android:id="@+id/img_pagi"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_pagi"></ImageView>
 
-                <Button
-                    android:id="@+id/btn_expand"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="expandview"
-                    android:layout_marginLeft="160dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/ic_arrow"></Button>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Pagi"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
+                        android:textAlignment="center"
+                        android:textSize="16dp"></TextView>
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+                    <Button
+                        android:id="@+id/btn_expand"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="expandview"
+                        android:layout_marginLeft="160dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/ic_arrow"></Button>
 
-            android:layout_marginTop="1dp"
-            android:id="@+id/layout_expand"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-            <LinearLayout
-                android:layout_width="360dp"
-                android:orientation="horizontal"
-                android:layout_height="70dp">
-                <RadioGroup
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/jam_janji"
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+
+                android:layout_marginTop="1dp"
+                android:id="@+id/layout_expand"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="500dp"
+                android:layout_marginRight="20dp">
+                <LinearLayout
                     android:layout_width="360dp"
-                    android:layout_height="55dp"
                     android:orientation="horizontal"
-                    >
+                    android:layout_height="70dp">
+                    <RadioGroup
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/jam_janji"
+                        android:layout_width="360dp"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        >
 
-                    <RadioButton
-                        android:id="@+id/btn_7"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="07:00"
-                        android:layout_marginHorizontal="8dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
-                    <RadioButton
-                        android:id="@+id/btn_8"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="08:00"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
+                        <RadioButton
+                            android:id="@+id/btn_7"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:text="07:00"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/radio_jam_selector"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textSize="14sp"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_jam_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
+                        <RadioButton
+                            android:id="@+id/btn_8"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:text="08:00"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textSize="14sp"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/radio_jam_selector"
+                            android:elevation="4dp"
+                            android:gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_jam_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
 
-                    <RadioButton
-                        android:id="@+id/btn_9"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="09:00"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
+                        <RadioButton
+                            android:id="@+id/btn_9"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:text="09:00"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/radio_jam_selector"
+                            android:elevation="4dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:paddingHorizontal="10dp"
+                            android:button="@drawable/null_jam_radio_button"
+                            android:textColor="@drawable/radio_text_selector"
+                            ></RadioButton>
 
 
 
-                </RadioGroup>
+                    </RadioGroup>
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-
-            android:id="@+id/card_expand2"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:paddingBottom="12dp"
-            android:layout_marginRight="20dp"
-            >
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-480dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
 
-                <ImageView
-                    android:id="@+id/img_malam"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:src="@drawable/ic_night"></ImageView>
 
+                >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_height="wrap_content">
+                   <ImageView
+                   android:layout_width="30dp"
+                   android:layout_height="30dp"
+                   android:src="@drawable/ic_baseline_info_24"></ImageView>
                 <TextView
-                    android:layout_width="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="15dp"
-                    android:text="Malam"
-                    android:textAlignment="center"
-                    android:textSize="18dp"></TextView>
+                    android:text="Detail Lainnya"
 
-                <Button
-                    android:id="@+id/btn_expand2"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="expandview"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/ic_arrow"></Button>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:visibility="gone"
-            android:layout_marginTop="1dp"
-            android:id="@+id/layout_expand_malam"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp">
-            <LinearLayout
-                android:layout_width="350dp"
-                android:orientation="horizontal"
-                android:layout_height="70dp">
-                <RadioGroup
+                    android:fontFamily="@font/googlesansmedium"
+                    android:textColor="@color/judul"
+                    android:textSize="16dp"></TextView>
+               </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/pilih_jam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="55dp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:text="Waktu pelayanan pasien akan mengikuti waktu kedatangan pasien"
+                    android:textStyle="bold"
+                    android:textSize="16dp"></TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     >
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Hasil tes : "
+                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Maks 2 Jam (Hard Copy)"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Metode Pembayaran : "
+                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=" Melalui aplikasi Halodoc"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
 
-                    <RadioButton
-                        android:id="@+id/btn_18"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tempat Pengambilan Tes : "
+                        android:textStyle="bold"
+
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=" Di Rumah Sakit."
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="95dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Detail Paket : "
+                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                    <TextView
+                        android:id="@+id/text_paket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=" nama paket"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
                         android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="18:00"
-                        android:layout_marginHorizontal="8dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
-                    <RadioButton
-                        android:id="@+id/btn_19"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="19:00"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Deskripsi : "
+                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
 
-                    <RadioButton
-                        android:id="@+id/btn_20"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
-                        android:text="20:00"
-                        android:layout_marginHorizontal="5dp"
-                        android:background="@drawable/radio_jam_selector"
-                        android:elevation="4dp"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:button="@drawable/null_jam_radio_button"
-                        android:textColor="@drawable/radio_text_selector"
-                        ></RadioButton>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/text_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="penjelasan"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
+                        android:textSize="16dp"></TextView>
 
-
-
-                </RadioGroup>
+                </LinearLayout>
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <!--        <androidx.cardview.widget.CardView-->
+
+            <!--            android:id="@+id/card_expand2"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="60dp"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:layout_marginLeft="20dp"-->
+            <!--            android:paddingBottom="12dp"-->
+            <!--            android:layout_marginRight="20dp"-->
+            <!--            >-->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content">-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/img_malam"-->
+            <!--                    android:layout_width="30dp"-->
+            <!--                    android:layout_height="30dp"-->
+            <!--                    android:layout_marginLeft="20dp"-->
+            <!--                    android:layout_marginTop="15dp"-->
+            <!--                    android:src="@drawable/ic_night"></ImageView>-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="80dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="10dp"-->
+            <!--                    android:layout_marginTop="8dp"-->
+            <!--                    android:layout_marginBottom="15dp"-->
+            <!--                    android:text="Malam"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:textSize="18dp"></TextView>-->
+
+            <!--                <Button-->
+            <!--                    android:id="@+id/btn_expand2"-->
+            <!--                    android:layout_width="48dp"-->
+            <!--                    android:layout_height="48dp"-->
+            <!--                    android:contentDescription="expandview"-->
+            <!--                    android:layout_marginLeft="130dp"-->
+            <!--                    android:layout_marginTop="5dp"-->
+            <!--                    android:layout_marginBottom="15dp"-->
+            <!--                    android:background="@drawable/ic_arrow"></Button>-->
+
+            <!--            </LinearLayout>-->
+            <!--        </androidx.cardview.widget.CardView>-->
+            <!--        <androidx.cardview.widget.CardView-->
+            <!--            android:visibility="gone"-->
+            <!--            android:layout_marginTop="1dp"-->
+            <!--            android:id="@+id/layout_expand_malam"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="75dp"-->
+            <!--            android:layout_marginLeft="20dp"-->
+            <!--            android:layout_marginRight="20dp">-->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="350dp"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_height="70dp">-->
+            <!--                <RadioGroup-->
+            <!--                    android:layout_marginTop="10dp"-->
+            <!--                    android:id="@+id/pilih_jam"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="55dp"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    >-->
+
+            <!--                    <RadioButton-->
+            <!--                        android:id="@+id/btn_18"-->
+            <!--                        android:layout_width="100dp"-->
+            <!--                        android:layout_height="50dp"-->
+            <!--                        android:text="18:00"-->
+            <!--                        android:layout_marginHorizontal="8dp"-->
+            <!--                        android:background="@drawable/radio_jam_selector"-->
+            <!--                        android:elevation="4dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:paddingHorizontal="10dp"-->
+            <!--                        android:button="@drawable/null_jam_radio_button"-->
+            <!--                        android:textColor="@drawable/radio_text_selector"-->
+            <!--                        ></RadioButton>-->
+            <!--                    <RadioButton-->
+            <!--                        android:id="@+id/btn_19"-->
+            <!--                        android:layout_width="100dp"-->
+            <!--                        android:layout_height="50dp"-->
+            <!--                        android:text="19:00"-->
+            <!--                        android:layout_marginHorizontal="5dp"-->
+            <!--                        android:background="@drawable/radio_jam_selector"-->
+            <!--                        android:elevation="4dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:paddingHorizontal="10dp"-->
+            <!--                        android:button="@drawable/null_jam_radio_button"-->
+            <!--                        android:textColor="@drawable/radio_text_selector"-->
+            <!--                        ></RadioButton>-->
+
+            <!--                    <RadioButton-->
+            <!--                        android:id="@+id/btn_20"-->
+            <!--                        android:layout_width="100dp"-->
+            <!--                        android:layout_height="50dp"-->
+            <!--                        android:text="20:00"-->
+            <!--                        android:layout_marginHorizontal="5dp"-->
+            <!--                        android:background="@drawable/radio_jam_selector"-->
+            <!--                        android:elevation="4dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:paddingHorizontal="10dp"-->
+            <!--                        android:button="@drawable/null_jam_radio_button"-->
+            <!--                        android:textColor="@drawable/radio_text_selector"-->
+            <!--                        ></RadioButton>-->
+
+
+
+            <!--                </RadioGroup>-->
+
+            <!--            </LinearLayout>-->
+            <!--        </androidx.cardview.widget.CardView>-->
+
+        </LinearLayout>
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="-60dp"
+        app:cardElevation="10dp"
+        android:layout_height="60dp">
+
         <Button
             android:id="@+id/btn_jadwal_janji"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             android:text="Buat Janji"
-            android:textColor="#838383"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
+            android:textSize="14dp"
+            android:textStyle="bold"
+
 
             ></Button>
-    </LinearLayout>
-    <!--    <Button-->
-    <!--        android:id="@+id/btn_jadwal_janji"-->
-    <!--        android:layout_margin="30dp"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:textColor="@color/colorWhite"-->
-    <!--        android:textSize="16sp"-->
-    <!--        android:background="@color/background_press"-->
-    <!--        android:textStyle="bold"-->
-    <!--        android:text="Buat Janji"-->
-    <!--        android:paddingLeft="4dp"-->
-    <!--        android:minWidth="40dp"-->
-    <!--        android:paddingRight="4dp"-->
-    <!--        android:paddingTop="8dp"-->
-    <!--        android:minHeight="32dp"-->
-    <!--        android:paddingBottom="8dp"-->
-    <!--        >-->
-    <!--        ></Button>-->
-
-
-
-</ScrollView>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

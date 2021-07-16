@@ -39,7 +39,16 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/ic_edit"/>
     </androidx.cardview.widget.CardView>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -50,16 +59,18 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/background_text"
+            android:background="@color/shapetopik"
             >
             <TextView
                 android:id="@+id/nama_layananrs_semua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="layanan"
-                android:layout_margin="10dp"
                 android:textSize="18dp"
-                android:textStyle="bold"
+                android:fontFamily="@font/googlesansbold"
+                android:textColor="@color/judul"
+                android:layout_margin="10dp"
+
                 ></TextView>
 
         </FrameLayout>
@@ -70,8 +81,10 @@
             android:text="layanan"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginTop="60dp"
-            android:textSize="15dp"
+            android:textSize="16dp"
             ></TextView>
     </androidx.cardview.widget.CardView>
     <androidx.recyclerview.widget.RecyclerView
@@ -80,4 +93,7 @@
         android:layout_height="wrap_content"
        android:layout_margin="10dp"
         ></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

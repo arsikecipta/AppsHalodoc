@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
@@ -25,7 +26,7 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@color/background_text"
+                    android:background="@color/shapetopik"
                     >
                     <TextView
                         android:layout_width="match_parent"
@@ -33,7 +34,10 @@
                         android:text="Janji Layanan"
                         android:layout_margin="10dp"
                         android:textSize="18dp"
-                        android:textStyle="bold"
+
+                        android:fontFamily="@font/googlesansbold"
+                        android:textColor="@color/judul"
+
                         ></TextView>
                 </FrameLayout>
 
@@ -50,7 +54,9 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Layanan"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
+
                         ></TextView>
                     <TextView
                         android:layout_width="70dp"
@@ -60,7 +66,9 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Lokasi"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
+
                         ></TextView>
                     <TextView
                         android:layout_width="70dp"
@@ -70,7 +78,8 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Tanggal"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
                         ></TextView>
                     <TextView
                         android:layout_width="70dp"
@@ -80,7 +89,9 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Waktu"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
+
                         ></TextView>
                     <TextView
                         android:layout_width="70dp"
@@ -90,13 +101,15 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Biaya"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
                         ></TextView>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="60dp"
                     android:layout_width="10dp"
                     android:layout_height="150dp"
+
                     android:layout_marginLeft="100dp"
                     android:orientation="vertical"
                     >
@@ -111,7 +124,7 @@
                         android:layout_width="10dp"
                         android:layout_height="20dp"
                         android:text=":"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="10dp"
                         android:textStyle="bold"
                         ></TextView>
                     <TextView
@@ -119,7 +132,7 @@
                         android:layout_height="20dp"
                         android:text=":"
                         android:textStyle="bold"
-                        android:layout_marginTop="11dp"
+                        android:layout_marginTop="10dp"
                         ></TextView>
 
                     <TextView
@@ -130,14 +143,12 @@
                         android:textStyle="bold"></TextView>
 
 
-
                     <TextView
                         android:layout_width="10dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:text=":"
-                        android:textStyle="bold"
-                        android:layout_marginTop="11dp"
-                        ></TextView>
+                        android:textStyle="bold"></TextView>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_marginTop="60dp"
@@ -154,16 +165,19 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="Nama layanan"
-
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         ></TextView>
                     <TextView
                         android:id="@+id/nama_rs_pasien"
                         android:layout_width="220dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="12dp"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         android:text="Nama rs"
                         ></TextView>
                     <TextView
@@ -174,6 +188,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         android:text="hari"
                         ></TextView>
                     <TextView
@@ -184,6 +200,8 @@
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         android:text="jam"
                         ></TextView>
                     <TextView
@@ -195,21 +213,26 @@
                         android:layout_marginRight="20dp"
                         android:textSize="16dp"
                         android:text="harga"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         ></TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="510dp"
-                android:layout_margin="20dp"
+                android:layout_height="530dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
                 app:cardElevation="10dp"
+                android:layout_marginBottom="100dp"
                 app:cardCornerRadius="5dp"
                 >
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
-                    android:background="@color/background_text"
+                    android:background="@color/shapetopik"
                     >
                     <TextView
                         android:layout_width="match_parent"
@@ -217,7 +240,8 @@
                         android:text="Mohon masukan detail sesuai dengan kartu identitas pasien"
                         android:layout_margin="10dp"
                         android:textSize="18dp"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/googlesansbold"
+                        android:textColor="@color/judul"
                         ></TextView>
                 </FrameLayout>
                 <LinearLayout
@@ -234,7 +258,9 @@
                         android:layout_height="wrap_content"
                         android:text="Nama Lengkap"
                         android:layout_marginTop="10dp"
-                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
                         ></TextView>
                     <EditText
                         android:id="@+id/et_nama_lengkap"
@@ -251,7 +277,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
                         android:text="Tanggal lahir"
                         ></TextView>
                     <Button
@@ -261,14 +289,18 @@
                         android:text="Masukan Tanggal lahir"
                         style="?android:spinnerStyle"
                         android:layout_marginTop="10dp"
-
+                        android:textSize="14sp"
+                        android:fontFamily="@font/googlesansregular"
+                        android:textColor="@color/deskripsi"
                         android:onClick="openDatePicker"
                         ></Button>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:textColor="@color/judul"
                         android:text="Unggah kartu identitas (KTP, SIM atau Passport)"
                         ></TextView>
 
@@ -280,6 +312,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="2dp"
                         android:layout_weight="1"
+
                         android:background="@drawable/bg_card_foto">
 
                         <LinearLayout
@@ -300,6 +333,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Masukan foto anda disini"
+                                android:fontFamily="@font/googlesansregular"
+                                android:textColor="@color/deskripsi"
+                                android:textSize="14sp"
                                 android:textAlignment="center"></TextView>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -321,9 +357,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textColor="@color/colorWhite"
-            android:background="@color/background_all"
+            android:background="@drawable/primary_button"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/googlesansmedium"
+            android:textSize="18sp"
             android:text="Lanjut"
             ></Button>
     </LinearLayout>

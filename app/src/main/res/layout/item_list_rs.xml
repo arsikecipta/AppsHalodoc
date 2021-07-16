@@ -38,13 +38,18 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="Nama rs"
-                    android:textColor="#000"
+                    android:fontFamily="@font/googlesansmedium"
+                    android:textColor="@color/judul"
+                    android:textSize="16sp"
                     android:textStyle="bold"></TextView>
 
                 <TextView
                     android:id="@+id/jenis_rs"
                     android:layout_width="match_parent"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textSize="14sp"
+                    android:textColor="@color/deskripsi"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="jenis"></TextView>
@@ -54,10 +59,13 @@
                     android:text="alamat rs"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textSize="14sp"
+                    android:textColor="@color/deskripsi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></TextView>
                 <Button
-                    android:id="@+id/btn_janji"
+                    android:id="@+id/btn_janji_rs"
                     android:layout_gravity="right"
                     android:background="@drawable/shape_button_rad"
                     android:layout_marginTop="20dp"

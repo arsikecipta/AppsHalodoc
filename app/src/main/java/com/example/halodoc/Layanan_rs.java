@@ -21,6 +21,7 @@ public class Layanan_rs extends AppCompatActivity {
     private ImageView img, imageView_layanan, imageView_layanan2;
     private ArrayList<model_layanan> ArrayListModel;
     CardView cardView_lay;
+    TextView nama_gone;
     RecyclerView layanan_recycler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,17 @@ public class Layanan_rs extends AppCompatActivity {
 
 
 
+
+
         layanan_recycler = findViewById(R.id.recyclerview_layanan);
+//        layanan_recycler.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(Layanan_rs.this, ListLayanan.class);
+//                intent.putExtra("NamaLengkap",nama_gone.getText());
+//                startActivity(intent);
+//            }
+//        });
         layanan_recycler.setHasFixedSize(true);
         layanan_recycler.setLayoutManager(new LinearLayoutManager(this));
 
@@ -42,11 +53,14 @@ public class Layanan_rs extends AppCompatActivity {
         imageView_layanan = (ImageView) findViewById(R.id.imageview_layanan);
         txt_layanan = (TextView) findViewById(R.id.nama_lay);
         txt_penjelasan1=(TextView)findViewById(R.id.penjelasan_layanan);
+        nama_gone=(TextView)findViewById(R.id.nama_gone);
 
 
         //receive data
         Intent intent = getIntent();
         String nama_rs = intent.getExtras().getString("NamaRS");
+//        String namalengkap =intent.getExtras().getString("NamaLengkap");
+
         getSupportActionBar().setTitle(nama_rs);
 
         String jenis_rs = intent.getExtras().getString("JenisRS");
@@ -69,7 +83,7 @@ public class Layanan_rs extends AppCompatActivity {
         img.setImageResource(image_rs);
         txt_alamatRS.setText(alamat_rs);
         txt_infoRs.setText(info_rs);
-
+//        nama_gone.setText(namalengkap);
 
 
         ArrayList<model_layanan> modelLayanan = new ArrayList<>();

@@ -39,6 +39,22 @@ public class Adapter_list_layanan  extends RecyclerView.Adapter<Adapter_list_lay
         holder.txt_jenis_layanan.setText(modelLayananlist.getJenis_layanan());
         holder.txt_biaya_layanan.setText(modelLayananlist.getBiaya_layanan());
         holder.image_layanan.setImageResource(modelLayananlist.getImage_layanan());
+        holder.button_janji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(context, Jadwal_janji.class);
+                //passing data to detail
+                intent.putExtra("NamaLayanan", modelListLayanan.get(position).getNama_layanan());
+                intent.putExtra("JenisLayanan", modelListLayanan.get(position).getJenis_layanan());
+                intent.putExtra("RumahSakitLayanan", modelListLayanan.get(position).getNama_rs());
+                intent.putExtra("AlamatLayanan", modelListLayanan.get(position).getAlamat_rs());
+                intent.putExtra("BiayaLayanan", modelListLayanan.get(position).getBiaya_layanan());
+                intent.putExtra("GambarLayanan", modelListLayanan.get(position).getImage_layanan());
+                intent.putExtra("PenjelasanLayanan", modelListLayanan.get(position).getPenjelasan_layanan());
+
+                context.startActivity(intent);
+            }
+        });
         holder.cardView_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

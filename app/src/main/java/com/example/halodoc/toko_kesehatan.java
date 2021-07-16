@@ -1,14 +1,22 @@
 package com.example.halodoc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
@@ -21,6 +29,7 @@ public class toko_kesehatan extends AppCompatActivity {
     public Button generate_btn;
     public ImageView selanjutnya;
     public CardView search_tokes;
+    FrameLayout frameLayout_loc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,34 @@ public class toko_kesehatan extends AppCompatActivity {
         setContentView(R.layout.activity_toko_kesehatan);
         getSupportActionBar().setTitle("Toko Kesehatan");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        frameLayout_loc=findViewById(R.id.frame_loc);
+        frameLayout_loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        toko_kesehatan.this,R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
+                );
+                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= new Intent(toko_kesehatan.this, toko_kesehatan.class);
+                        startActivity(intent);
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+            }
+        });
+
+
+
+
         recyclerview_tokes = findViewById(R.id.recyclerview_tokes);
         recyclerview_beldar = findViewById(R.id.recyclerview_beldar);
         tokes_recycler();
@@ -211,5 +248,24 @@ public class toko_kesehatan extends AppCompatActivity {
         recyclerview_beldar.setAdapter(adapter_beldar);
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_riwayat,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.button_riwayat:
+                Intent intent= new Intent(toko_kesehatan.this, RiwayatTransaksi.class);
+                startActivity(intent);
+                break;
+            case android.R.id.home:
+                finish();
+                return true;
+
+        }
+        return true;
+    }
 }

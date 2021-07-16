@@ -5,18 +5,23 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Adapter_lihat_semua_tokes extends RecyclerView.Adapter<Adapter_lihat_semua_tokes.ViewHolder> {
 
+    private List<Model_list_tokes> modelListTokesFull;
+    private  List<Model_list_tokes> modelListTokes;
     private Context context;
-    ArrayList<Model_list_tokes> modelListTokes;
-    public Adapter_lihat_semua_tokes (ArrayList<Model_list_tokes> modelListTokes,lihat_semua_tokes activity){
+
+    public Adapter_lihat_semua_tokes (List<Model_list_tokes> modelListTokes,lihat_semua_tokes activity){
         this.modelListTokes = modelListTokes;
         this.context = activity;
+        modelListTokesFull=new ArrayList<>(modelListTokes);
     }
 
     @NonNull
@@ -77,7 +82,37 @@ public class Adapter_lihat_semua_tokes extends RecyclerView.Adapter<Adapter_liha
 
         return modelListTokes.size();
     }
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+    Filter exampleFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<Model_list_tokes> filteredList =new ArrayList<>();
+            if(charSequence ==null || charSequence.length() == 0){
+                filteredList.addAll(modelListTokesFull);
 
+            }else{
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+                for(Model_list_tokes item : modelListTokesFull){
+                    if(item.getJudul().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values=filteredList;
+            return  results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            modelListTokes.clear();
+            modelListTokes.addAll((List) filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView judul;

@@ -24,6 +24,7 @@ public class Artikel_detail extends AppCompatActivity {
         tv_topik_artikel=(TextView)findViewById(R.id.artikel_topik_detail);
         tv_dokter_artikel=(TextView)findViewById(R.id.nama_dokter_penulis);
         tv_paragraph1=(TextView)findViewById(R.id.paragraph1);
+        tv_paragraph2=(TextView)findViewById(R.id.paragraph2);
 
 
         //receive data
@@ -34,6 +35,8 @@ public class Artikel_detail extends AppCompatActivity {
         getSupportActionBar().setTitle(topikArtikel);
         String dokterArtikel = intent.getExtras().getString("DokterArtikel");
         String isiArtikel = intent.getExtras().getString("IsiParagraph");
+        String isiArtikel2 = intent.getExtras().getString("IsiParagraph2");
+
 
 
 
@@ -44,6 +47,8 @@ public class Artikel_detail extends AppCompatActivity {
         tv_topik_artikel.setText(topikArtikel);
         tv_dokter_artikel.setText(dokterArtikel);
         tv_paragraph1.setText(isiArtikel);
+        tv_paragraph2.setText(isiArtikel2);
+
 
     }
 

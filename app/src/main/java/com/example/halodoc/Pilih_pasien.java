@@ -29,7 +29,6 @@ public class Pilih_pasien extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         next_detail = findViewById(R.id.next_detail_pasien);
         next_detail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +47,7 @@ public class Pilih_pasien extends AppCompatActivity {
         nam_rs=findViewById(R.id.nama_rumahsakit);
         day_1 =findViewById(R.id.hari_fix);
         txt_jam=findViewById(R.id.txt_jam);
-        nama_pasien=findViewById(R.id.nama_pasien_regis);
+//        nama_pasien=findViewById(R.id.nama_pasien_regis);
 
         harga_lay=findViewById(R.id.harga_lay);
         Intent intent =getIntent();
@@ -57,6 +56,8 @@ public class Pilih_pasien extends AppCompatActivity {
         String hargalayanan = intent.getExtras().getString("BiayaLayanan");
         String harifix = intent.getExtras().getString("HariTgl");
         String jam_fix = intent.getExtras().getString("JamJanji");
+//        String namalengkap =intent.getExtras().getString("NamaLengkap");
+
 //        String namalengkap = intent.getExtras().getString("NamaLengkap");
         // String JamJanjiMalam=intent.getExtras().getString("JamJanjiMalam");
 
@@ -65,7 +66,8 @@ public class Pilih_pasien extends AppCompatActivity {
         nam_rs.setText(namRS);
         harga_lay.setText(hargalayanan);
         day_1.setText(harifix);
-//        txt_jam.setText(jam_fix);
+//        nama_pasien.setText(namalengkap);
+       txt_jam.setText(jam_fix);
 //        nama_pasien.setText(namalengkap);
         // txt_jam.setText(JamJanjiMalam);
 

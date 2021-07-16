@@ -84,6 +84,7 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
         TextView nama_rs, jenis_rs, desc_rs,alamat_rs;
         CardView cardView_rs;
         Button btn_lihat;
+        RecyclerView rc_rs;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -93,6 +94,8 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
             alamat_rs = itemView.findViewById(R.id.txt_alamat);
             cardView_rs=itemView.findViewById(R.id.card_rs);
             btn_lihat=itemView.findViewById(R.id.btn_lihatsemua);
+            rc_rs =itemView.findViewById(R.id.recyclerview_rs);
+
 
         }
 

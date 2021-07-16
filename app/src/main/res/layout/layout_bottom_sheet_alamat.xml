@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:text="Pilih Alamat"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_input"
+
+        android:drawableStart="@drawable/ic_search2"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Cari Alamat"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_map"
+            ></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Menggunakan Peta"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/background_all"
+            ></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/card_artikel3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#C4C4C4">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_mylocation"
+            ></ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lokasimu saat ini"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/background_all"
+            ></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jl. Sigura Gura No.4 RT.1/RW.5, Bencongan Indah"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black_text"
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/card_artikel3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="75dp"
+        android:background="#C4C4C4">
+    </LinearLayout>
+<Button
+    android:id="@+id/batal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/shape_button_rad"
+    android:textColor="@color/colorWhite"
+    android:text="Cancle"
+    ></Button>
+</LinearLayout>

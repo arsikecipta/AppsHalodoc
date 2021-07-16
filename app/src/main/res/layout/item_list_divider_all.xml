@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- list dokter spesialisasi -->
@@ -34,14 +35,15 @@
             android:text="Periksa kesehatanmu sekarang"
             android:textColor="#757575"
             android:textSize="16dp" />
-
         <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
+            android:id="@+id/selanjutnya"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/ic_twotone_arrow_forward_ios_24" />
+            android:src="@drawable/ic_next"
+            ></ImageView>
 
     </RelativeLayout>
 

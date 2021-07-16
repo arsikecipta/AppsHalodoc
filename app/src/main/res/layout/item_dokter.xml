@@ -43,7 +43,7 @@
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/googlesansmedium"
                     android:text="@string/dr_febbyola_ramanda"
-                    android:textColor="#404345"
+                    android:textColor="@color/judul"
                     android:textSize="16sp"
                     android:textStyle="bold">
                 </TextView>
@@ -58,7 +58,7 @@
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/googlesansregular"
                     android:text="@string/dokter_umum"
-                    android:textColor="#6E6E6E"
+                    android:textColor="@color/deskripsi"
                     android:textSize="14sp"></TextView>
 
                 <LinearLayout

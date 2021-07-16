@@ -20,6 +20,8 @@
     <color name ="background_text">#ffeadb</color>
     <color name ="black_text">#666666</color>
     <color name ="mitra_halodoc">#54BAED</color>
+    <color name="shapetopik">#d6e0f0</color>
     <color name ="judul">#404345</color>
+    <color name="button_disable">#838383</color>
     <color name ="deskripsi">#6E6E6E</color>
 </resources>

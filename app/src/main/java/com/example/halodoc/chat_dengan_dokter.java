@@ -1,11 +1,14 @@
 package com.example.halodoc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import java.util.ArrayList;
@@ -128,5 +131,24 @@ public class chat_dengan_dokter extends AppCompatActivity {
         recyclerview_dokter.setAdapter(adapter_dokter);
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_riwayat,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.button_riwayat:
+                Intent intent= new Intent(chat_dengan_dokter.this, RiwayatTransaksi.class);
+                startActivity(intent);
+                break;
+            case android.R.id.home:
+                finish();
+                return true;
+
+        }
+        return true;
+    }
 }

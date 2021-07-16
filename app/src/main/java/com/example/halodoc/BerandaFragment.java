@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ public class BerandaFragment extends Fragment {
     private int white, darkGray,red;
     private RecyclerView recyclerViewArtikel;
     private String selectedFilter="all";
+    ImageView img_acc;
     TextView textView_masuk;
 
 
@@ -58,7 +60,14 @@ public class BerandaFragment extends Fragment {
 //        masuk_daftar.setText(namalengkap);
 //
 
-
+        img_acc=v.findViewById(R.id.icon_daftar);
+        img_acc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(BerandaFragment.this.getActivity(), Login.class);
+                startActivity(intent);
+            }
+        });
         masuk_daftar=v.findViewById(R.id.masuk_daftar);
         masuk_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +124,7 @@ public class BerandaFragment extends Fragment {
         modelArtikelArrayList = new ArrayList<>();
         model_artikel kecantikan = new model_artikel( R.drawable.kecantikan,
                 "Rangkaian Perawatan Wajah untuk Mencegah Jerawat",
-                "Kecantikan","Dr. Fadhli Rizal Makarim", "“Setelah membersihkan wajah, selalu gunakan pelembap yang tepat segera untuk merehidrasi kulit. Secara rutin membersihkan wajah dapat mencegah munculnya jerawat. Kulit menjadi lebih bersih, bebas minyak, dan pori-pori wajah pun tidak tersumbat oleh kotoran dan debu yang menempel usai beraktivitas.”\n" +
+                "Kecantikan","Dr. Fadhli Rizal Makarim", "“Setelah membersihkan wajah, selalu gunakan pelembap yang tepat segera untuk merehidrasi kulit. Secara rutin membersihkan wajah dapat mencegah munculnya jerawat. Kulit menjadi lebih bersih, bebas minyak, dan pori-pori wajah pun tidak tersumbat oleh kotoran dan debu yang menempel usai beraktivitas.",
                 "\n" +
                 "Halodoc, Jakarta – Untuk kamu yang memiliki wajah berjerawat, perawatan wajah dengan produk yang tepat adalah hal yang cukup penting. Perawatan wajah ini dimaksudkan untuk menghilangkan minyak dan kotoran yang menyumbat pori-pori dan menampung bakteri. Membersihkan wajah juga perlu dilakukan pagi maupun malam hari, untuk mendapatkan wajah yang sehat dan bersih.\n" +
                 "\n" +
@@ -155,7 +164,7 @@ public class BerandaFragment extends Fragment {
 
         model_artikel makanan = new model_artikel( R.drawable.makanan,
                 "Apa Manfaat Mengkonsumsi Yoghurt untuk Kesehatan?",
-                "Makanan Sehat","Dr. Rizal Fadli","Halodoc, Jakarta – Yoghurt adalah makanan yang merupakan fermentasi dari susu dan terkenal dapat menyehatkan karena kandungan probiotik yang tinggi. Namun, kebanyakan orang hanya tahu jika makanan ini dapat menyehatkan sistem pencernaan. Padahal, masih banyak manfaat lainnya yang dapat kamu rasakan dengan mengonsumsi yoghurt secara rutin. Berikut beberapa manfaatnya yang perlu kamu ketahui!\n" +
+                "Makanan Sehat","Dr. Rizal Fadli","Halodoc, Jakarta – Yoghurt adalah makanan yang merupakan fermentasi dari susu dan terkenal dapat menyehatkan karena kandungan probiotik yang tinggi. Namun, kebanyakan orang hanya tahu jika makanan ini dapat menyehatkan sistem pencernaan. Padahal, masih banyak manfaat lainnya yang dapat kamu rasakan dengan mengonsumsi yoghurt secara rutin. Berikut beberapa manfaatnya yang perlu kamu ketahui!",
                 "\n" +
                 "Manfaat Yoghurt Terhadap Kesehatan\n" +
                 "Yoghurt merupakan produk susu yang dibuat dengan metode fermentasi. Makanan ini kaya akan kandungan protein dan kalsium, sehingga mampu meningkatkan bakteri baik yang ada di sistem pencernaan, terutama usus. Asam laktat dibutuhkan untuk menghasilkan yoghurt, agar protein susu dapat mengental dan memberikan rasa serta struktur yang unik. Apabila ditambahkan gula, beberapa produk susu ini menjadi tidak menyehatkan.\n" +
@@ -189,7 +198,7 @@ public class BerandaFragment extends Fragment {
 
         model_artikel anak = new model_artikel(R.drawable.anak,
                 "4 Cara untuk Mencegah Anak Mengalami tantrum",
-                "Pola Asuh Anak","Dr. Rizal Fadli", "Halodoc, Jakarta - Tantrum pada anak bisa menjadi masalah tersendiri bagi orangtua. Namun, sebenarnya tantrum adalah hal yang wajar terjadi pada Si Kecil karena adanya perkembangan pada kemampuan emosional dan sosialnya. Selain itu, tantrum juga dapat terjadi karena anak mengalami kesulitan dalam menunjukkan perasaannya. \n" +
+                "Pola Asuh Anak","Dr. Rizal Fadli", "Halodoc, Jakarta - Tantrum pada anak bisa menjadi masalah tersendiri bagi orangtua. Namun, sebenarnya tantrum adalah hal yang wajar terjadi pada Si Kecil karena adanya perkembangan pada kemampuan emosional dan sosialnya. Selain itu, tantrum juga dapat terjadi karena anak mengalami kesulitan dalam menunjukkan perasaannya.",
                 "\n" +
                 "Saat hal ini terjadi, sang buah hati pasti akan menangis meraung sambil berteriak, bahkan bisa saja mereka berguling atau terduduk di lantai karena apa yang diinginkan tidak dipenuhi oleh orangtua. Lalu, bagaimana cara mencegah terjadinya hal ini? Berikut pembahasannya!\n" +
                 "\n" +
@@ -223,7 +232,7 @@ public class BerandaFragment extends Fragment {
 
         model_artikel parestesia = new model_artikel(R.drawable.parestesia,
                 "Jenis Pemeriksaan yang dilakukan untuk Deteksi parestesia",
-                "Parestesia","Dr. Gabriella Florencia","Halodoc, Jakarta – Pernahkah kamu merasa beberapa bagian tubuh kamu mengalami kesemutan? Kesemutan atau dalam bahasa medis dikenal dengan istilah parestesia adalah kondisi yang terjadi ketika anggota tubuh mengalami sensasi panas. Tidak hanya sensasi panas, terkadang seseorang yang mengalami kondisi parestesia mengalami sensasi seperti tertusuk jarum di beberapa bagian tubuh serta mati rasa atau kebas.\n" +
+                "Parestesia","Dr. Gabriella Florencia","Halodoc, Jakarta – Pernahkah kamu merasa beberapa bagian tubuh kamu mengalami kesemutan? Kesemutan atau dalam bahasa medis dikenal dengan istilah parestesia adalah kondisi yang terjadi ketika anggota tubuh mengalami sensasi panas. Tidak hanya sensasi panas, terkadang seseorang yang mengalami kondisi parestesia mengalami sensasi seperti tertusuk jarum di beberapa bagian tubuh serta mati rasa atau kebas.",
                 "\n" +
                 "Baca juga: Sering Alami Kesemutan? Hati-hati Gejala dari Parestesia\n" +
                 "\n" +
@@ -276,7 +285,7 @@ public class BerandaFragment extends Fragment {
 
         model_artikel bayi = new model_artikel(R.drawable.bayi,
                 "7 Cara Merawat Bayi Baru Lahir Tanpa Stres",
-                "Pertumbuhan bayi","Dr. Rizal Fadli", "Halodoc, Jakarta - Selain persiapan persalinan, ada banyak hal yang tidak kalah penting untuk menyambut kedatangan buah hati. Salah satunya dengan mempersiapkan diri dalam merawat dan mengasuh bayi yang baru lahir.\n" +
+                "Pertumbuhan bayi","Dr. Rizal Fadli", "Halodoc, Jakarta - Selain persiapan persalinan, ada banyak hal yang tidak kalah penting untuk menyambut kedatangan buah hati. Salah satunya dengan mempersiapkan diri dalam merawat dan mengasuh bayi yang baru lahir.",
                 "\n" +
                 "Merawat bayi yang baru lahir memang akan menjadi pengalaman yang menyenangkan. Namun dibalik itu, kondisi ini dapat menyebabkan emosi yang naik turun dan kelelahan yang cukup panjang. Bahkan, jika tidak diatasi dengan baik, kondisi ini dapat meningkatkan risiko stres atau baby blues.\n" +
                 "\n" +

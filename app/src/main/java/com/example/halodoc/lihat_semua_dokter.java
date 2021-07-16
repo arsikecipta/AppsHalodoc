@@ -14,12 +14,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class lihat_semua_dokter extends AppCompatActivity {
 
     public CardView filter;
     public ImageView lanjut;
-
+    private Adapter_lihat_semua_dokter adapter_dokter;
+    private List<Model_list_dokter> modelListdokter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,20 +29,14 @@ public class lihat_semua_dokter extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Rekomendasi Dokter");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        RecyclerView recyclerView =findViewById(R.id.recyclerview_dokter);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ArrayList<Model_list_dokter> modelListdokter = new ArrayList<>();
-        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Indonesia","RSCM Cipto M.","123456789",R.drawable.avadoctor3));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000","Universitas Negeri Solo","RS Sari Asih","123456789", R.drawable.avadoctor1));
-        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 10.000","Universitas Andalas","RS Siloam","123456789",R.drawable.avadoctor2));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000", "Universitas Dipnegoro","RS Fatmawati","123456789", R.drawable.avadoctor4));
-        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 50.000","Universitas Gajah Mada","RS Harapan Kita","123456789",R.drawable.avadoctor3));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000","Universitas Tarumanegara","RS Siloam","123456789", R.drawable.avadoctor1));
+        LihatDokter();
 
-        Adapter_lihat_semua_dokter adapter_dokter = new Adapter_lihat_semua_dokter (modelListdokter, lihat_semua_dokter.this);
-        recyclerView.setAdapter(adapter_dokter);
+        setUpRecyclerViewDokter();
+
+
+
+
 
         filter =(CardView) findViewById(R.id.filter);
         filter.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +65,27 @@ public class lihat_semua_dokter extends AppCompatActivity {
             }
         });
     }
+    private void LihatDokter() {
+         modelListdokter = new ArrayList<>();
+        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Indonesia","RSCM Cipto M.","123456789",R.drawable.avadoctor3));
+        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000","Universitas Negeri Solo","RS Sari Asih","123456789", R.drawable.avadoctor1));
+        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 10.000","Universitas Andalas","RS Siloam","123456789",R.drawable.avadoctor2));
+        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000", "Universitas Dipnegoro","RS Fatmawati","123456789", R.drawable.avadoctor4));
+        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 50.000","Universitas Gajah Mada","RS Harapan Kita","123456789",R.drawable.avadoctor3));
+        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000","Universitas Tarumanegara","RS Siloam","123456789", R.drawable.avadoctor1));
+
+
+    }
+
+    private void setUpRecyclerViewDokter() {
+        RecyclerView recyclerView =findViewById(R.id.recyclerview_dokter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+       adapter_dokter = new Adapter_lihat_semua_dokter (modelListdokter, lihat_semua_dokter.this);
+        recyclerView.setAdapter(adapter_dokter);
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -84,6 +101,9 @@ public class lihat_semua_dokter extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+
+                adapter_dokter.getFilter().filter(newText);
+
                 return false;
             }
         });

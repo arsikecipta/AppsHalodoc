@@ -26,9 +26,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_gravity="left"
+            android:textColor="@color/judul"
+            android:fontFamily="@font/googlesansbold"
             android:text="Nama Rumah sakit"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            />
 
         <TextView
             android:id="@+id/jenisrs"
@@ -38,7 +40,10 @@
             android:layout_gravity="left"
             android:layout_marginTop="5dp"
             android:text="Jenis"
-            android:textSize="18sp"
+            android:textColor="@color/deskripsi"
+            android:fontFamily="@font/googlesansmedium"
+            android:textSize="16sp"
+
             />
         <TextView
             android:id="@+id/info_rs"
@@ -49,7 +54,9 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="left"
             android:text="Info RS"
-            android:textSize="15sp"
+            android:textColor="@color/deskripsi"
+            android:fontFamily="@font/googlesansregular"
+            android:textSize="14sp"
             />
         <LinearLayout
             android:layout_below="@+id/card_artikel3"
@@ -68,8 +75,10 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="left"
             android:text="Alamat"
-            android:textStyle="bold"
+            android:textColor="@color/judul"
+            android:fontFamily="@font/googlesansbold"
             android:textSize="18sp"
+
             />
         <TextView
             android:id="@+id/alamatrs"
@@ -79,8 +88,11 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="left"
             android:text="Alamat Rs"
-            android:textSize="18sp"
+            android:textColor="@color/deskripsi"
+            android:fontFamily="@font/googlesansregular"
+            android:textSize="16sp"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -93,6 +105,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:textAllCaps="false"
+                android:fontFamily="@font/googlesansmedium"
                 android:background="@drawable/stroke_button"
                 android:layout_height="42dp"></Button>
             <Button
@@ -102,6 +115,7 @@
                 android:textColor="@color/background_all"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
+                android:fontFamily="@font/googlesansmedium"
                 android:background="@drawable/stroke_button"
                 android:layout_height="42dp"></Button>
         </LinearLayout>
@@ -124,7 +138,7 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/background_text"
+                android:background="@color/shapetopik"
                 >
                 <TextView
                     android:layout_width="match_parent"
@@ -132,7 +146,9 @@
                     android:text="Semua Layanan"
                     android:layout_margin="10dp"
                     android:textSize="18dp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/googlesansbold"
+                    android:textColor="@color/judul"
+
                     ></TextView>
 
             </FrameLayout>
@@ -143,9 +159,11 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginRight="15dp"
-                android:background="@drawable/stroke_button">
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="#F5F5F5">
 
-                <ImageView
+
+            <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_marginLeft="10dp"
@@ -157,8 +175,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="18dp"
+                    android:fontFamily="@font/googlesansregular"
                     android:text="Cari nama RS, dokter, spesialisasi, tindakan"
-                    android:textSize="12dp"></TextView>
+                    android:textSize="14dp"></TextView>
 
 
 

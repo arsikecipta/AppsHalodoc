@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".ListLayanan">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -16,8 +17,19 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/background_text"
+            android:background="@color/shapetopik"
             >
+            <TextView
+                android:id="@+id/nama_gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/googlesansbold"
+                android:textColor="@color/judul"
+                android:textSize="18dp"
+                android:visibility="gone"
+                android:text="Rekomendasi RS"/>
             <TextView
                 android:id="@+id/nama_layananrs"
                 android:layout_width="match_parent"
@@ -25,7 +37,8 @@
                 android:text="layanan"
                 android:layout_margin="10dp"
                 android:textSize="18dp"
-                android:textStyle="bold"
+                android:fontFamily="@font/googlesansbold"
+                android:textColor="@color/judul"
                 ></TextView>
 
         </FrameLayout>
@@ -34,16 +47,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="layanan"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="60dp"
-            android:textSize="15dp"
+            android:textSize="16dp"
             ></TextView>
     </androidx.cardview.widget.CardView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_list_layanan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

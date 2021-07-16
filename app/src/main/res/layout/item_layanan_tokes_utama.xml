@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -27,12 +28,12 @@
 
         <ImageView
             android:id="@+id/selanjutnya"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="30dp"
-            android:src="@drawable/ic_twotone_arrow_forward_ios_24" />
+            android:src="@drawable/ic_next"
+            ></ImageView>
 
     </RelativeLayout>
 

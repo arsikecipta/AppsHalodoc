@@ -10,18 +10,25 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
     TextView policy;
     Button generate_btn;
+    EditText et_telp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         policy = (TextView) findViewById(R.id.policy);
+
+        et_telp=findViewById(R.id.et_telp);
+
+
+
         String text = "Dengan mendaftar, \n saya akan menerima syarat dan ketentuan pengguna yang berlaku di halodoc";
         SpannableString ss = new SpannableString(text);
         StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
@@ -33,6 +40,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(Login.this, Login_OTP.class);
+                String call = et_telp.getText().toString();
+                intent.putExtra("NomorTelp", call);
                 startActivity(intent);
             }
         });

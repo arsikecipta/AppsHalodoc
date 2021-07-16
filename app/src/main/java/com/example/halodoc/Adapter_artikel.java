@@ -46,6 +46,7 @@ public class Adapter_artikel extends RecyclerView.Adapter<Adapter_artikel.ViewHo
                 intent.putExtra("TopikArtikel", model_artikels.get(position).getTopik_artikel());
                 intent.putExtra("DokterArtikel", model_artikels.get(position).getDokter_artikel());
                 intent.putExtra("IsiParagraph", model_artikels.get(position).getIsi_paragraph());
+                intent.putExtra("IsiParagraph2", model_artikels.get(position).getIsi_paragraph2());
                 context.startActivity(intent);
             }
         });

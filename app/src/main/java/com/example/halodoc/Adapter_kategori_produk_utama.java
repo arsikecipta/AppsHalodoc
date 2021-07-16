@@ -5,19 +5,24 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Adapter_kategori_produk_utama extends RecyclerView.Adapter<Adapter_kategori_produk_utama.ViewHolder> {
 
     private Context context;
-    ArrayList<Model_list_kategori_tokes> modelListObat;
-    public Adapter_kategori_produk_utama (ArrayList<Model_list_kategori_tokes> modelListObat,Kategori_produk_utama activity){
+
+    private List<Model_list_kategori_tokes> modelListObatFull;
+    private  List<Model_list_kategori_tokes> modelListObat;
+    public Adapter_kategori_produk_utama (List<Model_list_kategori_tokes> modelListObat,Kategori_produk_utama activity){
         this.modelListObat = modelListObat;
         this.context = activity;
+        modelListObatFull=new ArrayList<>(modelListObat);
     }
 
     @NonNull
@@ -108,6 +113,37 @@ public class Adapter_kategori_produk_utama extends RecyclerView.Adapter<Adapter_
 
         return modelListObat.size();
     }
+    public Filter getFilter() {
+        return exampleFilter;
+    }
+    Filter exampleFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<Model_list_kategori_tokes> filteredList =new ArrayList<>();
+            if(charSequence ==null || charSequence.length() == 0){
+                filteredList.addAll(modelListObatFull);
+
+            }else{
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+                for(Model_list_kategori_tokes item : modelListObatFull){
+                    if(item.getNama_obat().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values=filteredList;
+            return  results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            modelListObat.clear();
+            modelListObat.addAll((List) filterResults.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView nama_obat;

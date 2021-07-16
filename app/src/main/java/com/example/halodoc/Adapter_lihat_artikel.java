@@ -52,6 +52,8 @@ public class Adapter_lihat_artikel extends RecyclerView.Adapter<Adapter_lihat_ar
                 intent.putExtra("JudulArtikel",modelArtikels.get(position).getTitle_artikel());
                 intent.putExtra("TopikArtikel", modelArtikels.get(position).getTopik_artikel());
                 intent.putExtra("DokterArtikel", modelArtikels.get(position).getDokter_artikel());
+                intent.putExtra("IsiParagraph", modelArtikels.get(position).getIsi_paragraph());
+                intent.putExtra("IsiParagraph2", modelArtikels.get(position).getIsi_paragraph2());
                 context.startActivity(intent);
             }
         });

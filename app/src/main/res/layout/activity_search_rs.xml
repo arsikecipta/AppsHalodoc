@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".SearchRs">
+    <EditText
+        android:id="@+id/et_nama_lengkap"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:ems="10"
+        android:textSize="12dp"
+        android:drawableStart="@drawable/ic_search2"
+        android:layout_margin="20dp"
+        android:hint="Cari nama RS, dokter, spesialisasi, tindakan"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>

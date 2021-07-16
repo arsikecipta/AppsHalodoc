@@ -41,10 +41,13 @@
 
             <TextView
                 android:id="@+id/layanan_name"
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
                 android:textStyle="bold"
                 android:layout_marginStart="5dp"
                 android:text="Tes Covid-19"></TextView>
@@ -60,13 +63,17 @@
                     android:layout_marginTop="5dp"
                     android:layout_height="wrap_content"
                     android:textSize="14dp"
+                    android:fontFamily="@font/googlesansregular"
                     android:textAlignment="textStart"
                     android:layout_marginStart="5dp"
+                    android:maxLines="3"
+                    android:textColor="@color/deskripsi"
                     android:text="Tes Covid-19 adalah tes untuk mendeteksi virus corona yang menyerang sistem pernapasan"></TextView>
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_next"
                     ></ImageView>
 

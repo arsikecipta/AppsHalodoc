@@ -37,8 +37,10 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:maxLines="1"
+                    android:fontFamily="@font/googlesansmedium"
                     android:text="Nama layanan"
-                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textColor="@color/judul"
                     android:textStyle="bold"></TextView>
 
                 <TextView
@@ -47,6 +49,9 @@
                     android:layout_marginTop="5dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="14sp"
                     android:text="jenis"></TextView>
 
                 <TextView
@@ -56,6 +61,9 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
                     android:maxLines="1"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="14sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"></TextView>
                 <TextView
@@ -63,6 +71,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Alamat rs"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="14sp"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
                     ></TextView>
@@ -73,16 +84,21 @@
                     android:text="Biaya layanan rs"
                     android:layout_marginTop="5dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="14sp"
                     android:layout_marginLeft="10dp"
                     ></TextView>
                 <Button
                     android:id="@+id/btn_janji"
                     android:layout_gravity="right"
                     android:background="@drawable/shape_button_rad"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:textSize="16dp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textStyle="bold"
                     android:layout_marginRight="10dp"
-                    android:text="Buat janji"
+                    android:text="Buat Janji"
                     android:textColor="@color/colorWhite"
                     android:layout_width="160dp"
                     android:textAllCaps="false"

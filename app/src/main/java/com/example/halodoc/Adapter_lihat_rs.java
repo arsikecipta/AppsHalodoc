@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,6 +42,28 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
         holder.txt_alamat_rs.setText(modelRslist.getAlamat_rs());
         holder.txt_nama_rs.setText(modelRslist.getTitle());
         holder.rs_image.setImageResource(modelRslist.getImage());
+        holder.btn_rs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(context, Layanan_rs.class);
+                intent.putExtra("NamaRS", modelListRs.get(position).getTitle());
+                intent.putExtra("FotoRS", modelListRs.get(position).getImage());
+                intent.putExtra("JenisRS", modelListRs.get(position).getJenis());
+                intent.putExtra("NamaLayanan", modelListRs.get(position).getLayanan());
+                intent.putExtra("NamaLayanan2", modelListRs.get(position).getLayanan2());
+                intent.putExtra("FotoLayanan",modelListRs.get(position).getFoto_layanan());
+                intent.putExtra("FotoLayanan2",modelListRs.get(position).getFoto_layanan2());
+                intent.putExtra("AlamatRS",modelListRs.get(position).getAlamat_rs());
+                intent.putExtra("InfoRS",modelListRs.get(position).getInfo_rs());
+                intent.putExtra("Penjelasan1",modelListRs.get(position).getPenjelasan1());
+                intent.putExtra("Penjelasan2",modelListRs.get(position).getPenjelasan2());
+                intent.putExtra("Jenislayanan",modelListRs.get(position).getJenis_layanan());
+                intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
+                intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
+                intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
+                context.startActivity(intent);
+            }
+        });
         holder.cardView_rs_semua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +83,7 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
                 intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
                 intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
                 intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
+
                 context.startActivity(intent);
             }
         });
@@ -108,6 +132,7 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
         TextView txt_alamat_rs;
         TextView txt_jenis_rs;
         CardView cardView_rs_semua;
+        Button btn_rs;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             rs_image = itemView.findViewById(R.id.imageview_rs);
@@ -115,6 +140,7 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
             txt_alamat_rs=itemView.findViewById(R.id.alamat_rs);
             txt_jenis_rs=itemView.findViewById(R.id.jenis_rs);
             cardView_rs_semua=itemView.findViewById(R.id.cardview_rs_semua);
+            btn_rs=itemView.findViewById(R.id.btn_janji_rs);
         }
     }
 }

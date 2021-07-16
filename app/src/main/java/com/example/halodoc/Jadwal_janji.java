@@ -34,9 +34,10 @@ public class Jadwal_janji extends AppCompatActivity {
     private Button btn_7, btn_8, btn_9, btn_10,btn_11;
     private String selectedFilter="all";
     ArrayList<model_layanan> modelLayanan;
+    TextView nama_gone;
     RadioGroup radioGroup, radioGroup_jam, radioGroup_jam_malam;
     RadioButton radioButton, radioButton_jam,radioButton_jam_malam;
-    TextView textView_hari, textView_jam, txt_hari_bayar, txt_jam_bayar;
+    TextView textView_hari, textView_jam, txt_hari_bayar, txt_jam_bayar,txt_paket, txt_desc;;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +48,11 @@ public class Jadwal_janji extends AppCompatActivity {
         radioGroup_jam=(RadioGroup)findViewById(R.id.jam_janji);
 
 
+        txt_paket=findViewById(R.id.text_paket);
+        txt_desc=findViewById(R.id.text_desc);
 
-        radioGroup_jam_malam=findViewById(R.id.pilih_jam);
+        nama_gone=findViewById(R.id.nama_gone);
+//        radioGroup_jam_malam=findViewById(R.id.pilih_jam);
 //        textView_hari=findViewById(R.id.hari_fix);
 //        textView_jam=findViewById(R.id.txt_jam);
 //        textView_hari=findViewById(R.id.hari_fix);
@@ -70,12 +74,15 @@ public class Jadwal_janji extends AppCompatActivity {
 
         Intent intent =getIntent();
         String nama_rs_lay = intent.getExtras().getString("NamaLayanan");
+//        String namalengkap =intent.getExtras().getString("NamaLengkap");
+
         getSupportActionBar().setTitle(nama_rs_lay);
         String jenis_rs_lay = intent.getExtras().getString("JenisLayanan");
         String nama_rs = intent.getExtras().getString("RumahSakitLayanan");
         String alamat_rs_lay =intent.getExtras().getString("AlamatLayanan");
         int image_rs_lay = intent.getExtras().getInt("GambarLayanan");
         String harga_lay = intent.getExtras().getString("BiayaLayanan");
+        String penjelasan_lay =intent.getExtras().getString("PenjelasanLayanan");
 
         namalay_rs.setText(nama_rs_lay);
         jenis_lay.setText(jenis_rs_lay);
@@ -83,6 +90,9 @@ public class Jadwal_janji extends AppCompatActivity {
         alamatlay.setText(alamat_rs_lay);
         imglay.setImageResource(image_rs_lay);
         hargalay.setText(harga_lay);
+        txt_paket.setText(nama_rs_lay);
+        txt_desc.setText(penjelasan_lay);
+//        nama_gone.setText(namalengkap);
 
 //        RecyclerView recyclerView = findViewById(R.id.recyclerview_jadwal);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -106,26 +116,26 @@ public class Jadwal_janji extends AppCompatActivity {
                 btn_expand2.setBackgroundResource(R.drawable.ic_arrow);
             }
         });
-        cardView_expand2= findViewById(R.id.card_expand2);
-        layout_expand2= findViewById(R.id.layout_expand_malam);
-        btn_expand2=findViewById(R.id.btn_expand2);
-        cardView_expand2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(layout_expand2.getVisibility()==View.GONE){
-                    TransitionManager.beginDelayedTransition(cardView_expand2, new AutoTransition());
-                    layout_expand2.setVisibility(View.VISIBLE);
-                    btn_expand2.setBackgroundResource(R.drawable.ic_drop_up);
-                }else{
-                    TransitionManager.beginDelayedTransition(cardView_expand2, new AutoTransition());
-                    layout_expand2.setVisibility(View.GONE);
-                    btn_expand2.setBackgroundResource(R.drawable.ic_arrow);
-                }
-                TransitionManager.beginDelayedTransition(cardView_expand, new AutoTransition());
-                layout_expand.setVisibility(View.GONE);
-                btn_expand.setBackgroundResource(R.drawable.ic_arrow);
-            }
-        });
+//        cardView_expand2= findViewById(R.id.card_expand2);
+//        layout_expand2= findViewById(R.id.layout_expand_malam);
+//        btn_expand2=findViewById(R.id.btn_expand2);
+//        cardView_expand2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(layout_expand2.getVisibility()==View.GONE){
+//                    TransitionManager.beginDelayedTransition(cardView_expand2, new AutoTransition());
+//                    layout_expand2.setVisibility(View.VISIBLE);
+//                    btn_expand2.setBackgroundResource(R.drawable.ic_drop_up);
+//                }else{
+//                    TransitionManager.beginDelayedTransition(cardView_expand2, new AutoTransition());
+//                    layout_expand2.setVisibility(View.GONE);
+//                    btn_expand2.setBackgroundResource(R.drawable.ic_arrow);
+//                }
+//                TransitionManager.beginDelayedTransition(cardView_expand, new AutoTransition());
+//                layout_expand.setVisibility(View.GONE);
+//                btn_expand.setBackgroundResource(R.drawable.ic_arrow);
+//            }
+//        });
 
         Button btn_date;
         final TextView tanggal_fix =(TextView) findViewById(R.id.tanggal_fix);
@@ -171,7 +181,7 @@ public class Jadwal_janji extends AppCompatActivity {
                 }
                 else
                 {
-                    btn_jadwal_janji.setBackgroundColor(ContextCompat.getColor(getApplicationContext(),R.color.background_all));
+                    btn_jadwal_janji.setBackgroundResource(R.drawable.primary_button);
                     btn_jadwal_janji.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite));
                     Intent i = new Intent(Jadwal_janji.this, Pilih_pasien.class);
 
@@ -179,14 +189,15 @@ public class Jadwal_janji extends AppCompatActivity {
 //                 btn_jadwal_janji.setEnabled(true);
 //             }
                     //         btn_jadwal_janji.setEnabled(!radioButton.isChecked() && !radioButton_jam.isChecked());
-                    int radioId_jam_malam =radioGroup_jam_malam.getCheckedRadioButtonId();
-                    radioButton_jam_malam=findViewById(radioId_jam_malam);
+//                    int radioId_jam_malam =radioGroup_jam_malam.getCheckedRadioButtonId();
+//                    radioButton_jam_malam=findViewById(radioId_jam_malam);
                     i.putExtra("HariTgl", radioButton.getText());
                     i.putExtra("JamJanji", radioButton_jam.getText());
                     //i.putExtra("JamJanjiMalam",radioButton_jam_malam.getText());
                     i.putExtra("NamaLayanan", namalay_rs.getText());
                     i.putExtra("RumahSakitLayanan", namars_lay.getText());
                     i.putExtra("BiayaLayanan", hargalay.getText());
+//                    i.putExtra("NamaLengkap", nama_gone.getText());
                     startActivity(i);
 
                 }
