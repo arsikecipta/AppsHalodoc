@@ -49,7 +49,7 @@ public class Adapter_layanan extends RecyclerView.Adapter<Adapter_layanan.ViewHo
                 intent.putExtra("BiayaLayanan", modelLayanan.get(position).getBiaya_layanan());
                 intent.putExtra("GambarLayanan", modelLayanan.get(position).getImage_layanan());
                 intent.putExtra("PenjelasanLayanan", modelLayanan.get(position).getPenjelasan_layanan());
-
+                intent.putExtra("NamaGone",modelLayanan.get(position).getNama_pasien());
                 context.startActivity(intent);
             }
         });

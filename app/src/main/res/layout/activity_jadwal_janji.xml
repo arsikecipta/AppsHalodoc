@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="left"
                 android:fontFamily="@font/googlesansmedium"
                 android:textColor="@color/judul"
@@ -46,7 +46,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/googlesansregular"
                 android:textColor="@color/deskripsi"
@@ -57,7 +57,7 @@
                 android:id="@+id/nama_rs_lay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="left"
                 android:text="Nama Rs"
                 android:fontFamily="@font/googlesansregular"
@@ -69,7 +69,7 @@
                 android:id="@+id/alamat_rs_lay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="left"
                 android:text="Alamat Rs"
                 android:fontFamily="@font/googlesansregular"
@@ -80,13 +80,20 @@
                 android:id="@+id/hargalay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="left"
                 android:text="Harga Layanan"
                 android:fontFamily="@font/googlesansmedium"
                 android:textColor="@color/judul"
                 android:layout_marginTop="5dp"
                 android:textSize="18dp"></TextView>
+            <TextView
+                android:id="@+id/nama_gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nama"
+                android:visibility="gone"
+                ></TextView>
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -97,7 +104,7 @@
                     android:id="@+id/txt_pilihjadwal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
 
                     android:fontFamily="@font/googlesansmedium"
                     android:textColor="@color/judul"
@@ -205,9 +212,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:paddingBottom="12dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 >
 
                 <LinearLayout
@@ -252,9 +259,9 @@
                 android:id="@+id/layout_expand"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginBottom="500dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="10dp">
                 <LinearLayout
                     android:layout_width="360dp"
                     android:orientation="horizontal"
@@ -324,7 +331,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-480dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical"
 
 
@@ -615,8 +622,9 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
             android:text="Buat Janji"
+            android:background="@drawable/primary_button"
             android:fontFamily="@font/googlesansregular"
-            android:textColor="@color/deskripsi"
+            android:textColor="@color/colorWhite"
             android:textSize="14dp"
             android:textStyle="bold"
 

@@ -3,9 +3,9 @@ package com.example.halodoc;
 public class model_rs {
     private int image, foto_layanan, foto_layanan2;
     private String title, desc, jenis, layanan, layanan2, alamat_rs, info_rs,penjelasan1,penjelasan2,
-            jenis_layanan, harga_layanan, jenis_layanan2,harga_layanan2;
+            jenis_layanan, harga_layanan, jenis_layanan2,harga_layanan2, nama_pasien;
     public model_rs(int image, String title, String jenis, String layanan, String layanan2, String penjelasan1, String penjelasan2, String jenis_layanan, String jenis_layanan2, String harga_layanan,
-                    String harga_layanan2,int foto_layanan, int foto_layanan2, String alamat_rs,String info_rs) {
+                    String harga_layanan2,int foto_layanan, int foto_layanan2, String alamat_rs,String info_rs, String nama_pasien) {
         this.image = image;
         this.title = title;
         this.jenis=jenis;
@@ -22,7 +22,16 @@ public class model_rs {
         this.jenis_layanan2=jenis_layanan2;
         this.harga_layanan=harga_layanan;
         this.harga_layanan2=harga_layanan2;
+        this.nama_pasien=nama_pasien;
 
+    }
+
+    public String getNama_pasien() {
+        return nama_pasien;
+    }
+
+    public void setNama_pasien(String nama_pasien) {
+        this.nama_pasien = nama_pasien;
     }
 
     public int getFoto_layanan2() {

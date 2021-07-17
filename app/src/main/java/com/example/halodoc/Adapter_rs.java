@@ -60,6 +60,8 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
                 intent.putExtra("Jenislayanan2",modelRs.get(position).getJenis_layanan2());
                 intent.putExtra("Hargalayanan",modelRs.get(position).getHarga_layanan());
                 intent.putExtra("Hargalayanan2",modelRs.get(position).getHarga_layanan2());
+                intent.putExtra("NamaGone",modelRs.get(position).getNama_pasien());
+
                 context.startActivity(intent);
             }
         });
@@ -81,10 +83,11 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
     }
     public class ViewHolder extends RecyclerView.ViewHolder   {
         ImageView image_rs;
-        TextView nama_rs, jenis_rs, desc_rs,alamat_rs;
+        TextView nama_rs, jenis_rs, desc_rs,alamat_rs, nama_gone;
         CardView cardView_rs;
         Button btn_lihat;
         RecyclerView rc_rs;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -95,6 +98,7 @@ public class Adapter_rs extends RecyclerView.Adapter<Adapter_rs.ViewHolder> {
             cardView_rs=itemView.findViewById(R.id.card_rs);
             btn_lihat=itemView.findViewById(R.id.btn_lihatsemua);
             rc_rs =itemView.findViewById(R.id.recyclerview_rs);
+            nama_gone=itemView.findViewById(R.id.nama_gone);
 
 
         }

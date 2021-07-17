@@ -61,6 +61,8 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
                 intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
                 intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
                 intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
+                intent.putExtra("NamaGone",modelListRs.get(position).getNama_pasien());
+
                 context.startActivity(intent);
             }
         });
@@ -83,6 +85,7 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
                 intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
                 intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
                 intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
+                intent.putExtra("NamaGone",modelListRs.get(position).getNama_pasien());
 
                 context.startActivity(intent);
             }

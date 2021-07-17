@@ -57,11 +57,12 @@ public class ListLayanan extends AppCompatActivity {
         String biayaLayanan = intent.getExtras().getString("BiayaLayanan");
         int imageLayanan = intent.getExtras().getInt("GambarLayanan");
         String penjelasanlay = intent.getExtras().getString("PenjelasanLayanan");
+        String nama_gone =intent.getExtras().getString("NamaGone");
         tv_penjelasan.setText(penjelasanlay);
         txt_namalay.setText(namaLayanan);
 
         ArrayList<model_layanan> modelListLayanan = new ArrayList<>();
-        modelListLayanan.add(new model_layanan(namaLayanan, jenisLayanan,namaRS,alamatRS,biayaLayanan,imageLayanan,penjelasanlay));
+        modelListLayanan.add(new model_layanan(namaLayanan, jenisLayanan,namaRS,alamatRS,biayaLayanan,imageLayanan,penjelasanlay,nama_gone));
         Adapter_list_layanan adapterListLayanan = new Adapter_list_layanan(modelListLayanan, ListLayanan.this);
         recyclerView_list_layanan.setAdapter(adapterListLayanan);
     }

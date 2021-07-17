@@ -14,7 +14,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@color/background_all"
+            android:background="@color/shapetopik"
             >
             <TextView
                 android:layout_width="match_parent"
@@ -24,8 +24,9 @@
                 android:layout_marginTop="5dp"
                 android:text="Informasi dasar"
                 android:textSize="18sp"
-                android:textColor="@color/colorWhite"
-                android:textStyle="bold"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
+
                 ></TextView>
         </FrameLayout>
         <TextView
@@ -36,9 +37,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:text="Nama Lengkap"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginBottom="10dp"
-            android:textSize="15sp"
-            android:textStyle="bold"
+            android:textSize="16sp"
+
             ></TextView>
         <EditText
             android:id="@+id/et_nama_lengkap"
@@ -59,6 +62,9 @@
             android:layout_marginRight="20dp"
             android:text="Masukan Tanggal lahir"
             style="?android:spinnerStyle"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
+            android:textSize="16sp"
             android:layout_marginLeft="20dp"
             android:onClick="openDatePicker"
             ></Button>
@@ -69,7 +75,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:text="Jenis Kelamin"
-            android:textSize="15sp"
+            android:textSize="16sp"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:textStyle="bold"
             ></TextView>
         <LinearLayout
@@ -89,8 +97,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     android:text="Laki-laki"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
                     ></RadioButton>
                 <RadioButton
                     android:id="@+id/pr"
@@ -99,7 +109,9 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="100dp"
                     android:text="Perempuan"
-                    android:textSize="15sp"
+                    android:fontFamily="@font/googlesansregular"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="16sp"
                     ></RadioButton>
             </RadioGroup>
         </LinearLayout>
@@ -107,7 +119,8 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
-            android:background="@color/background_all"
+
+            android:background="@color/shapetopik"
             >
             <TextView
                 android:layout_width="match_parent"
@@ -117,8 +130,9 @@
                 android:layout_marginLeft="20dp"
                 android:text="Informasi Kontak"
                 android:textSize="18sp"
-                android:textColor="@color/colorWhite"
-                android:textStyle="bold"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
+
                 ></TextView>
         </FrameLayout>
         <TextView
@@ -126,9 +140,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/text_notelp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginLeft="20dp"
             android:text="Nomor telepon"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
             ></TextView>
@@ -141,13 +157,15 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:editable="false"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:drawableStart="@drawable/ic_phone"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="082213997564"/>
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -167,6 +185,8 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:drawableStart="@drawable/ic_message"
@@ -178,18 +198,19 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
-            android:background="@color/background_all"
+            android:background="@color/shapetopik"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/text_informasi_persoanl"
                 android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/googlesansmedium"
+                android:textColor="@color/judul"
                 android:layout_marginLeft="20dp"
                 android:text="Informasi Personal"
-                android:textColor="@color/colorWhite"
-                android:textSize="18sp"
-                android:textStyle="bold"
+
                 ></TextView>
         </FrameLayout>
         <TextView
@@ -199,7 +220,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:text="Berat badan (kg)"
-            android:textSize="15sp"
+            android:textSize="16sp"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
             ></TextView>
@@ -211,12 +234,14 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:inputType="number"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Berat badan"
+            android:hint="Contoh : 50"
             />
         <TextView
             android:layout_width="match_parent"
@@ -226,6 +251,8 @@
             android:layout_marginLeft="20dp"
             android:text="Tinggi badan (cm)"
             android:textSize="15sp"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginBottom="10dp"
             android:textStyle="bold"
             ></TextView>
@@ -240,9 +267,11 @@
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:inputType="number"
+            android:fontFamily="@font/googlesansregular"
+            android:textColor="@color/deskripsi"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Tinggi badan"
+            android:hint="Contoh : 170"
             />
         <FrameLayout
             android:layout_width="match_parent"
@@ -252,8 +281,9 @@
                 android:layout_margin="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/deskripsi"
+                android:textSize="18sp"
+                android:textColor="@color/judul"
+                android:fontFamily="@font/googlesansregular"
 
 
                 android:text="Simpan"

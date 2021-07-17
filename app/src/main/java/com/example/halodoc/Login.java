@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -39,11 +40,15 @@ public class Login extends AppCompatActivity {
         generate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Login.this, Login_OTP.class);
-                String call = et_telp.getText().toString();
-                intent.putExtra("NomorTelp", call);
-                startActivity(intent);
+                if (et_telp.getText().toString().length() == 0) {
+                    Toast.makeText(Login.this, "Mohon untuk mengisi nomor telepon Anda", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(Login.this, Login_OTP.class);
+                    String call = et_telp.getText().toString();
+                    intent.putExtra("NomorTelp", call);
+                    startActivity(intent);
+                }
             }
         });
     }
-}
+    }

@@ -5,12 +5,12 @@ import android.widget.ImageView;
 public class model_all_layanan {
     String nama_layanan,nama_layanan2, nama_layanan3, nama_layanan4,
             penjelasan_layanan, jenis_layanan,jenis_layanan2, jenis_layanan3,
-            nama_rs, nama_rs2, nama_rs3,alamat_rs,alamat_rs2,alamat_rs3,harga_layanan,harga_layanan2,harga_layanan3 ;
+            nama_rs, nama_rs2, nama_rs3,alamat_rs,alamat_rs2,alamat_rs3,harga_layanan,harga_layanan2,harga_layanan3,nama_pasien ;
     int gambar_layanan, gambar_rs, gambar_rs2, gambar_rs3;
     public model_all_layanan(String nama_layanan,String nama_layanan2, String nama_layanan3, String nama_layanan4,
                              int gambar_layanan, String penjelasan_layanan, int gambar_rs, int gambar_rs2, int gambar_rs3,
                              String jenis_layanan, String jenis_layanan2, String jenis_layanan3, String nama_rs,  String nama_rs2,  String nama_rs3,
-                             String alamat_rs, String alamat_rs2, String alamat_rs3, String harga_layanan, String harga_layanan2, String harga_layanan3){
+                             String alamat_rs, String alamat_rs2, String alamat_rs3, String harga_layanan, String harga_layanan2, String harga_layanan3,String nama_pasien){
         this.nama_layanan = nama_layanan;
         this.nama_layanan2 = nama_layanan2;
         this.nama_layanan3 = nama_layanan3;
@@ -32,6 +32,15 @@ public class model_all_layanan {
         this.harga_layanan=harga_layanan;
         this.harga_layanan2=harga_layanan2;
         this.harga_layanan3=harga_layanan3;
+        this.nama_pasien=nama_pasien;
+    }
+
+    public String getNama_pasien() {
+        return nama_pasien;
+    }
+
+    public void setNama_pasien(String nama_pasien) {
+        this.nama_pasien = nama_pasien;
     }
 
     public String getNama_layanan2() {

@@ -51,6 +51,7 @@ public class Adapter_list_layanan  extends RecyclerView.Adapter<Adapter_list_lay
                 intent.putExtra("BiayaLayanan", modelListLayanan.get(position).getBiaya_layanan());
                 intent.putExtra("GambarLayanan", modelListLayanan.get(position).getImage_layanan());
                 intent.putExtra("PenjelasanLayanan", modelListLayanan.get(position).getPenjelasan_layanan());
+                intent.putExtra("NamaGone", modelListLayanan.get(position).getNama_pasien());
 
                 context.startActivity(intent);
             }
@@ -67,7 +68,7 @@ public class Adapter_list_layanan  extends RecyclerView.Adapter<Adapter_list_lay
                 intent.putExtra("BiayaLayanan", modelListLayanan.get(position).getBiaya_layanan());
                 intent.putExtra("GambarLayanan", modelListLayanan.get(position).getImage_layanan());
                 intent.putExtra("PenjelasanLayanan", modelListLayanan.get(position).getPenjelasan_layanan());
-
+                intent.putExtra("NamaGone", modelListLayanan.get(position).getNama_pasien());
                 context.startActivity(intent);
             }
         });

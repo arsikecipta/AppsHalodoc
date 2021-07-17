@@ -30,6 +30,7 @@ public class Filter_berdasarkan extends AppCompatActivity {
 
             private void Lihat_semua_dokter_filter() {
                 Intent intent= new Intent(Filter_berdasarkan.this, Lihat_semua_dokter_filter.class);
+
                 startActivity(intent);
 
             }

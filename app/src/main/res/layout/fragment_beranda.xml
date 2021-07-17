@@ -41,401 +41,422 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="18sp"
-    android:layout_margin="20dp"
-    android:fontFamily="@font/googlesansmedium"
-    android:textColor="@color/judul"
-    android:text="Silahkan Masuk/Daftar"
-    ></TextView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_chat_dokter"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="#FFFFFF"
-        >
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:src="@drawable/cekhealth3"
-                android:scaleType="centerCrop"
-                android:id="@+id/imageview_chat_dokter"
-                android:layout_width="140dp"
-                android:layout_height="120dp">
-            </ImageView>
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/chat_dokter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Chat Dengan Dokter"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textColor="@color/judul"
-                    android:textSize="16sp"
-                    android:textStyle="bold">
-                </TextView>
-
-                <TextView
-                    android:id="@+id/txt_chatdokter"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="@color/deskripsi"
-                    android:fontFamily="@font/googlesansregular"
-                    android:textSize="14sp"
-                    android:text="Sakit? jangan asal cari solusi.. \nyuk tanya ke ahlinya!">
-                </TextView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="80dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/btn_janji"
-                    android:layout_gravity="right"
-                    android:text="Selengkapnya"
-                    android:layout_width="95dp"
-                    android:textColor="@color/background_all"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:layout_height="20dp"></TextView>
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="-5dp"
-                    android:src="@drawable/ic_next"
-                    ></ImageView>
-
-            </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_toko_kesehatan"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="5dp"
-            app:cardBackgroundColor="#FFFFFF"
-            >
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/apotek"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/imageview_tokokesehatan"
-                    android:layout_width="140dp"
-                    android:layout_height="120dp">
-                </ImageView>
-                <LinearLayout
-                    android:layout_weight="1"
-
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/toko_kesehatan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/googlesansmedium"
-                        android:textColor="@color/judul"
-                        android:textSize="16sp"
-                        android:text="Toko Kesehatan"
-                        android:textStyle="bold">
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/jenis_rs"
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/deskripsi"
-                        android:fontFamily="@font/googlesansregular"
-                        android:textSize="14sp"
-                        android:text="Kini beli obat gak perlu ribet lagi! ">
-                    </TextView>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginLeft="80dp"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/selengkapnya"
-                            android:layout_gravity="right"
-                            android:text="Selengkapnya"
-                            android:layout_width="95dp"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textColor="@color/background_all"
-                            android:textAllCaps="false"
-                            android:layout_height="20dp"></TextView>
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="-5dp"
-                            android:src="@drawable/ic_next"
-                            ></ImageView>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_buat_janji_rs"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="5dp"
-            app:cardBackgroundColor="#FFFFFF"
-            >
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/rspindad"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/imageview_rs"
-                    android:layout_width="140dp"
-                    android:layout_height="120dp">
-                </ImageView>
-                <LinearLayout
-                    android:layout_weight="1"
-
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/name_rs"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:text="Buat Janji RS"
-                        android:fontFamily="@font/googlesansmedium"
-                        android:textColor="@color/judul"
-                        android:textSize="16sp"
-                        android:textStyle="bold"></TextView>
-
-                    <TextView
-                        android:id="@+id/txt_buatjanjirs"
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/deskripsi"
-                        android:fontFamily="@font/googlesansregular"
-                        android:textSize="14sp"
-
-                        android:text="Buat janji RS mudah dan cepat!"></TextView>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginLeft="80dp"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:id="@+id/selengkapnya_buatjanjirs"
-                            android:layout_gravity="right"
-                            android:text="Selengkapnya"
-                            android:textColor="@color/background_all"
-                            android:layout_width="95dp"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textAllCaps="false"
-                            android:layout_height="20dp"></TextView>
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="-5dp"
-                            android:src="@drawable/ic_next"
-                            ></ImageView>
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
 
             <TextView
-                android:id="@+id/layanan_lainnya"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/main"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
-                android:text="Baca 100++ artikel terbaru"
-                android:textSize="18dp"
+                android:layout_margin="20dp"
                 android:fontFamily="@font/googlesansmedium"
+                android:text="Silahkan Masuk/Daftar"
                 android:textColor="@color/judul"
-                android:textStyle="bold" />
+                android:textSize="18sp"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_chat_dokter"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageview_chat_dokter"
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cekhealth3"></ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/chat_dokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Chat Dengan Dokter"
+                            android:textColor="@color/judul"
+                            android:textSize="16sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/txt_chatdokter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:text="Sakit? jangan asal cari solusi.. \nyuk tanya ke ahlinya!"
+                            android:textColor="@color/deskripsi"
+                            android:textSize="14sp"></TextView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:id="@+id/judul"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginRight="55dp"
+                                android:fontFamily="@font/googlesansmedium"
+                                android:text="Selengkapnya"
+                                android:textColor="@color/background_all"
+                                android:textSize="14sp" />
 
 
+                            <ImageView
+                                android:id="@+id/selanjutnya"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_next_pink"></ImageView>
 
-        </LinearLayout>
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:scrollbars="none">
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_toko_kesehatan"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageview_tokokesehatan"
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/apotek"></ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/toko_kesehatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Toko Kesehatan"
+                            android:textColor="@color/judul"
+                            android:textSize="16sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/jenis_rs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:text="Kini beli obat gak perlu ribet lagi! "
+                            android:textColor="@color/deskripsi"
+                            android:textSize="14sp"></TextView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp">
+
+                            <TextView
+                                android:id="@+id/judul2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginRight="55dp"
+                                android:fontFamily="@font/googlesansmedium"
+                                android:text="Selengkapnya"
+                                android:textColor="@color/background_all"
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:id="@+id/selanjutnya2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_next_pink"></ImageView>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_buat_janji_rs"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:clickable="false"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageview_rs"
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/rspindad"></ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_rs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Buat Janji RS"
+                            android:textColor="@color/judul"
+                            android:textSize="16sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/txt_buatjanjirs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/googlesansregular"
+                            android:text="Buat janji RS mudah dan cepat!"
+                            android:textColor="@color/deskripsi"
+
+                            android:textSize="14sp"></TextView>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="35dp">
+                            <TextView
+                                android:id="@+id/judul3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+
+                                android:layout_marginRight="55dp"
+                                android:fontFamily="@font/googlesansmedium"
+                                android:text="Selengkapnya"
+                                android:textColor="@color/background_all"
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:id="@+id/selanjutnya3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_next_pink"></ImageView>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/but_1"
-                    android:layout_width="80dp"
+                <TextView
+                    android:id="@+id/layanan_lainnya"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/stroke"
-                    android:text="Semua"
+                    android:layout_below="@+id/main"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
                     android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:textColor="@color/background_all"></Button>
+                    android:text="Baca 100++ artikel terbaru"
+                    android:textColor="@color/judul"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/but_2"
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="Kecantikan"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:background="@drawable/stroke"
-                    android:textColor="@color/background_all"></Button>
 
-                <Button
-                    android:id="@+id/but_3"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/stroke"
-                    android:text="Makanan Sehat"
-                    android:textAllCaps="false"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:textColor="@color/background_all">
-
-                </Button>
-
-                <Button
-                    android:id="@+id/but_4"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/stroke"
-                    android:text="Pola Asuh Anak"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:textColor="@color/background_all">
-
-                </Button>
-
-                <Button
-                    android:id="@+id/but_5"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:background="@drawable/stroke"
-                    android:text="Parestesia"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:textAllCaps="false"
-                    android:textColor="@color/background_all"></Button>
-                <Button
-                    android:id="@+id/but_6"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:textSize="14sp"
-                    android:background="@drawable/stroke"
-                    android:text="Pertumbuhan Bayi"
-                    android:textAllCaps="false"
-                    android:textColor="@color/background_all"></Button>
             </LinearLayout>
 
-        </HorizontalScrollView>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rec_artikel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
-            android:clipToPadding="false"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:foregroundGravity="center"
-            android:overScrollMode="never"></androidx.recyclerview.widget.RecyclerView>
-        <Button
-            android:id="@+id/button_artikel_seeall"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:textSize="18sp"
-            android:background="@drawable/primary_button"
-            android:fontFamily="@font/googlesansmedium"
-            android:textAllCaps="false"
-            android:textColor="@android:color/background_light"
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:scrollbars="none">
 
-            android:text="Lihat semua"
-            >
-            ></Button>
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/but_1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Semua"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp"></Button>
+
+                    <Button
+                        android:id="@+id/but_2"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Kecantikan"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp"></Button>
+
+                    <Button
+                        android:id="@+id/but_3"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Makanan Sehat"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/but_4"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Pola Asuh Anak"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/but_5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Parestesia"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp"></Button>
+
+                    <Button
+                        android:id="@+id/but_6"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/stroke"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text="Pertumbuhan Bayi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/background_all"
+                        android:textSize="14sp"></Button>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_artikel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:clipToPadding="false"
+                android:foregroundGravity="center"
+                android:overScrollMode="never"></androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/button_artikel_seeall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/primary_button"
+                android:fontFamily="@font/googlesansmedium"
+                android:text="Lihat semua"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light"
+
+                android:textSize="18sp">
+                >
+            </Button>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

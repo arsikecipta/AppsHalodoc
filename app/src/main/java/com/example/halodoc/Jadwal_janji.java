@@ -51,7 +51,7 @@ public class Jadwal_janji extends AppCompatActivity {
         txt_paket=findViewById(R.id.text_paket);
         txt_desc=findViewById(R.id.text_desc);
 
-        nama_gone=findViewById(R.id.nama_gone);
+
 //        radioGroup_jam_malam=findViewById(R.id.pilih_jam);
 //        textView_hari=findViewById(R.id.hari_fix);
 //        textView_jam=findViewById(R.id.txt_jam);
@@ -70,6 +70,7 @@ public class Jadwal_janji extends AppCompatActivity {
         btn_8 =(Button)findViewById(R.id.btn_8);
         btn_9 =(Button)findViewById(R.id.btn_9);
         btn_jadwal_janji=(Button)findViewById(R.id.btn_jadwal_janji) ;
+        nama_gone=(TextView)findViewById(R.id.nama_gone);
 
 
         Intent intent =getIntent();
@@ -83,6 +84,7 @@ public class Jadwal_janji extends AppCompatActivity {
         int image_rs_lay = intent.getExtras().getInt("GambarLayanan");
         String harga_lay = intent.getExtras().getString("BiayaLayanan");
         String penjelasan_lay =intent.getExtras().getString("PenjelasanLayanan");
+        String namapasien =intent.getExtras().getString("NamaGone");
 
         namalay_rs.setText(nama_rs_lay);
         jenis_lay.setText(jenis_rs_lay);
@@ -92,6 +94,7 @@ public class Jadwal_janji extends AppCompatActivity {
         hargalay.setText(harga_lay);
         txt_paket.setText(nama_rs_lay);
         txt_desc.setText(penjelasan_lay);
+        nama_gone.setText(namapasien);
 //        nama_gone.setText(namalengkap);
 
 //        RecyclerView recyclerView = findViewById(R.id.recyclerview_jadwal);
@@ -181,8 +184,7 @@ public class Jadwal_janji extends AppCompatActivity {
                 }
                 else
                 {
-                    btn_jadwal_janji.setBackgroundResource(R.drawable.primary_button);
-                    btn_jadwal_janji.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.colorWhite));
+
                     Intent i = new Intent(Jadwal_janji.this, Pilih_pasien.class);
 
 //                if(radioButton.isChecked() && radioButton_jam.isChecked())  {
@@ -197,6 +199,7 @@ public class Jadwal_janji extends AppCompatActivity {
                     i.putExtra("NamaLayanan", namalay_rs.getText());
                     i.putExtra("RumahSakitLayanan", namars_lay.getText());
                     i.putExtra("BiayaLayanan", hargalay.getText());
+                    i.putExtra("NamaGone", nama_gone.getText());
 //                    i.putExtra("NamaLengkap", nama_gone.getText());
                     startActivity(i);
 

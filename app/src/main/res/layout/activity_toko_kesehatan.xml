@@ -56,7 +56,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/search_tokes"
-            android:layout_width="371dp"
+            android:layout_width="330dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"

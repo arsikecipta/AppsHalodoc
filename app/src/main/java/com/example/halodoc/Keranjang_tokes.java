@@ -2,21 +2,25 @@ package com.example.halodoc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 public class Keranjang_tokes extends AppCompatActivity {
 
     public TextView tv_nama_obat, tv_jenis, tv_harga_obat;
     private ImageView tv_image;
-    private Button btn_bayar;
+    private Button btn_bayar, btn_ubah;
     private ImageView tv_additem;
 
     @Override
@@ -30,6 +34,28 @@ public class Keranjang_tokes extends AppCompatActivity {
         tv_harga_obat =(TextView)findViewById(R.id.harga_obat);
         tv_image = (ImageView) findViewById(R.id.image_obat);
 
+        btn_ubah=(Button)findViewById(R.id.btn_ubah);
+        btn_ubah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        Keranjang_tokes.this,R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
+                );
+//                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intent= new Intent(Keranjang_tokes.this, Keranjang_tokes.class);
+//                        startActivity(intent);
+//                    }
+//                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+            }
+        });
 
         //receive data
         Intent intent =getIntent();

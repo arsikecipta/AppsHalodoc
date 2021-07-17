@@ -1,5 +1,6 @@
 package com.example.halodoc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,11 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +28,7 @@ public class ListSemuaLayanan extends AppCompatActivity {
     private ImageView imglay;
     private Adapter_list_layanan_semua lihat_list_layanan;
     private List<model_list_layanan_semua> modelListLayananSemuas;
+    FrameLayout frameLayout_loc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +38,28 @@ public class ListSemuaLayanan extends AppCompatActivity {
 
         ListLayananSemua();
        setuprecyclerLayanan();
+        frameLayout_loc=findViewById(R.id.frame_loc);
+        frameLayout_loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        ListSemuaLayanan.this,R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
+                        R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
+                );
+//                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intent= new Intent(ListSemuaLayanan.this, ListSemuaLayanan.class);
+//                        startActivity(intent);
+//                    }
+//                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+            }
+        });
 
 
     }
@@ -47,6 +77,7 @@ public class ListSemuaLayanan extends AppCompatActivity {
 
         //receive data
         Intent intent =getIntent();
+        String txt_nama_gone=intent.getExtras().getString("NamaGone");
         String namaLayanan = intent.getExtras().getString("NamaLayanan");
         getSupportActionBar().setTitle(namaLayanan);
         String namaLayanan2 = intent.getExtras().getString("NamaLayanan2");
@@ -81,9 +112,9 @@ public class ListSemuaLayanan extends AppCompatActivity {
         txt_namalay.setText(namaLayanan);
 
        modelListLayananSemuas = new ArrayList<>();
-        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan2, jenisLayanan,namaRS,alamatRS,biayaLayanan,imageRS,penjelasanlay));
-        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan3, jenisLayanan2,namaRS2,alamatRS2,biayaLayanan2,imageRS2,penjelasanlay));
-        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan4, jenisLayanan3,namaRS3,alamatRS3,biayaLayanan2,imageRS3,penjelasanlay));
+        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan2, jenisLayanan,namaRS,alamatRS,biayaLayanan,imageRS,penjelasanlay, txt_nama_gone));
+        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan3, jenisLayanan2,namaRS2,alamatRS2,biayaLayanan2,imageRS2,penjelasanlay,txt_nama_gone));
+        modelListLayananSemuas.add(new model_list_layanan_semua(namaLayanan4, jenisLayanan3,namaRS3,alamatRS3,biayaLayanan2,imageRS3,penjelasanlay,txt_nama_gone));
 
     }
     private void setuprecyclerLayanan() {
@@ -114,5 +145,14 @@ public class ListSemuaLayanan extends AppCompatActivity {
             }
         });
         return  true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return true;
     }
 }

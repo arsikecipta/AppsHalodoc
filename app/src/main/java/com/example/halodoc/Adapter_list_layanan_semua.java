@@ -45,6 +45,22 @@ public class Adapter_list_layanan_semua extends RecyclerView.Adapter<Adapter_lis
         holder.txt_jenis_layanan.setText(modelLayananlist.getJenis_layanan());
         holder.txt_biaya_layanan.setText(modelLayananlist.getBiaya_layanan());
         holder.image_layanan.setImageResource(modelLayananlist.getImage_layanan());
+        holder.button_janji.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(context, Jadwal_janji.class);
+                //passing data to detail
+                intent.putExtra("NamaLayanan", modelListLayananSemuas.get(position).getNama_layanan());
+                intent.putExtra("JenisLayanan", modelListLayananSemuas.get(position).getJenis_layanan());
+                intent.putExtra("RumahSakitLayanan", modelListLayananSemuas.get(position).getNama_rs());
+                intent.putExtra("AlamatLayanan", modelListLayananSemuas.get(position).getAlamat_rs());
+                intent.putExtra("BiayaLayanan", modelListLayananSemuas.get(position).getBiaya_layanan());
+                intent.putExtra("GambarLayanan", modelListLayananSemuas.get(position).getImage_layanan());
+                intent.putExtra("PenjelasanLayanan", modelListLayananSemuas.get(position).getPenjelasan_layanan());
+                intent.putExtra("NamaGone",modelListLayananSemuas.get(position).getNama_pasien());
+                context.startActivity(intent);
+            }
+        });
         holder.cardView_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +73,7 @@ public class Adapter_list_layanan_semua extends RecyclerView.Adapter<Adapter_lis
                 intent.putExtra("BiayaLayanan", modelListLayananSemuas.get(position).getBiaya_layanan());
                 intent.putExtra("GambarLayanan", modelListLayananSemuas.get(position).getImage_layanan());
                 intent.putExtra("PenjelasanLayanan", modelListLayananSemuas.get(position).getPenjelasan_layanan());
-
+                intent.putExtra("NamaGone",modelListLayananSemuas.get(position).getNama_pasien());
                 context.startActivity(intent);
             }
         });

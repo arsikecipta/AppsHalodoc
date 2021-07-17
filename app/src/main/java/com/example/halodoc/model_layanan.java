@@ -1,11 +1,11 @@
 package com.example.halodoc;
 
 public class model_layanan {
-    String nama_layanan, jenis_layanan, nama_rs, alamat_rs, biaya_layanan, penjelasan_layanan;
+    String nama_layanan, jenis_layanan, nama_rs, alamat_rs, biaya_layanan, penjelasan_layanan, nama_pasien;
     int image_layanan, image_layanan2;
 
 
-    public model_layanan(String nama_layanan, String jenis_layanan, String nama_rs, String alamat_rs, String biaya_layanan, int image_layanan,String penjelasan_layanan) {
+    public model_layanan(String nama_layanan, String jenis_layanan, String nama_rs, String alamat_rs, String biaya_layanan, int image_layanan,String penjelasan_layanan, String nama_pasien) {
         this.nama_layanan = nama_layanan;
         this.jenis_layanan = jenis_layanan;
         this.nama_rs = nama_rs;
@@ -13,10 +13,18 @@ public class model_layanan {
         this.biaya_layanan = biaya_layanan;
         this.penjelasan_layanan=penjelasan_layanan;
         this.image_layanan = image_layanan;
+        this.nama_pasien=nama_pasien;
 
     }
 
 
+    public String getNama_pasien() {
+        return nama_pasien;
+    }
+
+    public void setNama_pasien(String nama_pasien) {
+        this.nama_pasien = nama_pasien;
+    }
 
     public String getPenjelasan_layanan() {
         return penjelasan_layanan;

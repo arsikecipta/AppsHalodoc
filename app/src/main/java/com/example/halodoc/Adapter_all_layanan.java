@@ -60,6 +60,7 @@ public class Adapter_all_layanan extends RecyclerView.Adapter<Adapter_all_layana
                 intent.putExtra("HargaLayanan2", modelLayanans.get(position).getHarga_layanan2());
                 intent.putExtra("HargaLayanan3", modelLayanans.get(position).getHarga_layanan3());
                 intent.putExtra("PenjelasanLayanan", modelLayanans.get(position).getPenjelasan_layanan());
+                intent.putExtra("NamaGone", modelLayanans.get(position).getNama_pasien());
 
                 context.startActivity(intent);
             }

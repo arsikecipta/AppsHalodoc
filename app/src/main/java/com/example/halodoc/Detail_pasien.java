@@ -8,6 +8,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -17,9 +18,12 @@ import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -35,8 +39,9 @@ public class Detail_pasien extends AppCompatActivity {
     ArrayAdapter<CharSequence> adapter;
     private DatePickerDialog datePickerDialog;
     private Button dateButton_ttl;
-    TextView nama_lay, nam_rs, harga_lay, hari_pasien, jam_pasien, textView_foto;
+    TextView nama_lay, nam_rs, harga_lay, hari_pasien, jam_pasien, textView_foto, nama_pasien;
     ImageView img_foto;
+    EditText et_namalengkap;
     private  static  final  int PERMISSION_CODE=1000;
     private  static  final  int IMAGE_CAPTURE_CODE=1001;
     Uri img_uri;
@@ -72,12 +77,20 @@ public class Detail_pasien extends AppCompatActivity {
         harga_lay=findViewById(R.id.harga_lay_pasien);
         hari_pasien=findViewById(R.id.detail_pasien_hari);
         jam_pasien=findViewById(R.id.detail_pasien_jam);
+        et_namalengkap=findViewById(R.id.et_nama_lengkap);
+        nama_pasien=findViewById(R.id.et_nama_lengkap);
+
+
+        InputMethodManager im = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        im.showSoftInput(et_namalengkap, 0);
+        
         Intent intent =getIntent();
         String namlay = intent.getExtras().getString("NamaLayanan");
         String namRS= intent.getExtras().getString("RumahSakitLayanan");
         String hargalayanan = intent.getExtras().getString("BiayaLayanan");
         String harifix = intent.getExtras().getString("HariTgl");
         String jam_fix = intent.getExtras().getString("JamJanji");
+        String namapasien = intent.getExtras().getString("NamaGone");
 
         nama_lay.setText(namlay);
         nam_rs.setText(namRS);
@@ -86,6 +99,7 @@ public class Detail_pasien extends AppCompatActivity {
         jam_pasien.setText(jam_fix);
         img_foto=findViewById(R.id.img_foto);
         card_up=findViewById(R.id.card_upload);
+        nama_pasien.setText(namapasien);
 
         card_up.setOnClickListener(new View.OnClickListener() {
             @Override

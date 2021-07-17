@@ -20,7 +20,9 @@
             android:name=".RiwayatTransaksi"
             android:parentActivityName=".BuatJanjiRS"
             android:theme="@style/AppTheme" />
-        <activity android:name=".SearchRs" /> <!-- Start Sherly -->
+        <activity android:name=".SearchRs"
+            android:windowSoftInputMode="adjustResize"
+            /> <!-- Start Sherly -->
         <activity android:name=".Address_tokes" />
         <activity android:name=".Filter_berdasarkan_spesialis" />
         <activity android:name=".Filter_berdasarkan" />
@@ -28,12 +30,14 @@
             android:name=".Lihat_semua_dokter_filter_spesialis"
             android:parentActivityName=".Lihat_semua_dokter_spesialis"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Detail_dokter_spesialis">
+        <activity android:name=".Detail_dokter_spesialis"
             android:parentActivityName=".chat_dengan_dokter"
-            android:theme="@style/AppTheme"
+            android:theme="@style/AppTheme">
+
         </activity>
         <activity
             android:name=".Lihat_semua_dokter_spesialis"
+            android:parentActivityName=".chat_dengan_dokter"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Kategori_produk_utama"
@@ -102,9 +106,12 @@
         <activity android:name=".all_layanan" />
         <activity
             android:name=".ListSemuaLayanan"
-            android:parentActivityName=".BuatJanjiRS" />
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".List_all_layanan" />
         <activity android:name=".Pembayaran" />
-        <activity android:name=".Detail_pasien" />
+        <activity android:name=".Detail_pasien"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
         <activity android:name=".Pilih_pasien" />
         <activity android:name=".Jadwal_janji" />
         <activity android:name=".LengkapiProfil" />

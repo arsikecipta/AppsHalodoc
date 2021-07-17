@@ -92,7 +92,20 @@
             android:fontFamily="@font/googlesansregular"
             android:textSize="16sp"
             />
+        <TextView
+            android:id="@+id/nama_gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="left"
+            android:text="Alamat Rs"
+            android:textColor="@color/deskripsi"
+            android:fontFamily="@font/googlesansregular"
+            android:textSize="16sp"
+            android:visibility="gone"
 
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -171,13 +184,13 @@
                     android:src="@drawable/ic_search2"></ImageView>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="20dp"
                     android:fontFamily="@font/googlesansregular"
                     android:text="Cari nama RS, dokter, spesialisasi, tindakan"
-                    android:textSize="14dp"></TextView>
+                    android:textSize="12dp"></TextView>
 
 
 

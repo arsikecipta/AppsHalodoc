@@ -34,14 +34,6 @@ public class Layanan_rs extends AppCompatActivity {
 
 
         layanan_recycler = findViewById(R.id.recyclerview_layanan);
-//        layanan_recycler.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent= new Intent(Layanan_rs.this, ListLayanan.class);
-//                intent.putExtra("NamaLengkap",nama_gone.getText());
-//                startActivity(intent);
-//            }
-//        });
         layanan_recycler.setHasFixedSize(true);
         layanan_recycler.setLayoutManager(new LinearLayoutManager(this));
 
@@ -77,18 +69,19 @@ public class Layanan_rs extends AppCompatActivity {
         String txt_jenislay2=intent.getExtras().getString("Jenislayanan2");
         String txt_hargalay=intent.getExtras().getString("Hargalayanan");
         String txt_hargalay2=intent.getExtras().getString("Hargalayanan2");
+        String txt_nama_gone=intent.getExtras().getString("NamaGone");
         //setting values
         tv_namars.setText(nama_rs);
         tv_jenisrs.setText(jenis_rs);
         img.setImageResource(image_rs);
         txt_alamatRS.setText(alamat_rs);
         txt_infoRs.setText(info_rs);
-//        nama_gone.setText(namalengkap);
+
 
 
         ArrayList<model_layanan> modelLayanan = new ArrayList<>();
-        modelLayanan.add(new model_layanan(txt_layanan1, txt_jenislay,nama_rs,alamat_rs,txt_hargalay,img_lay,txt_penjelasan1));
-        modelLayanan.add(new model_layanan(txt_layanan2, txt_jenislay2,nama_rs,alamat_rs,txt_hargalay2,img_layanan2,txt_penjelasan2));
+        modelLayanan.add(new model_layanan(txt_layanan1, txt_jenislay,nama_rs,alamat_rs,txt_hargalay,img_lay,txt_penjelasan1,txt_nama_gone));
+        modelLayanan.add(new model_layanan(txt_layanan2, txt_jenislay2,nama_rs,alamat_rs,txt_hargalay2,img_layanan2,txt_penjelasan2,txt_nama_gone));
 
         Adapter_layanan adapterLayanan=new Adapter_layanan(modelLayanan,Layanan_rs.this);
         layanan_recycler.setAdapter(adapterLayanan);

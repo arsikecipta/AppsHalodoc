@@ -29,7 +29,6 @@
             app:shapeAppearanceOverlay="@style/RoundedSquare"
             app:strokeColor="#eeeeee"
             app:strokeWidth="2dp"></com.google.android.material.imageview.ShapeableImageView>
-
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
@@ -71,7 +70,7 @@
                     android:text="Tes Covid-19 adalah tes untuk mendeteksi virus corona yang menyerang sistem pernapasan"></TextView>
 
                 <ImageView
-
+                    android:layout_alignParentRight="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/ic_next"
@@ -80,7 +79,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout

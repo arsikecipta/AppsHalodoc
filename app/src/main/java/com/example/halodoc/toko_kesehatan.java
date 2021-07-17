@@ -49,13 +49,13 @@ public class toko_kesehatan extends AppCompatActivity {
                 View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
                         R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
                 );
-                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent= new Intent(toko_kesehatan.this, toko_kesehatan.class);
-                        startActivity(intent);
-                    }
-                });
+//                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent intent= new Intent(toko_kesehatan.this, toko_kesehatan.class);
+//                        startActivity(intent);
+//                    }
+//                });
                 bottomSheetDialog.setContentView(bottomSheetView);
                 bottomSheetDialog.show();
 
