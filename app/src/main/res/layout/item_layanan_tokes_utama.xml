@@ -11,19 +11,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/stroke_divider">
 
         <TextView
             android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="Layanan"
             android:fontFamily="@font/googlesansmedium"
             android:textColor="@color/judul"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="18sp"/>
 
 
         <ImageView
@@ -31,20 +34,22 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/ic_next"
             ></ImageView>
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/divider_card"
-        android:orientation="horizontal"></LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/divider_card"-->
+<!--        android:orientation="horizontal"></LinearLayout>-->
 
     <!-- end   -->
 

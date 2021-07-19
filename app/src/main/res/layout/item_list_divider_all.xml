@@ -11,7 +11,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/stroke_divider">
 
         <TextView
             android:id="@+id/judul"
@@ -20,9 +25,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:text="Dokter Umum"
-            android:textColor="#404345"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/judul"
+            android:fontFamily="@font/googlesansmedium"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/deskripsi"
@@ -30,11 +35,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/judul"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="4dp"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/googlesansregular"
             android:text="Periksa kesehatanmu sekarang"
-            android:textColor="#757575"
+            android:textColor="@color/deskripsi"
             android:textSize="16dp" />
+
         <ImageView
             android:id="@+id/selanjutnya"
             android:layout_width="40dp"
@@ -47,14 +54,14 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/divider_card"
-        android:orientation="horizontal"></LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/divider_card"-->
+<!--        android:orientation="horizontal"></LinearLayout>-->
 
     <!-- end   -->
 

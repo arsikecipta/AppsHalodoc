@@ -30,7 +30,7 @@
                 android:layout_height="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/ic_baseline_arrow_back_search"></ImageView>
+                android:src="@drawable/ic_baseline_search_dark"></ImageView>
 
             <TextView
                 android:layout_width="match_parent"

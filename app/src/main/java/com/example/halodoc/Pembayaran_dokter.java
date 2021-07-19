@@ -4,13 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class Pembayaran_dokter extends AppCompatActivity {
     private TextView tv_nama_dokter, tv_kategori_dokter;
+    private Button btn_bayar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +25,18 @@ public class Pembayaran_dokter extends AppCompatActivity {
         tv_nama_dokter= (TextView) findViewById(R.id.nama_dokter);
         tv_kategori_dokter=(TextView)findViewById(R.id.kategori_dokter);
 
+//        btn_bayar = (Button) findViewById(R.id.btn_bayar);
+//        btn_bayar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Filter_berdasarkan();
+//            }
+//
+//            private void Filter_berdasarkan() {
+//                Intent intent= new Intent(Pembayaran_dokter.this, chat_dengan_dokter.class);
+//                startActivity(intent);
+//            }
+//        });
 
         //receive data
         Intent intent =getIntent();
@@ -34,6 +50,7 @@ public class Pembayaran_dokter extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         return true;
     }
 

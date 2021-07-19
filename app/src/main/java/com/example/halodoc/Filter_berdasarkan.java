@@ -21,6 +21,7 @@ public class Filter_berdasarkan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter_berdasarkan);
         getSupportActionBar().setTitle("Filter Berdasarkan");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         btn_terapkan=(Button) findViewById(R.id.btn_terapkan);
         btn_terapkan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,18 +36,18 @@ public class Filter_berdasarkan extends AppCompatActivity {
 
             }
         });
-        btn_kembali=(Button) findViewById(R.id.btn_kembali);
-        btn_kembali.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Lihat_semua_dokter();
-            }
-
-            private void Lihat_semua_dokter() {
-                Intent intent= new Intent(Filter_berdasarkan.this, lihat_semua_dokter.class);
-                startActivity(intent);
-
-            }
-        });
+//        btn_kembali=(Button) findViewById(R.id.btn_kembali);
+//        btn_kembali.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Lihat_semua_dokter();
+//            }
+//
+//            private void Lihat_semua_dokter() {
+//                Intent intent= new Intent(Filter_berdasarkan.this, lihat_semua_dokter.class);
+//                startActivity(intent);
+//
+//            }
+//        });
     }
 }

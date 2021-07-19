@@ -31,12 +31,7 @@ public class lihat_semua_dokter extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         LihatDokter();
-
         setUpRecyclerViewDokter();
-
-
-
-
 
         filter =(CardView) findViewById(R.id.filter);
         filter.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +46,7 @@ public class lihat_semua_dokter extends AppCompatActivity {
             }
         });
 
-        lanjut =(ImageView) findViewById(R.id.lanjut);
+        lanjut =(ImageView) findViewById(R.id.lanjutnya);
         lanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,13 +61,13 @@ public class lihat_semua_dokter extends AppCompatActivity {
         });
     }
     private void LihatDokter() {
-         modelListdokter = new ArrayList<>();
+        modelListdokter = new ArrayList<>();
         modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Indonesia","RSCM Cipto M.","123456789",R.drawable.avadoctor3));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000","Universitas Negeri Solo","RS Sari Asih","123456789", R.drawable.avadoctor1));
-        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 10.000","Universitas Andalas","RS Siloam","123456789",R.drawable.avadoctor2));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 30.000", "Universitas Dipnegoro","RS Fatmawati","123456789", R.drawable.avadoctor4));
-        modelListdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 50.000","Universitas Gajah Mada","RS Harapan Kita","123456789",R.drawable.avadoctor3));
-        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000","Universitas Tarumanegara","RS Siloam","123456789", R.drawable.avadoctor1));
+        modelListdokter.add(new Model_list_dokter("dr Zarni Jamali","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000","Universitas Negeri Solo","RS Sari Asih","123456789", R.drawable.avadoctor1));
+        modelListdokter.add(new Model_list_dokter("dr Diego Ilham","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Andalas","RS Siloam","123456789",R.drawable.avadoctor2));
+        modelListdokter.add(new Model_list_dokter("dr Arief Ilham","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000", "Universitas Dipnegoro","RS Fatmawati","123456789", R.drawable.avadoctor4));
+        modelListdokter.add(new Model_list_dokter("dr Tiara Andini","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Gajah Mada","RS Harapan Kita","123456789",R.drawable.avadoctor3));
+        modelListdokter.add(new Model_list_dokter("dr Nagita Sherina","Dokter Umum", "20 Tahun", "99,0%", "Rp 25.000","Universitas Tarumanegara","RS Siloam","123456789", R.drawable.avadoctor1));
 
 
     }

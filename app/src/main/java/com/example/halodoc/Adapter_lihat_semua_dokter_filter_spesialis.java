@@ -40,13 +40,16 @@ public class Adapter_lihat_semua_dokter_filter_spesialis extends RecyclerView.Ad
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =  new Intent(context, Detail_dokter_spesialis.class);
-                intent.putExtra("FotoDokter", modelListDokter.get(position).getImage_dokter());
-                intent.putExtra("NamaDokter",modelListDokter.get(position).getNama_dokter());
-                intent.putExtra("KategoriDokter", modelListDokter.get(position).getKategori_dokter());
-                intent.putExtra("Tahun", modelListDokter.get(position).getTahun());
-                intent.putExtra("Suka", modelListDokter.get(position).getSuka());
-                intent.putExtra("Harga", modelListDokter.get(position).getHarga());
+                Intent intent =  new Intent(context, Detail_dokter_spesialis_filter.class);
+                intent.putExtra("ImageDokter1", modelListDokter.get(position).getImage_dokter());
+                intent.putExtra("NamaDokter1",modelListDokter.get(position).getNama_dokter());
+                intent.putExtra("Kategori1", modelListDokter.get(position).getKategori_dokter());
+                intent.putExtra("Tahun1",modelListDokter.get(position).getTahun());
+                intent.putExtra("Suka1", modelListDokter.get(position).getSuka());
+                intent.putExtra("HargaDokter1", modelListDokter.get(position).getHarga());
+                intent.putExtra("Alumni1",modelListDokter.get(position).getAlumni());
+                intent.putExtra("Praktik1", modelListDokter.get(position).getPraktik());
+                intent.putExtra("STR1", modelListDokter.get(position).getStr());
                 context.startActivity(intent);
             }
         });

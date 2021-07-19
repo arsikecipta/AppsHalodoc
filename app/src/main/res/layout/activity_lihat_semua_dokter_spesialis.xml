@@ -11,30 +11,62 @@
 
     <!--  list dokter rekomendasi  -->
 
+    <TextView
+        android:id="@+id/judultoolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:fontFamily="@font/googlesansregular"
+        android:text="Filter Berdasarkan"
+        android:visibility="gone"
+        android:textColor="#616161"
+        android:textSize="16sp"></TextView>
+
+    <TextView
+        android:id="@+id/deskripsi_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:fontFamily="@font/googlesansregular"
+        android:text="Deskripsi"
+        android:visibility="gone"
+        android:textColor="#616161"
+        android:textSize="16sp"></TextView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/filter_lanjut"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_below="@id/frame_loc">
 
 
         <TextView
+            android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
             android:fontFamily="@font/googlesansregular"
             android:text="Filter Berdasarkan"
             android:textColor="#616161"
             android:textSize="16sp"></TextView>
 
         <TextView
-            android:layout_width="146dp"
+            android:id="@+id/selanjutnya"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="244dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
             android:fontFamily="@font/googlesansregular"
             android:text="Hapus Semua Filter"
             android:textColor="#9E9E9E"
@@ -43,35 +75,107 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/filter"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:cardBackgroundColor="#F5F5F5"
             app:cardCornerRadius="5dp">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="60dp"
-                android:fontFamily="@font/googlesansmedium"
-                android:text="Pilih Filter"
-                android:textSize="18sp"></TextView>
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/lanjut"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="330dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>
+                <TextView
+                    android:id="@+id/judulfillter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/googlesansmedium"
+                    android:text="Pilih Filter"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="18sp"/>
+
+
+                <ImageView
+                    android:id="@+id/lanjutnya"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
+
+     <!-- deskripsi penjelasan -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frame_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.68"
+        app:cardBackgroundColor="@color/mitra_halodoc"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/ic_twotone_info_blue"
+            android:contentDescription="TODO"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/judulinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/googlesansregular"
+                android:gravity="center"
+                android:text="Judul"
+                android:textColor="@color/judul"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/deskripsi_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/googlesansregular"
+                android:textAlignment="viewStart"
+                android:letterSpacing="0.01"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:lineSpacingExtra="8sp"
+                android:text="Deskripsi"
+                android:textColor="@color/judul"
+                android:textSize="16sp"
+                android:layout_gravity="start" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+     <!-- deskripsi penjelasan -->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -97,9 +201,7 @@
                             android:id="@+id/recyclerview_dokter"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginRight="10dp">
+                            android:layout_marginBottom="8dp">
                         </androidx.recyclerview.widget.RecyclerView>
 
 

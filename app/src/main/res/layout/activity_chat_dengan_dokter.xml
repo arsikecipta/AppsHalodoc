@@ -67,11 +67,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/googlesansregular"
                 android:textColor="@color/deskripsi"
-                android:text="Contoh : dr. Lia atau Sepesialis Gigi"
+                android:hint="Contoh : dr. Lia atau Sepesialis Gigi"
                 android:textSize="16sp"></TextView>
 
         </androidx.cardview.widget.CardView>
@@ -105,10 +105,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/googlesansbold"
+                    android:fontFamily="@font/googlesansmedium"
                     android:text="Rekomendasi Dokter"
                     android:textColor="@color/judul"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/googlesansmedium"
+                    android:fontFamily="@font/googlesansregular"
                     android:text="Dokter siaga terbaik untukmu"
                     android:textColor="@color/deskripsi"
                     android:textSize="16sp"></TextView>
@@ -138,7 +138,10 @@
                             android:id="@+id/recyclerview_dokter"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp" />
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
 
                     </LinearLayout>
 
@@ -178,7 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -186,10 +189,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/googlesansbold"
+                    android:fontFamily="@font/googlesansmedium"
                     android:text="Pilih Spesialisasi"
                     android:textColor="@color/judul"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -198,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/googlesansmedium"
+                    android:fontFamily="@font/googlesansregular"
                     android:text="Layanan kategori dokter khusus untukmu"
                     android:textColor="@color/deskripsi"
                     android:textSize="16sp">

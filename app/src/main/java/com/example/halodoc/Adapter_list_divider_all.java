@@ -38,6 +38,7 @@ public class Adapter_list_divider_all extends RecyclerView.Adapter<Adapter_list_
             public void onClick(View view) {
                 Intent intent =  new Intent(context, Lihat_semua_dokter_spesialis.class);
                 intent.putExtra("JudulKategori", modelListDokter.get(position).getJudul());
+                intent.putExtra("DeskripsiInfo",modelListDokter.get(position).getDeskripsi_info());
 
                 intent.putExtra("ImageDokter1", modelListDokter.get(position).getImage_dokter1());
                 intent.putExtra("NamaDokter1",modelListDokter.get(position).getNama_dokter1());

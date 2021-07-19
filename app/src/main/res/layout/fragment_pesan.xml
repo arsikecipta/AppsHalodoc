@@ -1,13 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_dark"
-    >
-    <TextView
+    android:background="@color/white"
+    tools:context=".PesanFragment"
+    android:orientation="vertical">
+
+    <!--judul-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/frame_judul"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardBackgroundColor="@color/background_all"
+        android:layout_below="@id/frame_loc">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/googlesansregular"
+                android:gravity="center"
+                android:text="Inbox"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--judul-->
+
+    <!--body-->
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="100dp"
+        android:screenReaderFocusable="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/pesan_ikon"/>
+
+    <TextView
+        android:id="@+id/judul_riwayat"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="PESAN"
-        ></TextView>
-</RelativeLayout>
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/googlesansbold"
+        android:layout_gravity="center_horizontal"
+        android:text="Kupon Belum Tersedia"
+        android:textColor="@color/judul"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/deskripsi_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/googlesansmedium"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="Jika Kuponmu sudah siap, nanti muncul disini"
+        android:textColor="@color/judul"
+        android:textSize="14sp"/>
+
+    <!--body-->
+
+</LinearLayout>

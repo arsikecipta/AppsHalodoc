@@ -385,48 +385,46 @@
 
             <!--    Button      -->
 
-            <LinearLayout
-                android:id="@+id/country_code_text"
+            <RelativeLayout
+                android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn_kembali"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="50dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="36dp"
-                    android:background="@drawable/primary_button"
-                    android:fontFamily="@font/googlesansmedium"
-                    android:text="Kembali"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="18sp"/>
+<!--                <Button-->
+<!--                    android:id="@+id/btn_kembali"-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="36dp"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_marginRight="220dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:background="@drawable/primary_button"-->
+<!--                    android:fontFamily="@font/googlesansmedium"-->
+<!--                    android:text="Kembali"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@android:color/background_light"-->
+<!--                    android:textSize="18sp" />-->
 
                 <Button
                     android:id="@+id/btn_terapkan"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="36dp"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/primary_button"
                     android:fontFamily="@font/googlesansmedium"
                     android:text="Terapkan"
                     android:textAllCaps="false"
                     android:textColor="@android:color/background_light"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <!--  end Button  -->
 

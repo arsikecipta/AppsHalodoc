@@ -25,13 +25,8 @@ public class Kategori_produk_utama extends AppCompatActivity {
         setContentView(R.layout.activity_kategori_produk);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         ListObat();
         SetUpRecyclerObat();
-
-
-
-
     }
 
     private void ListObat() {

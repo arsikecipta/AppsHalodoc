@@ -22,14 +22,17 @@ public class Search_tokes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_tokes);
-        search = (ImageView) findViewById(R.id.back_tokes);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Search_tokes.this, toko_kesehatan.class);
-                startActivity(intent);
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        search = (ImageView) findViewById(R.id.back_tokes);
+//        search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(Search_tokes.this, toko_kesehatan.class);
+//                startActivity(intent);
+//            }
+//        });
+
         RecyclerView recyclerView =findViewById(R.id.recyclerview_tokes);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

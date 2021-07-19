@@ -11,18 +11,20 @@
     <!--  list dokter rekomendasi  -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/frame_search"
+        android:id="@+id/filter_lanjut"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_below="@id/frame_loc">
 
 
         <TextView
+            android:id="@+id/judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
             android:fontFamily="@font/googlesansregular"
             android:text="Filter Berdasarkan"
             android:textColor="#616161"
@@ -30,51 +32,60 @@
 
         <TextView
             android:id="@+id/hapus_filter"
-            android:layout_width="152dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="225dp"
             android:layout_marginTop="16dp"
-            android:layout_marginRight="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
             android:fontFamily="@font/googlesansbold"
             android:text="Hapus Semua Filter"
             android:textColor="@color/background_all"
             android:textSize="16sp"></TextView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/filter"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:cardBackgroundColor="#F5F5F5"
             app:cardCornerRadius="5dp">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="60dp"
-                android:fontFamily="@font/googlesansmedium"
-                android:text="Pilih Filter"
-                android:textSize="18sp"></TextView>
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="270dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/checklist">
-            </ImageView>
+                <TextView
+                    android:id="@+id/judulfillter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/googlesansmedium"
+                    android:text="Pilih Filter"
+                    android:textColor="@color/deskripsi"
+                    android:textSize="18sp" />
 
-            <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="315dp"
-                android:layout_marginTop="4dp"
-                android:src="@drawable/ic_baseline_arrow_drop_down">
-            </ImageView>
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="270dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/checklist"></ImageView>
+
+
+                <ImageView
+                    android:id="@+id/lanjutnya"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -107,9 +118,7 @@
                             android:id="@+id/recyclerview_dokter"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginRight="10dp">
+                            android:layout_marginBottom="8dp">
                         </androidx.recyclerview.widget.RecyclerView>
 
 

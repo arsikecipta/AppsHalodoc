@@ -2,16 +2,17 @@ package com.example.halodoc;
 
 public class Model_list_dokter_spesialis {
 
-    private String judul, nama_dokter, kategori_dokter, tahun, suka, harga, alumni, praktik, str;
+    private String judul, deskripsi_info,nama_dokter, kategori_dokter, tahun, suka, harga, alumni, praktik, str;
 
     int image_dokter;
 
-    public Model_list_dokter_spesialis (String judul, String nama_dokter, String kategori_dokter, String tahun, String suka, String harga,String alumni, String praktik, String str, int image_dokter) {
+    public Model_list_dokter_spesialis (String judul, String deskripsi_info,String nama_dokter, String kategori_dokter, String tahun, String suka, String harga,String alumni, String praktik, String str, int image_dokter) {
 
         this.judul = judul;
         this.nama_dokter = nama_dokter;
         this.kategori_dokter = kategori_dokter;
         this.tahun = tahun;
+        this.deskripsi_info = deskripsi_info;
         this.suka = suka;
         this.harga = harga;
         this.alumni = alumni;
@@ -27,6 +28,14 @@ public class Model_list_dokter_spesialis {
 
     public void setJudul(String judul) {
         this.judul = judul;
+    }
+
+    public String getDeskripsi_info() {
+        return deskripsi_info;
+    }
+
+    public void setDeskripsi_info(String deskripsi_info) {
+        this.deskripsi_info = deskripsi_info;
     }
 
     public String getNama_dokter() {

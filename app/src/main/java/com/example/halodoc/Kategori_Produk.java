@@ -25,12 +25,7 @@ public class Kategori_Produk extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ListObat();
-
         SetUpRecyclerObat();
-
-
-
-
     }
 
     private void ListObat() {

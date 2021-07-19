@@ -153,6 +153,7 @@ public class Adapter_lihat_semua_dokter_spesialis extends RecyclerView.Adapter<A
             notifyDataSetChanged();
         }
     };
+
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView judul;
@@ -164,11 +165,13 @@ public class Adapter_lihat_semua_dokter_spesialis extends RecyclerView.Adapter<A
         TextView alumni;
         TextView praktik;
         TextView str;
+        TextView deskripsi_info;
         ImageView image_dokter;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             judul = itemView.findViewById(R.id.judul);
+            deskripsi_info = itemView.findViewById(R.id.deskripsi_info);
             image_dokter = itemView.findViewById(R.id.image_dokter);
             nama_dokter = itemView.findViewById(R.id.nama_dokter);
             kategori_dokter =itemView.findViewById(R.id.kategori_dokter);

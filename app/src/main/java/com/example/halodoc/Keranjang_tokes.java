@@ -42,7 +42,7 @@ public class Keranjang_tokes extends AppCompatActivity {
                         Keranjang_tokes.this,R.style.ButtomSheetDialogTheme
                 );
                 View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
-                        R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
+                        R.layout.activity_address_tokes, (LinearLayout)findViewById(R.id.bottomSheetContainer)
                 );
 //                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
 //                    @Override

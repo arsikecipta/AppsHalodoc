@@ -24,4 +24,8 @@
     <color name ="judul">#404345</color>
     <color name="button_disable">#838383</color>
     <color name ="deskripsi">#6E6E6E</color>
+    <color name ="bluelabel">#d6e0f0</color>
+    <color name ="enablebutton">#757575</color>
+    <color name ="labeltextblue">#325288</color>
+    <color name ="enabletext">#F5F5F5</color>
 </resources>

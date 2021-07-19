@@ -47,7 +47,7 @@ public class toko_kesehatan extends AppCompatActivity {
                         toko_kesehatan.this,R.style.ButtomSheetDialogTheme
                 );
                 View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
-                        R.layout.layout_bottom_sheet_alamat, (LinearLayout)findViewById(R.id.bottomSheetContainer)
+                        R.layout.activity_address_tokes, (LinearLayout)findViewById(R.id.bottomSheetContainer)
                 );
 //                bottomSheetView.findViewById(R.id.batal).setOnClickListener(new View.OnClickListener() {
 //                    @Override
@@ -258,7 +258,7 @@ public class toko_kesehatan extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.button_riwayat:
-                Intent intent= new Intent(toko_kesehatan.this, RiwayatTransaksi.class);
+                Intent intent= new Intent(toko_kesehatan.this, Riwayat_tokes.class);
                 startActivity(intent);
                 break;
             case android.R.id.home:

@@ -20,25 +20,28 @@ import java.util.List;
 
 public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
 
+    private TextView tv_deskripsi_info, tv_judul, tv_judul_intent, tv_deskripsi_intent;
     public CardView filter;
     public ImageView lanjut;
     private Adapter_lihat_semua_dokter_spesialis adapter_spesialisasi;
     private List<Model_list_dokter_spesialis> modelListDokter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_semua_dokter_spesialis);
+        tv_deskripsi_info= (TextView) findViewById(R.id.deskripsi_info);
+        tv_judul= (TextView) findViewById(R.id.judulinfo);
+        tv_judul_intent= (TextView) findViewById(R.id.judultoolbar);
+        tv_deskripsi_intent = (TextView) findViewById(R.id.deskripsi_intent);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         ListDokterSpesialis();
-       setUpRecyclerSpesialis();
+        setUpRecyclerSpesialis();
 
-
-
-
-
-
-
+//        //intentback
+//        Intent intent =getIntent();
+//        String JudulIntent = intent.getExtras().getString("JudulIntent");
+//        getSupportActionBar().setTitle(JudulIntent);
 
         filter =(CardView) findViewById(R.id.filter);
         filter.setOnClickListener(new View.OnClickListener() {
@@ -49,11 +52,13 @@ public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
 
             private void Filter_berdasarkan_spesialis() {
                 Intent intent= new Intent(Lihat_semua_dokter_spesialis.this, Filter_berdasarkan_spesialis.class);
+                intent.putExtra("JudulIntent", tv_judul_intent.getText());
+                intent.putExtra("Deskripsi_Info", tv_deskripsi_intent.getText());
                 startActivity(intent);
             }
         });
 
-        lanjut =(ImageView) findViewById(R.id.lanjut);
+        lanjut =(ImageView) findViewById(R.id.lanjutnya);
         lanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,7 +79,10 @@ public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
         //receive data
         Intent intent =getIntent();
         String JudulKategori = intent.getExtras().getString("JudulKategori");
+        tv_judul_intent.setText(JudulKategori);
         getSupportActionBar().setTitle(JudulKategori);
+        String DeskripsiInfo = intent.getExtras().getString("DeskripsiInfo");
+        tv_deskripsi_intent.setText(DeskripsiInfo);
         String NamaDokter1 = intent.getExtras().getString("NamaDokter1");
         String Kategori1 = intent.getExtras().getString("Kategori1");
         String Tahun1 = intent.getExtras().getString("Tahun1");
@@ -136,15 +144,17 @@ public class Lihat_semua_dokter_spesialis extends AppCompatActivity {
         String Praktik6 = intent.getExtras().getString("Praktik6");
         String STR6 = intent.getExtras().getString("STR6");
 
+        //setting values
+        tv_deskripsi_info.setText(DeskripsiInfo);
+        tv_judul.setText(JudulKategori);
+
         modelListDokter = new ArrayList<>();
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter1, Kategori1, Tahun1, Suka1, HargaDokter1, "Universitas Indonesia", "Poliklinik Madya", "1202175642", ImageDokter1));
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter2, Kategori2, Tahun2, Suka2, HargaDokter2, "Universitas Brawijaya", "RS.Mayapada", "1202170987",  ImageDokter2));
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter3, Kategori3, Tahun3, Suka3, HargaDokter3, "Universitas Soedirman", "RS.Bhayangkari", "1202174523",  ImageDokter3));
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter4, Kategori4, Tahun4, Suka4, HargaDokter4, "Universitas Trisakti", "RS.Siloam", "1202178546",  ImageDokter4));
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter5, Kategori5, Tahun5, Suka5, HargaDokter5, "Universitas Tarumanegara", "RS.Qadr", "1202177321",  ImageDokter5));
-        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, NamaDokter6, Kategori6, Tahun6, Suka6, HargaDokter6, "Universitas Diponegoro", "Poliklinik Telkom", "1202173177",  ImageDokter6));
-
-
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter1, Kategori1, Tahun1, Suka1, HargaDokter1, "Universitas Indonesia", "Poliklinik Madya", "1202175642", ImageDokter1));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter2, Kategori2, Tahun2, Suka2, HargaDokter2, "Universitas Brawijaya", "RS.Mayapada", "1202170987",  ImageDokter2));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter3, Kategori3, Tahun3, Suka3, HargaDokter3, "Universitas Soedirman", "RS.Bhayangkari", "1202174523",  ImageDokter3));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter4, Kategori4, Tahun4, Suka4, HargaDokter4, "Universitas Trisakti", "RS.Siloam", "1202178546",  ImageDokter4));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter5, Kategori5, Tahun5, Suka5, HargaDokter5, "Universitas Tarumanegara", "RS.Qadr", "1202177321",  ImageDokter5));
+        modelListDokter.add(new Model_list_dokter_spesialis(JudulKategori, DeskripsiInfo, NamaDokter6, Kategori6, Tahun6, Suka6, HargaDokter6, "Universitas Diponegoro", "Poliklinik Telkom", "1202173177",  ImageDokter6));
 
     }
     private void setUpRecyclerSpesialis() {

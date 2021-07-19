@@ -25,20 +25,24 @@ public class Search_dokter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_dokter);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         recyclerview_dokter=findViewById(R.id.recyclerview_dokter);
         dokter_recycler();
         recyclerview_dokter.setHasFixedSize(true);
         recyclerview_dokter.setLayoutManager(new LinearLayoutManager(this));
-        search = (ImageView) findViewById(R.id.back_dokter);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Search_dokter.this, chat_dengan_dokter.class);
-                startActivity(intent);
-            }
-        });
+
+//        search = (ImageView) findViewById(R.id.back_dokter);
+//        search.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent= new Intent(Search_dokter.this, chat_dengan_dokter.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
+
     private void dokter_recycler() {
         ArrayList <Model_list_dokter> modellistdokter = new ArrayList<>();
         modellistdokter.add(new Model_list_dokter("dr Febbyola Ramanda","Dokter Umum","10 Tahun","99.0%","Rp 25.000","Universitas Indonesia","RSCM Cipto M.","123456789", R.drawable.avadoctor3));

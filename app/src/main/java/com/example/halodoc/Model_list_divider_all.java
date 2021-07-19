@@ -2,7 +2,7 @@ package com.example.halodoc;
 
 public class Model_list_divider_all {
 
-    private String judul, deskripsi,
+    private String judul, deskripsi, deskripsi_info,
             nama_dokter1, kategori_dokter1, tahun1, suka1, harga1, alumni1, praktik1, str1,
             nama_dokter2, kategori_dokter2, tahun2, suka2, harga2, alumni2, praktik2, str2,
             nama_dokter3, kategori_dokter3, tahun3, suka3, harga3, alumni3, praktik3, str3,
@@ -12,15 +12,17 @@ public class Model_list_divider_all {
 
     int image_dokter1,image_dokter2,image_dokter3,image_dokter4,image_dokter5,image_dokter6;
 
-    public Model_list_divider_all (String judul,String deskripsi, String nama_dokter1, String kategori_dokter1, String tahun1, String suka1, String harga1, String alumni1, String praktik1, String str1, int image_dokter1,
-                                        String nama_dokter2, String kategori_dokter2, String tahun2, String suka2, String harga2, String alumni2, String praktik2, String str2, int image_dokter2,
-                                        String nama_dokter3, String kategori_dokter3, String tahun3, String suka3, String harga3, String alumni3, String praktik3, String str3, int image_dokter3,
-                                        String nama_dokter4, String kategori_dokter4, String tahun4, String suka4, String harga4, String alumni4, String praktik4, String str4, int image_dokter4,
-                                        String nama_dokter5, String kategori_dokter5, String tahun5, String suka5, String harga5, String alumni5, String praktik5, String str5, int image_dokter5,
-                                        String nama_dokter6, String kategori_dokter6, String tahun6, String suka6, String harga6, String alumni6, String praktik6, String str6, int image_dokter6) {
+    public Model_list_divider_all (String judul,String deskripsi, String deskripsi_info,
+                                   String nama_dokter1, String kategori_dokter1, String tahun1, String suka1, String harga1, String alumni1, String praktik1, String str1, int image_dokter1,
+                                   String nama_dokter2, String kategori_dokter2, String tahun2, String suka2, String harga2, String alumni2, String praktik2, String str2, int image_dokter2,
+                                   String nama_dokter3, String kategori_dokter3, String tahun3, String suka3, String harga3, String alumni3, String praktik3, String str3, int image_dokter3,
+                                   String nama_dokter4, String kategori_dokter4, String tahun4, String suka4, String harga4, String alumni4, String praktik4, String str4, int image_dokter4,
+                                   String nama_dokter5, String kategori_dokter5, String tahun5, String suka5, String harga5, String alumni5, String praktik5, String str5, int image_dokter5,
+                                   String nama_dokter6, String kategori_dokter6, String tahun6, String suka6, String harga6, String alumni6, String praktik6, String str6, int image_dokter6) {
 
         this.judul = judul;
         this.deskripsi = deskripsi;
+        this.deskripsi_info = deskripsi_info;
         this.nama_dokter1 = nama_dokter1;
         this.kategori_dokter1 = kategori_dokter1;
         this.tahun1 = tahun1;
@@ -96,6 +98,14 @@ public class Model_list_divider_all {
 
     public void setDeskripsi(String deskripsi) {
         this.deskripsi = deskripsi;
+    }
+
+    public String getDeskripsi_info() {
+        return deskripsi_info;
+    }
+
+    public void setDeskripsi_info(String deskripsi_info) {
+        this.deskripsi_info = deskripsi_info;
     }
 
     public String getNama_dokter1() {

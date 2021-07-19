@@ -151,10 +151,9 @@
                     <ImageView
                         android:id="@+id/image_obat"
                         android:layout_width="147dp"
-                        android:layout_height="170dp"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="8dp"
-                        android:src="@drawable/covidpackage">
-                    </ImageView>
+                        android:src="@drawable/covidpackage"></ImageView>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -202,7 +201,7 @@
 
                         <LinearLayout
                             android:id="@+id/divider_list"
-                            android:layout_width="250dp"
+                            android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="8dp"
@@ -215,16 +214,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginTop="8dp">
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="10dp">
 
                             <LinearLayout
                                 android:layout_width="120dp"
                                 android:layout_height="40dp"
                                 android:layout_marginLeft="4dp"
-                                android:background="@drawable/phonecode"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
+                                android:background="@drawable/label_blue"
                                 android:orientation="horizontal">
 
 
@@ -260,14 +260,14 @@
 
                             </LinearLayout>
 
-                                <ImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_marginRight="20dp"
-                                    android:layout_marginTop="12dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:src="@drawable/ic_outline_delete" />
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_outline_delete" />
 
                         </RelativeLayout>
 
@@ -412,23 +412,25 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="142dp"
-                        android:background="@drawable/phonecode"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <EditText
+                            android:id="@+id/pesan_keranjang"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Taruh di depan pagar saja"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="12dp"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textColor="@color/judul"
-                            android:textSize="16sp"/>
+                            android:layout_height="50dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:ems="10"
+                            android:fontFamily="@font/googlesansregular"
+                            android:textColor="@color/deskripsi"
+                            android:background="@drawable/custom_input"
+                            android:drawablePadding="12dp"
+                            android:inputType="text"
+                            android:hint="Contoh : Taruh di depan pagar saja"/>
 
                     </LinearLayout>
 
@@ -460,7 +462,7 @@
                     <Button
                         android:id="@+id/btn_ubah"
                         android:layout_width="82dp"
-                        android:layout_height="70dp"
+                        android:layout_height="68dp"
                         android:layout_marginTop="16dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
