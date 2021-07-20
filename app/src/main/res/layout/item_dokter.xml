@@ -98,7 +98,7 @@
                             android:layout_marginBottom="4dp"
                             android:lineSpacingExtra="7sp"
                             android:text="@string/_5_tahun"
-                            android:textColor="#6E6E6E"
+                            android:textColor="@color/judul"
                             android:textSize="14sp" />
 
                     </LinearLayout>
@@ -131,7 +131,7 @@
                             android:layout_marginBottom="4dp"
                             android:lineSpacingExtra="7sp"
                             android:text="@string/_99_0"
-                            android:textColor="#6E6E6E"
+                            android:textColor="@color/judul"
                             android:textSize="13sp" />
 
                     </LinearLayout>

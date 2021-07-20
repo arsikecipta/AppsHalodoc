@@ -15,6 +15,7 @@
     <color name="color2">#7e455e</color>
     <color name="color3">#796e25</color>
     <color name="color4">#D3D3D3</color>
+    <color name="color5">#59717c</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDivider">#FCFCFC</color>
     <color name ="background_text">#ffeadb</color>
@@ -28,4 +29,6 @@
     <color name ="enablebutton">#757575</color>
     <color name ="labeltextblue">#325288</color>
     <color name ="enabletext">#F5F5F5</color>
+    <color name="text_topik">#325288</color>
+
 </resources>

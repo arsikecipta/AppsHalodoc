@@ -81,7 +81,7 @@ public class LengkapiProfil extends AppCompatActivity {
         @Override
         public void afterTextChanged(Editable s) {
             if(s.toString().trim().length()>0){
-                btn_regis.setBackgroundColor(getResources().getColor(R.color.background_all));
+                btn_regis.setBackgroundResource(R.drawable.primary_button);
                 btn_regis.setTextColor(getResources().getColor(R.color.colorWhite));
             }else{
                 btn_regis.setBackgroundColor(getResources().getColor(R.color.deskripsi));

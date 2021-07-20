@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@color/colorWhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
    <LinearLayout
@@ -12,7 +13,7 @@
         android:id="@+id/image_artikel_detail"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_margin="20dp"
+
         android:scaleType="centerCrop"
         android:src="@drawable/kecantikan"
 
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/googlesansbold"
         android:textColor="@color/judul"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_gravity="left"
         android:text="Judul Artikel"
@@ -36,7 +38,8 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/shape_topik"
         android:paddingTop="4dp"
-        android:text="Topik artikel"
+        android:text="@string/topik_artikel"
+        android:contentDescription="@string/topik_artikel"
         android:textSize="14dp"
         android:fontFamily="@font/googlesansregular"
         android:textAlignment="center"
@@ -65,6 +68,7 @@
             android:textSize="14dp"
             android:fontFamily="@font/googlesansregular"
             android:layout_gravity="left"
+
             android:layout_marginRight="20dp"
             android:text="Nama dokter "
 
@@ -94,7 +98,8 @@
         android:textStyle="bold"
         android:textAlignment="viewStart"
         android:text="Isi artikel"
-        android:textSize="15sp"
+        android:textSize="16sp"
+        android:fontFamily="@font/googlesansregular"
         tools:ignore="RtlCompat" />
        <TextView
            android:id="@+id/paragraph2"
@@ -104,9 +109,10 @@
            android:layout_marginLeft="20dp"
            android:layout_marginRight="20dp"
            android:layout_gravity="left"
+           android:fontFamily="@font/googlesansregular"
            android:textAlignment="viewStart"
            android:text="Isi artikel"
-           android:textSize="15sp"
+           android:textSize="16sp"
            tools:ignore="RtlCompat" />
 
    </LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer"
+    android:background="@drawable/bottom_sheet_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_slider"
+        android:layout_width="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/color4"
+        ></androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/judul"
+        android:textSize="18sp"
+        android:fontFamily="@font/googlesansbold"
+        android:text="Akun"
+        ></TextView>
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:textSize="16sp"
+       android:textColor="@color/judul"
+       android:fontFamily="@font/googlesansmedium"
+       android:text="Silahkan Masuk/Daftar terlebih dahulu"
+       android:layout_height="wrap_content"></TextView>
+<Button
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="30dp"
+    android:text="Masuk/Daftar"
+    android:textSize="16sp"
+    android:layout_marginBottom="20dp"
+    android:textColor="@color/colorWhite"
+    android:fontFamily="@font/googlesansmedium"
+    android:background="@drawable/primary_button"
+    ></Button>
+</LinearLayout>

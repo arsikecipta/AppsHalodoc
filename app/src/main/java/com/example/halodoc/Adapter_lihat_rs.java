@@ -66,30 +66,30 @@ public class Adapter_lihat_rs extends RecyclerView.Adapter<Adapter_lihat_rs.View
                 context.startActivity(intent);
             }
         });
-        holder.cardView_rs_semua.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =  new Intent(context, Layanan_rs.class);
-                intent.putExtra("NamaRS", modelListRs.get(position).getTitle());
-                intent.putExtra("FotoRS", modelListRs.get(position).getImage());
-                intent.putExtra("JenisRS", modelListRs.get(position).getJenis());
-                intent.putExtra("NamaLayanan", modelListRs.get(position).getLayanan());
-                intent.putExtra("NamaLayanan2", modelListRs.get(position).getLayanan2());
-                intent.putExtra("FotoLayanan",modelListRs.get(position).getFoto_layanan());
-                intent.putExtra("FotoLayanan2",modelListRs.get(position).getFoto_layanan2());
-                intent.putExtra("AlamatRS",modelListRs.get(position).getAlamat_rs());
-                intent.putExtra("InfoRS",modelListRs.get(position).getInfo_rs());
-                intent.putExtra("Penjelasan1",modelListRs.get(position).getPenjelasan1());
-                intent.putExtra("Penjelasan2",modelListRs.get(position).getPenjelasan2());
-                intent.putExtra("Jenislayanan",modelListRs.get(position).getJenis_layanan());
-                intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
-                intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
-                intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
-                intent.putExtra("NamaGone",modelListRs.get(position).getNama_pasien());
-
-                context.startActivity(intent);
-            }
-        });
+//        holder.cardView_rs_semua.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent =  new Intent(context, Layanan_rs.class);
+//                intent.putExtra("NamaRS", modelListRs.get(position).getTitle());
+//                intent.putExtra("FotoRS", modelListRs.get(position).getImage());
+//                intent.putExtra("JenisRS", modelListRs.get(position).getJenis());
+//                intent.putExtra("NamaLayanan", modelListRs.get(position).getLayanan());
+//                intent.putExtra("NamaLayanan2", modelListRs.get(position).getLayanan2());
+//                intent.putExtra("FotoLayanan",modelListRs.get(position).getFoto_layanan());
+//                intent.putExtra("FotoLayanan2",modelListRs.get(position).getFoto_layanan2());
+//                intent.putExtra("AlamatRS",modelListRs.get(position).getAlamat_rs());
+//                intent.putExtra("InfoRS",modelListRs.get(position).getInfo_rs());
+//                intent.putExtra("Penjelasan1",modelListRs.get(position).getPenjelasan1());
+//                intent.putExtra("Penjelasan2",modelListRs.get(position).getPenjelasan2());
+//                intent.putExtra("Jenislayanan",modelListRs.get(position).getJenis_layanan());
+//                intent.putExtra("Jenislayanan2",modelListRs.get(position).getJenis_layanan2());
+//                intent.putExtra("Hargalayanan",modelListRs.get(position).getHarga_layanan());
+//                intent.putExtra("Hargalayanan2",modelListRs.get(position).getHarga_layanan2());
+//                intent.putExtra("NamaGone",modelListRs.get(position).getNama_pasien());
+//
+//                context.startActivity(intent);
+//            }
+//        });
     }
 
     @Override

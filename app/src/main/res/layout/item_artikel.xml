@@ -60,7 +60,7 @@
                     android:textSize="14dp"
                     android:fontFamily="@font/googlesansregular"
                     android:textAlignment="center"
-                    android:textColor="#325288"></TextView>
+                    android:textColor="@color/text_topik"></TextView>
 
 
             </LinearLayout>

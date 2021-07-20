@@ -48,13 +48,7 @@ public class LihatSemuaRS extends AppCompatActivity {
                 "Rumah Sakit Umum",
                 "Tes Swab Antigen","Tes Rapid","Swab tes antigen atau rapid tes antigen adalah tes imun yang bisa digunakan untuk mengidentifikasi COVID-19 dengan cara mendeteksi keberadaan virus tersebut", "Rapid tes adalah tes untuk mendeteksi COVID-19 dengan menggunakan sampel darah.",
                 "Tes Swab Antigen","Tes Rapid","Rp199.000","Rp.99.000", R.drawable.tescovid,R.drawable.swab,"Kelapa dua,Tangerang","Siloam Hospital Lippo Village adalah Rumah Sakit yang terletak di Kelapa Dua, Tangerang yang berada dibawah naungan Siloam Hospital Group.", namalengkap));
-        modelListRs.add(new model_list_rs(R.drawable.sariasih,
-                "RS Sari Asih",
-                "Rumah sakit umum",
-                "Tes GeNose","PCR Drive Thru", "GeNose adalah sebuah alat pendeteksi virus corona yang diciptakan oleh para ahli dari Universitas Gadjah MAda (UGM).", "es PCR (Polymerase Chain Reaction) akan dilakukan melalui kendaraan, pasien tidak perlu turun dari kendaraan untuk tes.",
-                "Tes GeNose","PCR Drive Thru, Tes PCR","Rp30.000","Rp650.000", R.drawable.genose,R.drawable.drivethru,"Karawaci,Tangerang","Rumah Sakit Sari Asih Karawaci beroperasi sejak tahun 1981 di daerah Karawaci. Rumah sakit ini terus berkembang hingga menjadi Rumah Sakit besar dengan manajemen dan perlengkapan medis modern.",namalengkap));
-
-        modelListRs.add(new model_list_rs(R.drawable.axeldental,
+               modelListRs.add(new model_list_rs(R.drawable.axeldental,
                 "Axel Dental Tangerang",
                 "Klinik", "Bleeching gigi","Scalling ","Bleaching gigi merupakan prosedur pemutih gigi menggunakan bahan kimia untuk pemulihan kembali gigi", "Scaling merupakan sebuah tindakan non-operasi yang dilakukan untuk menghilangkan plak dan karang pada gigi",
                 "Bleaching gigi","Scalling","Rp5000.000", "Rp300.000", R.drawable.poligigi,R.drawable.scalling,"Pinang, Tangerang","Axel Dental merupakan klinik yang berada dibawah naungan CV Tri Anugra dan didirikan untuk memberikan pelayanan terbaik untuk kesehatan gigi bagi keluarga indonesia dengan berkerja sama dengan para dokter gigi profesional.",namalengkap));;
@@ -63,11 +57,17 @@ public class LihatSemuaRS extends AppCompatActivity {
                 "Kimia Farma Beringin",
                 "Klinik", "Tes rapid","Rapid basic","Rapid tes adalah tes untuk mendeteksi COVID-19 dengan menggunakan sampel darah.", "Rapid tes adalah tes untuk mendeteksi COVID-19 dengan menggunakan sampel darah.",
                 "Tes Rapid, Rapid Basic","Tes Rapid, Rapid Basic","Rp150.000","Rp150.000", R.drawable.tescovid,R.drawable.tescovid,"Karawaci, Tangerang","Unit bisnis Laboratorium Klinik Kimia Far,a donila sekal tahun 2003 dibawah PT. Kimia Farma (persero) Tbk. sebagai Healthcare company.",namalengkap));
+        modelListRs.add(new model_list_rs(R.drawable.sariasih,
+                "RS Sari Asih",
+                "Rumah sakit umum",
+                "Tes GeNose","PCR Drive Thru", "GeNose adalah sebuah alat pendeteksi virus corona yang diciptakan oleh para ahli dari Universitas Gadjah MAda (UGM).", "es PCR (Polymerase Chain Reaction) akan dilakukan melalui kendaraan, pasien tidak perlu turun dari kendaraan untuk tes.",
+                "Tes GeNose","PCR Drive Thru, Tes PCR","Rp30.000","Rp650.000", R.drawable.genose,R.drawable.drivethru,"Karawaci,Tangerang","Rumah Sakit Sari Asih Karawaci beroperasi sejak tahun 1981 di daerah Karawaci. Rumah sakit ini terus berkembang hingga menjadi Rumah Sakit besar dengan manajemen dan perlengkapan medis modern.",namalengkap));
+
 
         modelListRs.add(new model_list_rs(R.drawable.rsprimaya,
                 "RS Primaya Tangerang",
                 "Rumah Sakit Umum", "PCR Drive Thru","Tes PCR","Tes PCR (Polymerase Chain Reaction) akan dilakukan melalui kendaraan, pasien tidak perlu turun dari kendaraan untuk tes.", "Tes PCR (Polymerase Chain Reaction) digunakan untu mendeteksi keberadaan material genetik dari sel, bakteri atau virus.",
-                "PCR Drive Thru","Tes Rapid, Rapid Basic","Rp950.000","Rp950.000", R.drawable.drivethru,R.drawable.swab,"Pinang, Tangerang","Unit bisnis Laboratorium Klinik Kimia Far,a donila sekal tahun 2003 dibawah PT. Kimia Farma (persero) Tbk. sebagai Healthcare company.",namalengkap));
+                "PCR Drive Thru","Tes Rapid, Rapid Basic","Rp950.000","Rp950.000", R.drawable.drivethru,R.drawable.swab,"Pinang, Tangerang","Rumah Sakit Primaya Tangerang adalah salah satu jaringan rumah sakit di Indonesia yang selalu memberikan layanan kualitas terbaik yang menekankan pada Kecepatan, Keramahan, Akurasi Dan Tanggap terhadap kebutuhan pasien.",namalengkap));
 
 
 

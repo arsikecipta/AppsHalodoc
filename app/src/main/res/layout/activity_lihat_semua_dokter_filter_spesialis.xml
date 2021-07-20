@@ -14,7 +14,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/filter_lanjut"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="115dp"
         android:layout_below="@id/frame_loc">
 
 
@@ -28,7 +28,7 @@
             android:layout_gravity="left"
             android:fontFamily="@font/googlesansregular"
             android:text="Filter Berdasarkan"
-            android:textColor="#616161"
+            android:textColor="@color/judul"
             android:textSize="16sp"></TextView>
 
         <TextView
@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginRight="20dp"
+            android:minHeight="48dp"
             android:layout_alignParentRight="true"
             android:layout_gravity="right"
             android:fontFamily="@font/googlesansbold"
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             app:cardBackgroundColor="#F5F5F5"
@@ -57,7 +58,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="48dp">
 
                 <TextView
                     android:id="@+id/judulfillter"
@@ -67,7 +68,7 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/googlesansmedium"
                     android:text="Pilih Filter"
-                    android:textColor="@color/deskripsi"
+                    android:textColor="@color/judul"
                     android:textSize="18sp"/>
 
                 <ImageView
@@ -81,8 +82,9 @@
 
                 <ImageView
                     android:id="@+id/lanjutnya"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/dropdown"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>
@@ -97,9 +99,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/frame_loc"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:alpha="0.68"
+
         app:cardBackgroundColor="@color/mitra_halodoc"
         android:elevation="2dp">
 
@@ -128,7 +131,8 @@
                 android:layout_marginRight="8dp"
                 android:fontFamily="@font/googlesansregular"
                 android:gravity="center"
-                android:text="Judul"
+                android:text="@string/judul_spesialisasi"
+               android:contentDescription="@string/judul_spesialisasi"
                 android:textColor="@color/judul"
                 android:textSize="18sp"
                 android:textStyle="bold" />

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
     tools:context=".Pembayaran_tokes">
 
     <!-- filter berdasarkan -->
@@ -246,7 +247,9 @@
                         android:layout_marginRight="30dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
-                        android:text="Rp 415.000"
+                        android:importantForAccessibility="no"
+                        android:contentDescription="@string/txt_bayar"
+                        android:text="@string/txt_bayar"
                         android:textColor="@color/deskripsi"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -452,7 +455,7 @@
                         android:layout_marginTop="52dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
-                        android:text="Rp 415.000"
+                        android:text="@string/totalbayar_tokes"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -464,11 +467,13 @@
                         android:layout_marginTop="16dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
+                        android:importantForAccessibility="no"
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/primary_button"
                         android:fontFamily="@font/googlesansmedium"
-                        android:text="Bayar"
+                        android:text="@string/bayar_tokes"
                         android:textAllCaps="false"
+                       android:contentDescription="@string/bayar_tokes"
                         android:textColor="@android:color/background_light"
                         android:textSize="20sp"/>
 

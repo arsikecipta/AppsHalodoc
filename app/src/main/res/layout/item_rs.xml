@@ -11,7 +11,7 @@
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        app:cardElevation="5dp"
+        app:cardElevation="3dp"
         app:cardCornerRadius="5dp"
         app:cardBackgroundColor="#FFFFFF"
         >
@@ -40,6 +40,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="Nama rs"
+                    android:labelFor="@id/txt_namars"
                     android:fontFamily="@font/googlesansmedium"
                     android:textColor="@color/judul"
                     android:textSize="16sp"

@@ -28,7 +28,7 @@
             android:layout_gravity="left"
             android:fontFamily="@font/googlesansregular"
             android:text="Filter Berdasarkan"
-            android:textColor="#616161"
+            android:textColor="@color/judul"
             android:textSize="16sp"></TextView>
 
         <TextView
@@ -41,7 +41,7 @@
             android:layout_gravity="right"
             android:fontFamily="@font/googlesansregular"
             android:text="Hapus Semua Filter"
-            android:textColor="#9E9E9E"
+            android:textColor="@color/deskripsi"
             android:textSize="16sp"></TextView>
 
         <androidx.cardview.widget.CardView
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             app:cardBackgroundColor="#F5F5F5"
@@ -57,7 +57,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="48dp">
 
                 <TextView
                     android:id="@+id/judulfillter"
@@ -67,14 +67,15 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/googlesansmedium"
                     android:text="Pilih Filter"
-                    android:textColor="@color/deskripsi"
+                    android:textColor="@color/judul"
                     android:textSize="18sp"/>
 
 
                 <ImageView
                     android:id="@+id/lanjutnya"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/dropdown"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:src="@drawable/ic_baseline_arrow_drop_down"></ImageView>

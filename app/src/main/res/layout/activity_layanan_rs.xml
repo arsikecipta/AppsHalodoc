@@ -28,7 +28,8 @@
             android:layout_gravity="left"
             android:textColor="@color/judul"
             android:fontFamily="@font/googlesansbold"
-            android:text="Nama Rumah sakit"
+            android:text="@string/nama_rumah_sakit"
+            android:contentDescription="@string/nama_rumah_sakit"
             android:textSize="18sp"
             />
 
@@ -106,32 +107,45 @@
             android:visibility="gone"
 
             />
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+         >
+
             <Button
                 android:layout_width="150dp"
                 android:text="Telepon rs"
                 android:textColor="@color/background_all"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+            android:layout_marginTop="5dp"
                 android:textAllCaps="false"
                 android:fontFamily="@font/googlesansmedium"
                 android:background="@drawable/stroke_button"
-                android:layout_height="42dp"></Button>
+                android:layout_height="wrap_content"></Button>
+
             <Button
+                android:id="@+id/selanjutnya"
                 android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Lokasi"
                 android:textAllCaps="false"
-                android:textColor="@color/background_all"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/googlesansmedium"
                 android:background="@drawable/stroke_button"
-                android:layout_height="42dp"></Button>
-        </LinearLayout>
+                android:textColor="@color/background_all"
+                android:layout_marginBottom="8dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_next"
+                ></Button>
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_below="@+id/card_artikel3"
             android:layout_width="match_parent"
@@ -184,6 +198,7 @@
                     android:src="@drawable/ic_search2"></ImageView>
 
                 <TextView
+
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="38dp"

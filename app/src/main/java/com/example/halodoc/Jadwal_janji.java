@@ -141,7 +141,7 @@ public class Jadwal_janji extends AppCompatActivity {
 //        });
 
         Button btn_date;
-        final TextView tanggal_fix =(TextView) findViewById(R.id.tanggal_fix);
+//        final TextView tanggal_fix =(TextView) findViewById(R.id.tanggal_fix);
         Button button_tgl = (Button)findViewById(R.id.tanggal_picker);
         // Button btn_jadwal = (Button)findViewById(R.id.btn_jadwal_janji);
         Calendar calendar = Calendar.getInstance();
@@ -156,7 +156,7 @@ public class Jadwal_janji extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayofMonth) {
                         String date = dayofMonth+"/"+month+"/"+year;
-                        tanggal_fix.setText(date);
+//                        tanggal_fix.setText(date);
                     }
                 },year,month,day);
                 datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
@@ -200,6 +200,7 @@ public class Jadwal_janji extends AppCompatActivity {
                     i.putExtra("RumahSakitLayanan", namars_lay.getText());
                     i.putExtra("BiayaLayanan", hargalay.getText());
                     i.putExtra("NamaGone", nama_gone.getText());
+
 //                    i.putExtra("NamaLengkap", nama_gone.getText());
                     startActivity(i);
 

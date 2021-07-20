@@ -9,7 +9,7 @@
         android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        app:cardElevation="10dp"
+        app:cardElevation="3dp"
         app:cardCornerRadius="5dp"
         app:cardBackgroundColor="#FFFFFF"
         >
@@ -66,19 +66,22 @@
                     android:layout_height="wrap_content"></TextView>
                 <Button
                     android:id="@+id/btn_janji_rs"
+                    android:minWidth="48dp"
+                    android:maxWidth="48dp"
                     android:layout_gravity="right"
-                    android:background="@drawable/shape_button_rad"
-                    android:layout_marginTop="20dp"
-                    android:textSize="12dp"
+                    android:background="@drawable/primary_button"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="null"
+                    android:fontFamily="@font/googlesansmedium"
                     android:layout_marginRight="10dp"
-                    android:text="Buat janji"
-                    android:textColor="#ffffff"
-                    android:layout_width="130dp"
+                    android:text="@string/txt_btn_buatjanji"
+                    android:textSize="14sp"
+                    android:importantForAccessibility="no"
+                    android:hint="@string/txt_btn_buatjanji"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="140dp"
                     android:textAllCaps="false"
-                    android:labelFor="@+id/buat_janji_rs"
-                    android:contentDescription="tombol janji rs"
-
-                    android:layout_height="40dp"></Button>
+                    android:layout_height="wrap_content"></Button>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

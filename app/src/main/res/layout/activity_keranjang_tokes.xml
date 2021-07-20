@@ -325,8 +325,11 @@
 
                     <ImageView
                         android:id="@+id/additem"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="48dp"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:contentDescription="@string/gambar_tambah"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginBottom="8dp"
@@ -430,6 +433,7 @@
                             android:background="@drawable/custom_input"
                             android:drawablePadding="12dp"
                             android:inputType="text"
+                            android:textColorHint="@color/deskripsi"
                             android:hint="Contoh : Taruh di depan pagar saja"/>
 
                     </LinearLayout>

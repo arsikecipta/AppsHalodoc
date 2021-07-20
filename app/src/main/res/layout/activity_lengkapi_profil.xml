@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/colorWhite"
     android:layout_height="match_parent"
-    tools:context=".Lengkapi_profil">
+    tools:context=".LengkapiProfil">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -33,14 +33,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:id="@+id/text_informasinama"
+            android:id="@+id/text_nl"
             android:layout_marginTop="10dp"
+            android:textStyle="bold"
             android:layout_marginLeft="20dp"
-            android:text="Nama Lengkap"
+            android:text="@string/text_nama_lengkap"
             android:fontFamily="@font/googlesansregular"
             android:textColor="@color/deskripsi"
             android:layout_marginBottom="10dp"
             android:textSize="16sp"
+
 
             ></TextView>
         <EditText
@@ -50,21 +52,35 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:textSize="16sp"
+           android:hint="Nama Lengkap Anda"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:fontFamily="@font/googlesansregular"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Tanggal lahir"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            ></TextView>
         <Button
             android:id="@+id/datepicker_ttl"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content"
+
+            android:layout_height="50dp"
             android:layout_marginRight="20dp"
-            android:text="Masukan Tanggal lahir"
-            style="?android:spinnerStyle"
-            android:fontFamily="@font/googlesansregular"
-            android:textColor="@color/deskripsi"
+            android:paddingLeft="20dp"
+            android:hint="MM/DD/YY"
             android:textSize="16sp"
+            style="?android:spinnerStyle"
+            android:background="@drawable/bg_spinner"
             android:layout_marginLeft="20dp"
             android:onClick="openDatePicker"
             ></Button>
@@ -82,20 +98,24 @@
             ></TextView>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+
             android:orientation="horizontal"
             >
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
+
                 android:orientation="horizontal"
 
                 android:id="@+id/radioGroup">
                 <RadioButton
                     android:id="@+id/lk"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+
                     android:layout_marginLeft="20dp"
                     android:textSize="16sp"
                     android:text="Laki-laki"
@@ -105,8 +125,8 @@
                 <RadioButton
                     android:id="@+id/pr"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginLeft="100dp"
                     android:text="Perempuan"
                     android:fontFamily="@font/googlesansregular"
@@ -143,6 +163,7 @@
             android:fontFamily="@font/googlesansregular"
             android:textColor="@color/deskripsi"
             android:layout_marginLeft="20dp"
+
             android:text="Nomor telepon"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -173,7 +194,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:text="Email"
-            android:textSize="15sp"
+            android:fontFamily="@font/googlesansregular"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
             ></TextView>
@@ -185,6 +207,7 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:textSize="16sp"
             android:fontFamily="@font/googlesansregular"
             android:textColor="@color/deskripsi"
             android:background="@drawable/custom_input"
@@ -192,7 +215,8 @@
             android:drawableStart="@drawable/ic_message"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:hint="Email"
+
+            android:hint="Contoh : abc@gmail.com"
             />
         <FrameLayout
             android:layout_width="match_parent"
@@ -234,6 +258,8 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:textSize="16sp"
+
             android:fontFamily="@font/googlesansregular"
             android:textColor="@color/deskripsi"
             android:background="@drawable/custom_input"
@@ -264,6 +290,7 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:ems="10"
+            android:textSize="16sp"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
             android:inputType="number"
@@ -283,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textColor="@color/judul"
-                android:fontFamily="@font/googlesansregular"
+                android:fontFamily="@font/googlesansmedium"
 
 
                 android:text="Simpan"

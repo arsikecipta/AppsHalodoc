@@ -37,7 +37,8 @@
                 android:layout_gravity="left"
                 android:fontFamily="@font/googlesansmedium"
                 android:textColor="@color/judul"
-                android:text="Nama Layanan"
+                android:contentDescription="@string/nama_layanan_rs"
+                android:text="@string/nama_layanan_rs"
                 android:textSize="18dp"
                 />
 
@@ -50,7 +51,8 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/googlesansregular"
                 android:textColor="@color/deskripsi"
-                android:text="Jenis"
+                android:text="@string/jenis_layanan"
+                android:contentDescription="@string/jenis_layanan"
                 android:textSize="16dp"></TextView>
 
             <TextView
@@ -117,7 +119,7 @@
 
 
             <HorizontalScrollView
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:scrollbars="none">
@@ -137,6 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
                             android:text="Senin 5 Juli"
+                            android:layout_marginTop="10dp"
                             android:layout_marginHorizontal="8dp"
                             android:background="@drawable/radio_selector2"
                             android:elevation="4dp"
@@ -159,6 +162,7 @@
                             android:gravity="center"
                             android:fontFamily="@font/googlesansregular"
                             android:textSize="14sp"
+                            android:layout_marginTop="10dp"
                             android:paddingHorizontal="10dp"
                             android:button="@drawable/null_radio_button"
                             android:textColor="@drawable/radio_text_selector"
@@ -168,6 +172,7 @@
                             android:layout_width="100dp"
                             android:layout_height="80dp"
                             android:text="Rabu 7Juli"
+                            android:layout_marginTop="10dp"
                             android:layout_marginHorizontal="5dp"
                             android:background="@drawable/radio_selector"
                             android:elevation="4dp"
@@ -187,6 +192,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:textSize="14sp"
                         android:textStyle="bold"
+                        android:layout_marginTop="10dp"
                         android:elevation="4dp"
                         android:textColor="@color/background_all"
                         android:background="@drawable/radio_selector"
@@ -196,15 +202,15 @@
                     </Button>
                 </LinearLayout>
             </HorizontalScrollView>
-            <TextView
-                android:id="@+id/tanggal_fix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="left"
-                android:text="Tanggal fix"
-                android:layout_marginTop="5dp"
-                android:textSize="14sp"></TextView>
+<!--            <TextView-->
+<!--                android:id="@+id/tanggal_fix"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_gravity="left"-->
+<!--                android:text="Tanggal fix"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textSize="14sp"></TextView>-->
 
 
             <androidx.cardview.widget.CardView
@@ -341,8 +347,8 @@
                    android:orientation="horizontal"
                    android:layout_height="wrap_content">
                    <ImageView
-                   android:layout_width="30dp"
-                   android:layout_height="30dp"
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
                    android:src="@drawable/ic_baseline_info_24"></ImageView>
                 <TextView
                     android:layout_marginTop="5dp"

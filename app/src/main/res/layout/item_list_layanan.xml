@@ -8,7 +8,7 @@
         android:id="@+id/card_list_layanan"
         android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="190dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="5dp"
         app:cardBackgroundColor="#FFFFFF"
@@ -22,7 +22,7 @@
                 android:scaleType="centerCrop"
                 android:id="@+id/imageview_list_layanan"
                 android:layout_width="140dp"
-                android:layout_height="180dp">
+                android:layout_height="190dp">
             </ImageView>
             <LinearLayout
                 android:layout_weight="1"
@@ -38,7 +38,8 @@
                     android:layout_marginLeft="10dp"
                     android:maxLines="1"
                     android:fontFamily="@font/googlesansmedium"
-                    android:text="Nama layanan"
+                    android:text="@string/list_namalay"
+                    android:contentDescription="null"
                     android:textSize="16sp"
                     android:textColor="@color/judul"
                     android:textStyle="bold"></TextView>
@@ -92,22 +93,23 @@
                 <Button
                     android:id="@+id/btn_janji"
                     android:layout_gravity="right"
-                    android:background="@drawable/shape_button_rad"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16dp"
-                    android:fontFamily="@font/googlesansregular"
+                    android:background="@drawable/primary_button"
+                    android:layout_marginTop="12dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/googlesansmedium"
                     android:textStyle="bold"
                     android:layout_marginRight="10dp"
                     android:text="Buat Janji"
+                    android:importantForAccessibility="no"
                     android:textColor="@color/colorWhite"
-                    android:layout_width="160dp"
+                    android:layout_width="150dp"
                     android:textAllCaps="false"
                     android:minHeight="48dp"
                     android:minWidth="48dp"
                     android:labelFor="@+id/buat_janji_rs"
                     android:contentDescription="tombol janji rs"
-                    android:layout_height="40dp"></Button>
+                    android:layout_height="48dp"></Button>
             </LinearLayout>
-        </LinearLayout>
+        </LinearLayout>b
     </androidx.cardview.widget.CardView>
 </LinearLayout>

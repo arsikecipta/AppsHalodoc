@@ -8,11 +8,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 
@@ -20,7 +24,7 @@ public class Layanan_rs extends AppCompatActivity {
     private TextView tv_namars, tv_descriprs,tv_jenisrs, txt_layanan, txt_alamatRS, txt_infoRs, txt_penjelasan1, txt_penjelasan2;
     private ImageView img, imageView_layanan, imageView_layanan2;
     private ArrayList<model_layanan> ArrayListModel;
-    CardView cardView_lay;
+    CardView cardView_lay, cardView_search;
     TextView nama_gone;
     RecyclerView layanan_recycler;
     @Override
@@ -32,6 +36,14 @@ public class Layanan_rs extends AppCompatActivity {
 
 
 
+        cardView_search=findViewById(R.id.card_search);
+       cardView_search.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Intent intent= new Intent(Layanan_rs.this,SearchRs.class);
+               startActivity(intent);
+           }
+       });
 
         layanan_recycler = findViewById(R.id.recyclerview_layanan);
         layanan_recycler.setHasFixedSize(true);

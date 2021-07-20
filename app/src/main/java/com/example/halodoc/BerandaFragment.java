@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +22,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,26 +91,68 @@ public class BerandaFragment extends Fragment {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent = new Intent(BerandaFragment.this.getActivity(), chat_dengan_dokter.class);
-                startActivity(intent);
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        getContext(),R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getContext()).inflate(
+                        R.layout.layout_masuk_daftar, (LinearLayout)v.findViewById(R.id.bottomSheetContainer)
+                );
+                bottomSheetView.findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= new Intent( getContext(), Login.class);
+                        startActivity(intent);
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
             }
         });
         card2 = v.findViewById(R.id.card_toko_kesehatan);
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(BerandaFragment.this.getActivity(), toko_kesehatan.class);
-                startActivity(intent);
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        getContext(),R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getContext()).inflate(
+                        R.layout.layout_masuk_daftar, (LinearLayout)v.findViewById(R.id.bottomSheetContainer)
+                );
+                bottomSheetView.findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= new Intent( getContext(), Login.class);
+                        startActivity(intent);
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
             }
         });
         card3 = v.findViewById(R.id.card_buat_janji_rs);
-//        card3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent= new Intent(BerandaFragment.this.getActivity(), BuatJanjiRS.class);
-//                startActivity(intent);
-//            }
-//        });
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
+                        getContext(),R.style.ButtomSheetDialogTheme
+                );
+                View bottomSheetView = LayoutInflater.from(getContext()).inflate(
+                        R.layout.layout_masuk_daftar, (LinearLayout)v.findViewById(R.id.bottomSheetContainer)
+                );
+                bottomSheetView.findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= new Intent( getContext(), Login.class);
+                        startActivity(intent);
+                    }
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
+
+            }
+        });
         button1 = v.findViewById(R.id.but_1);
         button2 = v.findViewById(R.id.but_2);
         button3 = v.findViewById(R.id.but_3);

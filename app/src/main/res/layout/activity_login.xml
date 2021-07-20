@@ -92,7 +92,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:fontFamily="@font/googlesansmedium"
-                    android:text="*silahkan masukan nomor telepon*"
+                    android:text="@string/penjelasan_notel"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
@@ -154,14 +154,18 @@
                         android:layout_height="55dp"
                         android:paddingStart="12dp"
                         android:paddingEnd="12dp"
+                        android:textColorLink="@color/deskripsi"
+                        android:hint="Contoh : 82213228456"
                         android:ems="10"
-                        android:hint="Contoh : 8291038192"
+                        android:textSize="16sp"
                         android:inputType="number"
                        android:layout_marginTop="5dp"
+                        android:textColorHint="@color/deskripsi"
+                        android:fontFamily="@font/googlesansregular"
                         android:background="@drawable/custom_input"
                         android:drawablePadding="12dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"/>
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"/>
                 </LinearLayout>
 
                 <!--     number      -->

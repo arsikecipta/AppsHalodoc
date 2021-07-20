@@ -13,75 +13,71 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/frame_loc"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:elevation="2dp">
-
+        android:layout_height="48dp"
+        android:elevation="2dp"
+        >
         <TextView
             android:id="@+id/loc"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:textColor="@color/deskripsi"
-            android:fontFamily="@font/googlesansmedium"
-            android:layout_marginTop="13dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/googlesansbold"
+            android:layout_marginTop="16dp"
             android:text="Jalan Sukabirus">
         </TextView>
-
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_location">
-        </ImageView>
+            android:src="@drawable/ic_location"
+            ></ImageView>
 
         <ImageView
             android:id="@+id/edit"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="360dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_edit" />
-    </androidx.cardview.widget.CardView>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_gravity="right"
 
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_edit"/>
+    </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/frame_search"
         android:layout_below="@id/frame_loc"
         android:layout_width="match_parent"
         android:layout_marginTop="2dp"
-        android:layout_height="wrap_content">
+        android:layout_height="64dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/search_tokes"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            app:cardBackgroundColor="#F5F5F5"
-            app:cardCornerRadius="2dp">
-
+            app:cardCornerRadius="2dp"
+            app:cardBackgroundColor="#F5F5F5">
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_search2"></ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/googlesansregular"
-                android:hint="Contoh : Surbex-Z atau Vitamin"
-                android:textColor="@color/deskripsi"
-                android:textSize="14sp"></TextView>
-
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_search2"></ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="45dp"
+                android:text="Contoh : Propolis atau Vitamin"
+                ></TextView>
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>

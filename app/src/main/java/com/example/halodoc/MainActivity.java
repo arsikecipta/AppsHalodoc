@@ -32,12 +32,13 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.nav_riwayat:
                             selectedFragment = new HistoryFragment();
                             break;
-                        case R.id.nav_profil:
-                            selectedFragment = new ProfilFragment();
-                            break;
                         case R.id.nav_pesan:
                             selectedFragment = new PesanFragment();
                             break;
+                        case R.id.nav_profil:
+                            selectedFragment = new ProfilFragment();
+                            break;
+
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
                     return true;
