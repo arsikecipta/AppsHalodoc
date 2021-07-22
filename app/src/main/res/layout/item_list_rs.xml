@@ -78,7 +78,7 @@
                     android:textSize="14sp"
                     android:importantForAccessibility="no"
                     android:hint="@string/txt_btn_buatjanji"
-                    android:textColor="@color/background_all"
+                  android:textColor="@drawable/button_text_color"
                     android:layout_width="100dp"
                     android:textAllCaps="false"
                     android:layout_height="wrap_content"></Button>

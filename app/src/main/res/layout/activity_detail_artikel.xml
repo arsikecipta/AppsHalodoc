@@ -99,7 +99,7 @@
         android:textAlignment="viewStart"
         android:text="Isi artikel"
         android:textSize="16sp"
-        android:fontFamily="@font/googlesansregular"
+        android:fontFamily="@font/googlesansmedium"
         tools:ignore="RtlCompat" />
        <TextView
            android:id="@+id/paragraph2"
@@ -109,8 +109,9 @@
            android:layout_marginLeft="20dp"
            android:layout_marginRight="20dp"
            android:layout_gravity="left"
-           android:fontFamily="@font/googlesansregular"
+           android:fontFamily="@font/googlesansmedium"
            android:textAlignment="viewStart"
+           android:layout_marginBottom="20dp"
            android:text="Isi artikel"
            android:textSize="16sp"
            tools:ignore="RtlCompat" />

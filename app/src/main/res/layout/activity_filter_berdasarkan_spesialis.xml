@@ -12,6 +12,32 @@
 
     <!-- filter berdasarkan -->
 
+    <TextView
+        android:id="@+id/judultoolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:fontFamily="@font/googlesansregular"
+        android:text="Filter Berdasarkan"
+        android:visibility="gone"
+        android:textColor="#616161"
+        android:textSize="16sp"></TextView>
+    <TextView
+        android:id="@+id/deskripsi_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:fontFamily="@font/googlesansregular"
+        android:text="Filter Berdasarkan"
+        android:visibility="gone"
+        android:textColor="#616161"
+        android:textSize="16sp"></TextView>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

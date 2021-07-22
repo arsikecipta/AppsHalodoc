@@ -90,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:alpha="0.68"
-        app:cardBackgroundColor="@color/mitra_halodoc"
+        app:cardBackgroundColor="@color/bluelabel"
         android:elevation="2dp">
 
         <ImageView

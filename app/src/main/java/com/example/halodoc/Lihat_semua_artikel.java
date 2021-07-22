@@ -2,6 +2,7 @@ package com.example.halodoc;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,29 +11,57 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Lihat_semua_artikel extends AppCompatActivity {
     private List<model_artikel> modelArtikels;
-    private   Adapter_lihat_artikel adapter_lihatartikel;
+    Adapter_lihat_artikel adapter_lihatartikel;
+    private Button button1, button2, button3, button4, button5,button6, btn_see_all;
+    private int white, darkGray, red;
+    private RecyclerView recyclerView_artikel;
+    private String selectedFilter = "all";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_semua_artikel);
-        setContentView(R.layout.activity_lihat_semua_artikel);
+
         getSupportActionBar().setTitle("Artikel");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         SemuaArtikel();
         setUpRecyclerView();
+
+        button1 = (Button) findViewById(R.id.but_01);
+        button2 = (Button) findViewById(R.id.but_02);
+        button3 = (Button) findViewById(R.id.but_03);
+        button4 = (Button) findViewById(R.id.but_04);
+        button5 = (Button) findViewById(R.id.but_05);
+        button6 = (Button) findViewById(R.id.but_06);
+
+        initcolors();
+        lookSelected(button1);
+
+    }
+
+    private void setUpRecyclerView() {
+         recyclerView_artikel = findViewById(R.id.recyclerview_artikel);
+        recyclerView_artikel.setHasFixedSize(true);
+        recyclerView_artikel.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter_lihatartikel = new Adapter_lihat_artikel(modelArtikels, Lihat_semua_artikel.this);
+        recyclerView_artikel.setAdapter(adapter_lihatartikel);
+
     }
     private void SemuaArtikel() {
         modelArtikels = new ArrayList<>();
-        model_artikel kecantikan = new model_artikel( R.drawable.kecantikan,
+        model_artikel kecantikan = new model_artikel(R.drawable.kecantikan,
                 "Rangkaian Perawatan Wajah untuk Mencegah Jerawat",
-                "Kecantikan","Dr. Fadhli Rizal Makarim", "“Setelah membersihkan wajah, selalu gunakan pelembap yang tepat segera untuk merehidrasi kulit. Secara rutin membersihkan wajah dapat mencegah munculnya jerawat. Kulit menjadi lebih bersih, bebas minyak, dan pori-pori wajah pun tidak tersumbat oleh kotoran dan debu yang menempel usai beraktivitas.",
-                "\n" +
+                "Kecantikan", "Dr. Fadhli Rizal Makarim", "“Setelah membersihkan wajah, selalu gunakan pelembap yang tepat segera untuk merehidrasi kulit. Secara rutin membersihkan wajah dapat mencegah munculnya jerawat. Kulit menjadi lebih bersih, bebas minyak, dan pori-pori wajah pun tidak tersumbat oleh kotoran dan debu yang menempel usai beraktivitas.",
+
                         "Halodoc, Jakarta – Untuk kamu yang memiliki wajah berjerawat, perawatan wajah dengan produk yang tepat adalah hal yang cukup penting. Perawatan wajah ini dimaksudkan untuk menghilangkan minyak dan kotoran yang menyumbat pori-pori dan menampung bakteri. Membersihkan wajah juga perlu dilakukan pagi maupun malam hari, untuk mendapatkan wajah yang sehat dan bersih.\n" +
                         "\n" +
                         "Ingat, dengan membersihkan dan merawat wajah dengan benar akan memungkinkan kulit untuk melakukan regenerasi secara alami dan meminimalkan risiko pembentukan jerawat baru. Oleh karena itu, untuk kamu yang memiliki masalah jerawat, berikut adalah hal-hal yang perlu kamu lakukan!\n" +
@@ -69,78 +98,78 @@ public class Lihat_semua_artikel extends AppCompatActivity {
                         "Kamu juga bisa memilih retinol yang merupakan bahan aktif lain yang cocok untuk mengatasi jerawat. Retinol akan bekerja secara keratolitik, yakni mengangkat sel-sel kulit mati dari permukaan kulit dan pori-pori. Dengan begini, pergantian sel akan mengalami peningkatan, yang membantu memerangi gejala jerawat.");
         modelArtikels.add(kecantikan);
 
-        model_artikel makanan = new model_artikel( R.drawable.makanan,
-                "Apa Manfaat Mengkonsumsi Yoghurt untuk Kesehatan?",
-                "Makanan Sehat","Dr. Rizal Fadli","Halodoc, Jakarta – Yoghurt adalah makanan yang merupakan fermentasi dari susu dan terkenal dapat menyehatkan karena kandungan probiotik yang tinggi. Namun, kebanyakan orang hanya tahu jika makanan ini dapat menyehatkan sistem pencernaan. Padahal, masih banyak manfaat lainnya yang dapat kamu rasakan dengan mengonsumsi yoghurt secara rutin. Berikut beberapa manfaatnya yang perlu kamu ketahui!",
-                "\n" +
-                        "Manfaat Yoghurt Terhadap Kesehatan\n" +
-                        "Yoghurt merupakan produk susu yang dibuat dengan metode fermentasi. Makanan ini kaya akan kandungan protein dan kalsium, sehingga mampu meningkatkan bakteri baik yang ada di sistem pencernaan, terutama usus. Asam laktat dibutuhkan untuk menghasilkan yoghurt, agar protein susu dapat mengental dan memberikan rasa serta struktur yang unik. Apabila ditambahkan gula, beberapa produk susu ini menjadi tidak menyehatkan.\n" +
+        model_artikel coronavirus = new model_artikel(R.drawable.covid1,
+                "COVID-19 Rentan pada Pengidap Diabetes dan Obesitas",
+                "Coronavirus", "Dr. Fadhil Rizal Makarim", "COVID-19 Rentan pada Pengidap Diabetes dan Obesitas\n" +
+                "“COVID-19 bisa menyerang siapa saja, sehingga kewaspadaan diri harus selalu dijaga. Meski bisa disembuhkan, pada beberapa orang, penyakit yang disebabkan oleh infeksi virus ini mungkin akan berbahaya. Ada beberapa orang yang lebih berisiko terinfeksi, siapa saja?”",
+                "\n" +"Halodoc, Jakarta – COVID-19 bisa menyerang siapa saja yang terinfeksi virus corona. Namun, tahukah kamu? Ternyata risiko penyakit ini menjadi lebih tinggi pada kelompok orang tertentu, misalnya pengidap penyakit diabetes dan obesitas alias kelebihan berat badan. Bukan tanpa alasan, kedua kondisi tersebut diyakini bisa memengaruhi tubuh dan dapat menyebabkan sistem kekebalan atau imunitas tidak berfungsi maksimal dalam mencegah penyakit. \n" +
                         "\n" +
-                        "Baca juga: Mitos atau Fakta, Konsumsi Yogurt Bikin Pencernaan Sehat\n" +
+                        "Selain itu, ada faktor lain yang disebut bisa meningkatkan risiko infeksi pada pengidap diabetes dan obesitas. Maka dari itu, orang dengan kondisi kesehatan tertentu harus lebih waspada agar terhindar dari serangan penyakit. Lantas, mengapa pengidap penyakit diabetes dan kelebihan berat badan berisiko tinggi terserang COVID-19? Cari tahu jawabannya di artikel berikut!\n" +
                         "\n" +
-                        "Faktanya, masih banyak manfaat yang bisa dirasakan dengan mengonsumsi yoghurt secara rutin, meski tergantung pada jenis yang kamu konsumsi sehari-hari. Selain itu, makanan ini juga dapat menjadi pilihan seseorang yang tidak dapat mengonsumsi produk susu atau zat hewani akibat alergi atau intoleransi. Hal ini karena yoghurt mengandung lebih sedikit laktosa dibandingkan susu karena adanya proses fermentasi.\n" +
+                        "Baca juga: Bisakah COVID-19 Disembuhkan?\n" +
                         "\n" +
-                        "Nah, kamu juga perlu tahu beberapa manfaat dari yogurt untuk kesehatan, antara lain:\n" +
+                        "Faktor Risiko Infeksi COVID-19 \n" +
+                        "Virus corona bisa menyerang siapa saja dan menyebabkan infeksi. Namun, ada kelompok orang yang disebut lebih berisiko mengalami kondisi ini. Salah satu faktor yang disebut bisa meningkatkan risiko COVID-19 adalah kelebihan berat badan atau overweight. Bahkan, orang yang memiliki bobot tubuh berlebih disebut lebih berisiko mengalami gejala infeksi virus corona yang fatal, hingga menyebabkan komplikasi bahkan hilangnya nyawa. \n" +
                         "\n" +
-                        "1. Meningkatkan Sistem Imunitas\n" +
-                        "Salah satu manfaat yoghurt untuk kesehatan adalah dapat meningkatkan sistem imunitas di dalam tubuh. Hal ini dapat terjadi ketika probiotik mengubah mikroflora usus dan mengurangi respons sistem kekebalan tubuh yang dapat memperburuk penyakit. Selain itu, kandungan tersebut juga dapat meningkatkan resistensi dan pemulihan dari infeksi. Penelitian menyebut jika durasi semua gangguan yang disebabkan oleh penyakit lebih pendek pada orang yang rutin mengonsumsi yoghurt, dibandingkan yang tidak.\n" +
+                        "Sejumlah ahli meyakini bahwa hal ini terjadi karena tumpukan lemak di perut dapat mendorong diafragma. Semakin lama, dorongan tersebut membuat otot besar yang terletak di bawah rongga dada menekan paru-paru. Kondisi ini kemudian akan membatasi aliran udara yang diterima paru-paru. Penurunan volume udara bisa menyebabkan kolapsnya saluran udara lobus di bawah paru-paru. Hal ini bisa memperparah gejala penyakit dengan lebih cepat. \n" +
                         "\n" +
-                        "2. Mencegah Osteoporosis\n" +
-                        "Nutrisi yang cukup sangat berperan penting dalam pencegahan dan pengobatan osteoporosis, terutama kandungan kalsium dan vitamin D. Kedua kandungan ini terdapat dalam yogurt sehingga sangat baik untuk menjaga kepadatan tulang. Kalsium terbukti dapat meningkatkan massa tulang untuk semua orang tidak terpaku usia. Maka dari itu, pastikan untuk mengonsumsi yoghurt secara rutin setiap hari.\n" +
+                        "Survei Kasus Infeksi Corona di Jakarta\n" +
+                        "Melansir DetikHealth, kasus positif corona di DKI Jakarta ternyata berkaitan dengan indeks massa tubuh. Hasil itu didapat dari survei yang dilakukan oleh Dinas Kesehatan Provinsi DKI Jakarta bersama Tim Pandemi Fakultas Kesehatan Masyarakat Universitas Indonesia, Lembaga Eijkman, dan CDC Indonesia. Hasilnya sebagai berikut; \n" +
                         "\n" +
-                        "Baca juga: Mengenal Lebih Jauh Mengenai Yogurt Kelapa\n" +
+                        "Kurus (kurang dari 18,4 kg/m2) = 33,8 persen\n" +
                         "\n" +
-                        "Jika kamu ingin memastikan tingkat kepadatan tulang dan seberapa besar kebutuhan terhadap kalsium dan vitamin D setiap hari, pemeriksaan di rumah sakit yang bekerja sama dengan Halodoc dapat dilakukan. Cukup dengan download aplikasi Halodoc, kamu bisa melakukan pemesanan untuk pemeriksaan tersebut hanya dengan penggunaan smartphone. Unduh aplikasinya sekarang juga!\n" +
+                        "Normal (18,5 sampai 25,0 kg/m2) = 42,0 persen\n" +
                         "\n" +
-                        "3. Mengurangi Risiko Tekanan Darah Tinggi\n" +
-                        "Manfaat lainnya dari yogurt untuk kesehatan tubuh adalah mengurangi risiko dari tekanan darah tinggi. Dipercaya jika susu rendah lemak yang mirip dengan yoghurt dapat membuat tekanan darah menjadi normal jika dikonsumsi secara rutin. Disebutkan jika penurunan risiko terkena darah tinggi mencapai 50 persen pada seseorang yang mengonsumsi 2–3 porsi susu rendah lemak dalam sehari. Tidak ada salahnya untuk mengganti susu rendah lemak dengan yoghurt.\n" +
+                        "Overweight (25,1 sampai 27,0 kg/m2) = 52,9 persen\n" +
                         "\n" +
-                        "4. Pilihan Baik saat Diet\n" +
-                        "Yoghurt juga dapat bermanfaat sebagai makanan yang sangat baik saat kamu sedang dalam program diet. Hasil fermentasi susu ini dipercaya dapat menjadi camilan yang tepat di jam-jam tertentu saat perut tiba-tiba lapar padahal jadwal makan selanjutnya masih lama. Memang telah terbukti jika makanan ini dapat membuat seseorang merasa kenyang dibandingkan camilan lainnya, serta mampu menyehatkan tubuh.\n" +
+                        "Obesitas (lebih dari 27,0 kg/m2) = 51,6 persen. \n" +
                         "\n" +
-                        "Baca juga: Yogurt Kelapa Lebih Sehat dari yang Berbahan Hewani, Benarkah?\n" +
+                        "Baca juga: Ketahui Segala Hal Mengenai COVID-19\n" +
                         "\n" +
-                        "Sekarang kamu tahu apa saja manfaat dari yoghurt untuk kesehatan tubuh, bukan hanya sistem pencernaan. Maka dari itu, ada baiknya kamu membiasakan diri untuk mengonsumsi makanan hasil fermentasi ini. Tentu kamu tidak ingin kan memiliki osteoporosis saat tua karena kepadatan tulang yang terus menurun akibat faktor usia? Biasakan hal baik ini sekarang juga!");
-        modelArtikels.add(makanan);
+                        "Selain berat badan, risiko COVID-19 juga meningkat pada pengidap penyakit tertentu. Dari survei yang sama, diketahui bahwa pengidap gula darah tinggi alias obesitas masuk dalam kategori berisiko tinggi terinfeksi virus corona. Setidaknya ada 53 persen orang yang memiliki kadar gula darah puasa lebih dari 200 mg/dL diketahui mengalami gejala penyakit. Sementara untuk orang dengan kadar gula di bawah 200 mg/dL, angka penularan disebut mencapai 45,9 persen. \n" +
+                        "\n" +
+                        "Sementara itu, American Diabetes Association menyebut masih sedikit data yang menunjukkan pengidap diabetes lebih berisiko dibandingkan orang kebanyakan. Namun, hal nyata yang dihadapi adalah risiko tinggi terjadinya komplikasi. Diabetes menyebabkan sistem imunitas pengidapnya menurun, sehingga lebih mudah terserang penyakit. Komplikasi berbahaya dari infeksi virus corona juga dikhawatirkan meningkat pada orang dengan gula darah tinggi. \n" +
+                        "\n" +
+                        "Baca juga: Begini Kronologi Lengkap Virus Corona Masuk Indonesia\n" +
+                        "\n" +
+                        "Orang yang memiliki risiko tinggi terinfeksi virus harus sangat memperhatikan kondisi tubuh. Penting untuk selalu menerapkan protokol kesehatan, konsumsi makanan sehat, mengelola stres, mengenakan masker, serta menghindari kerumunan.");
+        modelArtikels.add(coronavirus);
 
-        model_artikel anak = new model_artikel(R.drawable.anak,
-                "4 Cara untuk Mencegah Anak Mengalami tantrum",
-                "Pola Asuh Anak","Dr. Rizal Fadli", "Halodoc, Jakarta - Tantrum pada anak bisa menjadi masalah tersendiri bagi orangtua. Namun, sebenarnya tantrum adalah hal yang wajar terjadi pada Si Kecil karena adanya perkembangan pada kemampuan emosional dan sosialnya. Selain itu, tantrum juga dapat terjadi karena anak mengalami kesulitan dalam menunjukkan perasaannya.",
-                "\n" +
-                        "Saat hal ini terjadi, sang buah hati pasti akan menangis meraung sambil berteriak, bahkan bisa saja mereka berguling atau terduduk di lantai karena apa yang diinginkan tidak dipenuhi oleh orangtua. Lalu, bagaimana cara mencegah terjadinya hal ini? Berikut pembahasannya!\n" +
-                        "\n" +
-                        "Baca juga: Inilah 6 Jenis Pola Asuh Anak yang Bisa Diterapkan Orangtua\n" +
-                        "\n" +
-                        "Sebenarnya, tantrum merupakan fase yang wajar terjadi pada setiap anak. Biasanya, kondisi ini dialami oleh anak yang berusia 1–3 tahun dengan durasi yang berbeda pada setiap anak. Jika tantrum terjadi di rumah, hal ini tentunya bukan menjadi masalah yang berarti bagi orangtua. Namun, bagaimana jika tantrum terjadi di tempat umum? Pasti sangat merepotkan, ya!\n" +
-                        "\n" +
-                        "Cara Mencegah Tantrum pada Anak\n" +
-                        "Lalu, bagaimana caranya supaya tantrum tidak terjadi, baik di rumah maupun di tempat umum? Berikut ini beberapa tips pola asuh anak yang bisa ibu lakukan:\n" +
-                        "\n" +
-                        "Tetaplah melakukan rutinitas seperti biasa, terlebih saat waktunya makan dan tidur. Hindari pergi jalan-jalan terlalu jauh atau menunda waktu makan dan tidur siang Si Kecil.\n" +
-                        "Alihkan perhatian sang buah hati dengan mainan favoritnya.\n" +
-                        "Tidak perlu marah, tetap tenang dan cobalah pahami anak. Ingatlah bahwa setiap anak memiliki kelebihan, kekurangan, dan keunikan masing-masing. Selalu tanamkan bahwa pada usianya, mereka belum mampu menyampaikan apa yang diinginkan dengan baik pada orangtuanya.\n" +
-                        "Bantu anak agar tidak mengalami rasa frustasi. Selalu persiapkan anak saat hendak mengalami perubahan baru dengan membicarakannya setiap hari sebelum terjadi. Jelaskan dengan baik dan perlahan pada anak aturan apa saja yang harus ia ketahui dan patuhi.\n" +
-                        "Baca juga: Mengenal Dampak Pola Asuh Orangtua ke Anak Lewat Film Shazam!\n" +
-                        "\n" +
-                        "Menghadapi Tantrum pada Anak\n" +
-                        "Tetap tenang saat anak mengalami tantrum adalah kunci penting yang perlu diingat oleh para orangtua. Jangan buat masalah menjadi lebih rumit dengan memarahi anak. Selalu ingat bahwa orangtua berperan dalam membantu anak menyampaikan apa yang mereka inginkan dengan baik.\n" +
-                        "\n" +
-                        "Tantrum ditangani dengan cara yang berbeda tergantung pada sebab anak marah. Terkadang, ibu perlu memberikan mereka penghiburan. Jika anak merasa lelah atau lapar, ajak ia beristirahat atau siapkan makanan untuknya. Aktivitas baru juga bisa membantu anak teralihkan dari rasa kesal.\n" +
-                        "\n" +
-                        "Jika tantrum terjadi karena anak butuh perhatian orangtua, ibu bisa mengurangi perilaku ini dengan mengabaikannya. Jika anak marah setelah ditolak, tetap tenang dan sebaiknya ibu tidak banyak menjelaskan alasan anak tidak mendapatkan keinginannya.\n" +
-                        "\n" +
-                        "Jika tantrum terjadi setelah ibu meminta anak melakukan sesuatu yang tidak ia inginkan, abaikan amukan tersebut dan pastikan ibu tetap memintanya menyelesaikan tugas setelah dirinya lebih tenang.\n" +
-                        "\n" +
-                        "Baca juga: Enggan Menikah tapi Bisa Punya Anak dengan Platonic Parenting\n" +
-                        "\n" +
-                        "Anak yang cenderung melukai diri sendiri atau orang lain selama mengalami tantrum harus segera dibawa ke tempat yang lebih aman serta tenang dan aman, agar ia bisa menenangkan diri. Apabila ibu butuh bantuan, tanyakan langsung pada dokter spesialis anak atau psikolog anak melalui aplikasi Halodoc. Memang, mengatasi tantrum mungkin tidak mudah bagi beberapa orangtua sehingga membutuhkan bantuan ahlinya. Jangan tunda untuk download aplikasi Halodoc, ya!\n" +
-                        "\n");
-        modelArtikels.add(anak);
+        model_artikel sakit_kepala = new model_artikel(R.drawable.lansia,
+                "Lansia Kerap Alami Sakit Kepala, Waspadai Penyakit Ini",
+                "Sakit Kepala", "Dr. Fadhil Rizal Makarim", "Halodoc, Jakarta – Sakit kepala adalah penyakit yang tidak memandang usia. Sakit kepala bisa dialami oleh siapa pun, baik orang dewasa dan anak-anak. Tetapi, lansia cenderung lebih sering atau lebih mudah mengalami sakit kepala daripada orang yang lebih muda.",
+
+                        "Selain itu, sakit kepala yang dialami lansia juga bisa menjadi tanda penyakit tertentu. Penyakit bisa serius atau tidak, tergantung pada kondisi sakit kepala yang dialami. Dikutip dari WebMD, berikut ini sejumlah penyakit yang berisiko dialami lansia yang mengalami sakit kepala.\n" +
+                                "\n" +
+                                "Baca Juga: Ini 3 Beda Letak Sakit Kepala\n" +
+                                "\n" +
+                                "Penyakit Serebrovaskular\n" +
+                                "Stroke adalah salah satu penyakit yang disertai dengan sakit kepala. Dikutip dari WebMD, penelitian terhadap 163 pasien yang mengalami stroke, 60 persen di antaranya mengalami sakit kepala. Sedangkan 46 persen di antaranya mengalami sakit kepala yang amat berat dan sisanya mengalami sakit kepala ringan, tetapi cukup menyakitkan. Sakit kepala kemungkinan datang secara tiba-tiba atau melambat.\n" +
+                                "\n" +
+                                "Trauma Kepala\n" +
+                                "Sekitar 30 persen orang yang berusia 65 tahun ke atas mengalami jatuh setidaknya setahun sekali. Jatuh bisa menyebabkan hematoma subdural atau perdarahan pada otak akibat cedera kepala ringan. Trauma otak bisa mengancam jiwa atau hilang dengan sendirinya. Nah, kondisi ini ditandai dengan sakit kepala. Sakit kepala dapat berkisar dari ringan hingga parah, selang seling atau konstan, dan dapat terjadi pada satu atau kedua sisi kepala.\n" +
+                                "\n" +
+                                "Arteritis Temporal\n" +
+                                "Sakit kepala adalah gejala umum dari arteritis temporal, yaitu penyakit yang menyebabkan arteri membengkak dan menyempit. Kondisi ini terjadi pada arteri temporal yang besar dan yang sedang membentang di kedua sisi kepala. Sel-sel arteri yang meradang ini terlihat besar jika dilihat di bawah mikroskop.\n" +
+                                "\n" +
+                                "Baca Juga: Inilah Perbedaan Pusing dan Sakit Kepala, Penyakit yang Dikira Sama\n" +
+                                "\n" +
+                                "Arteritis temporal sering terjadi pada lansia di atas 50 tahun. Sakit kepala biasanya dideskripsikan seperti berdenyut, dan selang seling atau konstan. Sakit kepala bisa terjadi pada satu atau kedua sisi kepala, biasanya di dekat pelipis, dahi atau belakang kepala. Pengidap arteritis temporal juga dapat mengalami sakit rahang saat mengunyah.\n" +
+                                "\n" +
+                                "Trigeminal Neuralgia\n" +
+                                "Saraf trigeminal bekerja untuk mengontrol perasaan wajah. Ketika saraf mengalami gangguan, seseorang bisa mengalami rasa sakit yang luar biasa di bagian bawah wajah, di sekitar hidung, dan di atas mata. Trigeminal neuralgia dipicu dengan melakukan hal-hal biasa, seperti menyikat gigi, mengunyah, atau meniup hidung. Pada kasus lainnya, rasa sakit disebabkan oleh tumor yang menekan saraf trigeminal.\n" +
+                                "\n" +
+                                "Kondisi ini lebih umum dialami oleh lansia berusia di atas 50 dan lebih sering terjadi pada wanita daripada pria. Trigeminal neuralgia bisa disebabkan oleh hipertensi, multiple sclerosis atau diturunkan dalam keluarga. \n" +
+                                "\n" +
+                                "Baca Juga: Sakit Kepala Bisa Jadi Tanda Tumor Otak?\n" +
+                                "\n" +
+                                "Itulah kondisi yang ditandai dengan sakit kepala yang dialami oleh lansia. Kalau kamu sering mengalami sakit kepala tanpa penyebab yang jelas dan dibarengi dengan gejala tidak biasa lainnya, lebih baik periksakan ke dokter. Kini, lewat Halodoc kamu bisa membuat janji dengan dokter terlebih dahulu. Tinggal pilih dokter di rumah sakit yang tepat sesuai dengan kebutuhan lewat aplikasi.");
+        modelArtikels.add(sakit_kepala);
 
         model_artikel parestesia = new model_artikel(R.drawable.parestesia,
                 "Jenis Pemeriksaan yang dilakukan untuk Deteksi parestesia",
-                "Parestesia","Dr. Gabriella Florencia","Halodoc, Jakarta – Pernahkah kamu merasa beberapa bagian tubuh kamu mengalami kesemutan? Kesemutan atau dalam bahasa medis dikenal dengan istilah parestesia adalah kondisi yang terjadi ketika anggota tubuh mengalami sensasi panas. Tidak hanya sensasi panas, terkadang seseorang yang mengalami kondisi parestesia mengalami sensasi seperti tertusuk jarum di beberapa bagian tubuh serta mati rasa atau kebas.",
-                "\n" +
+                "Parestesia", "Dr. Gabriella Florencia", "Halodoc, Jakarta – Pernahkah kamu merasa beberapa bagian tubuh kamu mengalami kesemutan? Kesemutan atau dalam bahasa medis dikenal dengan istilah parestesia adalah kondisi yang terjadi ketika anggota tubuh mengalami sensasi panas. Tidak hanya sensasi panas, terkadang seseorang yang mengalami kondisi parestesia mengalami sensasi seperti tertusuk jarum di beberapa bagian tubuh serta mati rasa atau kebas.",
+
                         "Baca juga: Sering Alami Kesemutan? Hati-hati Gejala dari Parestesia\n" +
                         "\n" +
                         "Kenali Jenis Parestesia\n" +
@@ -187,13 +216,13 @@ public class Lihat_semua_artikel extends AppCompatActivity {
                         "\n" +
                         "Tidak ada salahnya untuk melakukan pencegahan, salah satunya dengan rajin berkeliling secara berkala jika sudah duduk dalam waktu yang cukup lama. Gunakan aplikasi Halodoc untuk bertanya langsung pada dokter mengenai gangguan kesehatan yang kamu alami pada bagian saraf kamu. Yuk, download aplikasi Halodoc melalui App Store atau Google Play sekarang juga!\n" +
                         "\n" +
-                        "Baca juga: Hati-hati, Kadar Gula Tinggi Dapat Sebabkan Parestesia" );
+                        "Baca juga: Hati-hati, Kadar Gula Tinggi Dapat Sebabkan Parestesia");
         modelArtikels.add(parestesia);
 
         model_artikel bayi = new model_artikel(R.drawable.bayi,
                 "7 Cara Merawat Bayi Baru Lahir Tanpa Stres",
-                "Pertumbuhan bayi","Dr. Rizal Fadli", "Halodoc, Jakarta - Selain persiapan persalinan, ada banyak hal yang tidak kalah penting untuk menyambut kedatangan buah hati. Salah satunya dengan mempersiapkan diri dalam merawat dan mengasuh bayi yang baru lahir.",
-                "\n" +
+                "Pertumbuhan bayi", "Dr. Rizal Fadli", "Halodoc, Jakarta - Selain persiapan persalinan, ada banyak hal yang tidak kalah penting untuk menyambut kedatangan buah hati. Salah satunya dengan mempersiapkan diri dalam merawat dan mengasuh bayi yang baru lahir.",
+
                         "Merawat bayi yang baru lahir memang akan menjadi pengalaman yang menyenangkan. Namun dibalik itu, kondisi ini dapat menyebabkan emosi yang naik turun dan kelelahan yang cukup panjang. Bahkan, jika tidak diatasi dengan baik, kondisi ini dapat meningkatkan risiko stres atau baby blues.\n" +
                         "\n" +
                         "Baca juga: Tips Perawatan untuk Bayi Baru Lahir\n" +
@@ -242,15 +271,84 @@ public class Lihat_semua_artikel extends AppCompatActivity {
 
     }
 
-    private void setUpRecyclerView() {
-        RecyclerView recyclerView_artikel = findViewById(R.id.recyclerview_artikel);
-        recyclerView_artikel.setHasFixedSize(true);
-        recyclerView_artikel.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter_lihatartikel = new Adapter_lihat_artikel(modelArtikels,Lihat_semua_artikel.this);
-        recyclerView_artikel.setAdapter(adapter_lihatartikel);
+
+    private void initcolors() {
+        white = ContextCompat.getColor(getApplicationContext(), R.color.colorWhite);
+        red = ContextCompat.getColor(getApplicationContext(), R.color.background_all);
+        darkGray = ContextCompat.getColor(getApplicationContext(), R.color.colorDivider);
+    }
+
+    private void unSelectAllSortButtons() {
+        lookUnselected(button1);
+        lookUnselected(button2);
+        lookUnselected(button3);
+        lookUnselected(button4);
+        lookUnselected(button5);
+        lookUnselected(button6);
+
 
     }
+
+    private void lookSelected(Button parsedButton) {
+        parsedButton.setTextColor(white);
+        parsedButton.setBackgroundResource(R.drawable.stroke3);
+    }
+
+    private void lookUnselected(Button parsedButton) {
+        parsedButton.setTextColor(red);
+        parsedButton.setBackgroundResource(R.drawable.stroke);
+    }
+
+    private void filterList(String status) {
+        selectedFilter = status;
+        ArrayList<model_artikel> modelLihatArtikels = new ArrayList<model_artikel>();
+        for (model_artikel artikel : modelArtikels) {
+            if (artikel.getTopik_artikel().toLowerCase().contains(status)) {
+                modelLihatArtikels.add(artikel);
+            }
+        }
+        Adapter_lihat_artikel adapter_lihatartikel = new Adapter_lihat_artikel(modelLihatArtikels, this);
+        recyclerView_artikel.setAdapter(adapter_lihatartikel);
+    }
+
+
+    public void Button1(View view) {
+        Adapter_lihat_artikel adapter_lihatartikel = new Adapter_lihat_artikel(modelArtikels, Lihat_semua_artikel.this);
+        recyclerView_artikel.setAdapter(adapter_lihatartikel);
+        unSelectAllSortButtons();
+        lookSelected(button1);
+    }
+
+    public void Button2(View view) {
+        filterList("kecantikan");
+        unSelectAllSortButtons();
+        lookSelected(button2);
+    }
+
+    public void Button3(View view) {
+        filterList("coronavirus");
+        unSelectAllSortButtons();
+        lookSelected(button3);
+    }
+
+    public void Button4(View view) {
+        filterList("sakit kepala");
+        unSelectAllSortButtons();
+        lookSelected(button4);
+    }
+
+    public void Button5(View view) {
+        filterList("parestesia");
+        unSelectAllSortButtons();
+        lookSelected(button5);
+    }
+    public void Button6(View view) {
+        filterList("bayi");
+        unSelectAllSortButtons();
+        lookSelected(button6);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 

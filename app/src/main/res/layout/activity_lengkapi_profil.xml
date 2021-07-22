@@ -114,7 +114,7 @@
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:layout_marginTop="8dp"
-
+                    android:buttonTint="@color/background_all"
                     android:layout_marginLeft="20dp"
                     android:textSize="16sp"
                     android:text="Laki-laki"
@@ -128,6 +128,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="100dp"
                     android:text="Perempuan"
+                    android:buttonTint="@color/background_all"
                     android:fontFamily="@font/googlesansregular"
                     android:textColor="@color/deskripsi"
                     android:textSize="16sp"
@@ -182,7 +183,7 @@
             android:editable="false"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
-            android:drawableStart="@drawable/ic_phone"
+
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             />
@@ -211,7 +212,7 @@
             android:textColor="@color/deskripsi"
             android:background="@drawable/custom_input"
             android:drawablePadding="12dp"
-            android:drawableStart="@drawable/ic_message"
+
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
 

@@ -50,6 +50,8 @@ public class Adapter_list_layanan_semua extends RecyclerView.Adapter<Adapter_lis
             public void onClick(View view) {
                 Intent intent =  new Intent(context, Jadwal_janji.class);
                 //passing data to detail
+
+
                 intent.putExtra("NamaLayanan", modelListLayananSemuas.get(position).getNama_layanan());
                 intent.putExtra("JenisLayanan", modelListLayananSemuas.get(position).getJenis_layanan());
                 intent.putExtra("RumahSakitLayanan", modelListLayananSemuas.get(position).getNama_rs());

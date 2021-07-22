@@ -19,7 +19,7 @@
     <string name="nama_rumah_sakit">Nama Rumah sakit</string>
     <string name="list_namalay">Nama layanan</string>
     <string name="layanan_name">layanan</string>
-    <string name="txt_pilihpasien">Pilih pasien</string>
+    <string name="txt_pilihpasien">Pilih Pasien</string>
     <string name="nama_layanan_rs">RS Nama Layanan</string>
     <string name="dropdown">dropdown</string>
     <string name="txt_bayar">Rp 415.000</string>
@@ -37,5 +37,10 @@
     <string name="ringkas_bayar_dokter">Bayar</string>
     <string name="jumlah_obat">+</string>
     <string name="kurangi_obat">-</string>
+    <string name="nama_paket">nama paket</string>
+    <string name="radiobutton_pasien">radio_pasien</string>
+    <string name="radiobutton_keluarga">radio_keluarga</string>
+    <string name="pengiriman_instant">instant</string>
+    <string name="pengiriman_reg">reguler</string>
     <!-- End Sherly  -->
 </resources>

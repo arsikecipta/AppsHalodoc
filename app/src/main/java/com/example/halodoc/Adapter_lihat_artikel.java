@@ -29,8 +29,6 @@ public class Adapter_lihat_artikel extends RecyclerView.Adapter<Adapter_lihat_ar
         modelArtikelsFull = new ArrayList<>(modelArtikels);
     }
 
-    @NonNull
-    @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //   LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_artikel, parent, false);

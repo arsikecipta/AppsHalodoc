@@ -157,7 +157,7 @@
         </LinearLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="420dp"
             android:layout_margin="20dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="5dp"
@@ -213,7 +213,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_layanan"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="290dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="120dp"

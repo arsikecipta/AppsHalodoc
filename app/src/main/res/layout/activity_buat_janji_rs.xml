@@ -103,8 +103,8 @@
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/judul"
-            android:textSize="18dp"
-            android:text="Rekomendasi RS"/>
+            android:textSize="20dp"
+            android:text="RS Terjamin Asuransi"/>
         <TextView
             android:id="@+id/nama_gone"
             android:layout_width="wrap_content"
@@ -142,7 +142,9 @@
           android:id="@+id/recyclerview_rs"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_margin="10dp">
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="8dp">
       </androidx.recyclerview.widget.RecyclerView>
 
       <Button
@@ -177,7 +179,7 @@
 
             android:fontFamily="@font/googlesansbold"
             android:textColor="@color/judul"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:text="Semua Layanan"/>
 
       </LinearLayout>
@@ -186,7 +188,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_alignParentBottom="true"
-          android:layout_marginTop="10dp"
+          android:layout_marginTop="8dp"
           android:layout_marginLeft="10dp"
           android:layout_marginRight="10dp"
           android:layout_marginBottom="9dp"
