@@ -229,14 +229,14 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_below="@+id/card_artikel3"
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
+                        android:layout_below="@+id/card_artikel3"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="100dp"
-                        android:background="#C4C4C4">
-                    </LinearLayout>
+                        android:layout_marginRight="10dp"
+                        android:background="#C4C4C4"></LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -380,7 +380,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -430,7 +430,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 

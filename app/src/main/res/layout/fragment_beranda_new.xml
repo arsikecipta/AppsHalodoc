@@ -227,35 +227,28 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-
-                            android:layout_marginLeft="10dp"
-                           >
+                            android:layout_marginTop="18dp">
 
                             <TextView
                                 android:id="@+id/judul2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                               android:layout_alignParentRight="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
                                 android:layout_marginRight="55dp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="16dp"
-                                android:text="Selengkapnya"
                                 android:fontFamily="@font/googlesansmedium"
+                                android:text="Selengkapnya"
                                 android:textColor="@color/background_all"
-                                android:textSize="14sp"/>
+                                android:textSize="14sp" />
 
 
                             <ImageView
                                 android:id="@+id/selanjutnya2"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:layout_marginRight="20dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_alignParentRight="true"
-                                android:src="@drawable/ic_next_pink"
-                                ></ImageView>
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_next_pink"></ImageView>
 
                         </RelativeLayout>
 
@@ -272,8 +265,8 @@
                 android:layout_height="120dp"
                 app:cardElevation="10dp"
                 app:cardCornerRadius="5dp"
-                app:cardBackgroundColor="#FFFFFF"
-                >
+                app:cardBackgroundColor="#FFFFFF">
+
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -285,9 +278,9 @@
                         android:layout_width="140dp"
                         android:layout_height="120dp">
                     </ImageView>
+
                     <LinearLayout
                         android:layout_weight="1"
-
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -313,16 +306,13 @@
                             android:textColor="@color/deskripsi"
                             android:fontFamily="@font/googlesansregular"
                             android:textSize="14sp"
-
                             android:text="Buat janji RS mudah dan cepat!"></TextView>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-
-                            android:layout_marginLeft="10dp"
-                            >
+                            android:layout_marginLeft="10dp">
 
                             <TextView
                                 android:id="@+id/judul3"

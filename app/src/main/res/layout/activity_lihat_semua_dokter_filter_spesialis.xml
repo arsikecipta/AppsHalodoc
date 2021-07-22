@@ -99,11 +99,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/frame_loc"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        app:cardBackgroundColor="@color/mitra_halodoc"
+        app:cardBackgroundColor="@color/bluelabel"
         android:elevation="2dp">
 
         <ImageView
@@ -119,7 +117,7 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="48dp"
             android:layout_height="wrap_content">
 
             <TextView
@@ -129,13 +127,12 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="8dp"
-                android:fontFamily="@font/googlesansregular"
+                android:fontFamily="@font/googlesansmedium"
                 android:gravity="center"
                 android:text="@string/judul_spesialisasi"
                android:contentDescription="@string/judul_spesialisasi"
                 android:textColor="@color/judul"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"/>
 
             <TextView
                 android:id="@+id/deskripsi_info"

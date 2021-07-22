@@ -12,35 +12,6 @@
 
     <!-- filter berdasarkan -->
 
-    <TextView
-        android:id="@+id/judultoolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_gravity="left"
-        android:fontFamily="@font/googlesansregular"
-        android:text="judul"
-        android:visibility="gone"
-        android:textColor="#616161"
-        android:textSize="16sp"></TextView>
-
-
-    <TextView
-        android:id="@+id/deskripsi_intent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_gravity="left"
-        android:fontFamily="@font/googlesansregular"
-        android:visibility="gone"
-        android:text="deskripsi"
-        android:textColor="#616161"
-        android:textSize="16sp"></TextView>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,32 +23,39 @@
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:orientation="vertical">
-
+                android:layout_height="50dp"
+                android:background="@color/shapetopik">
 
                 <TextView
                     android:id="@+id/pengalaman"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/bluelabel"
                     android:layout_marginRight="20dp"
                     android:text="Pengalaman"
                     android:fontFamily="@font/googlesansbold"
-                    android:textColor="#404345"
-                    android:textSize="24sp"
+                    android:textColor="@color/judul"
+                    android:textSize="20sp"
                     android:textStyle="bold">
                 </TextView>
 
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp">
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/deskripsi1"
@@ -96,7 +74,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -132,7 +110,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -168,7 +146,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -184,29 +162,37 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/layoutgender"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout1">
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/shapetopik">
 
                 <TextView
                     android:id="@+id/gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/bluelabel"
                     android:layout_marginRight="20dp"
                     android:text="Gender"
                     android:fontFamily="@font/googlesansbold"
-                    android:textColor="#404345"
-                    android:textSize="24sp"
+                    android:textColor="@color/judul"
+                    android:textSize="20sp"
                     android:textStyle="bold">
                 </TextView>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -230,7 +216,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -266,7 +252,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -282,6 +268,29 @@
 
             </LinearLayout>
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/shapetopik">
+
+                <TextView
+                    android:id="@+id/hargakonsul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/bluelabel"
+                    android:layout_marginRight="20dp"
+                    android:text="Harga Konsultasi"
+                    android:fontFamily="@font/googlesansbold"
+                    android:textColor="@color/judul"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </FrameLayout>
+
             <LinearLayout
                 android:id="@+id/layoutharga"
                 android:layout_width="match_parent"
@@ -291,24 +300,6 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layoutgender">
-
-                <TextView
-                    android:id="@+id/harga"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginRight="20dp"
-                    android:text="Harga Konsultasi"
-                    android:fontFamily="@font/googlesansbold"
-                    android:textColor="#404345"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/divider">
-                </TextView>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -332,7 +323,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -368,7 +359,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -404,7 +395,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -420,21 +411,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-<!--                <Button-->
-<!--                    android:id="@+id/btn_kembali"-->
-<!--                    android:layout_width="150dp"-->
-<!--                    android:layout_height="50dp"-->
-<!--                    android:layout_alignParentLeft="true"-->
-<!--                    android:layout_marginLeft="36dp"-->
-<!--                    android:layout_marginTop="40dp"-->
-<!--                    android:layout_marginRight="220dp"-->
-<!--                    android:layout_marginBottom="20dp"-->
-<!--                    android:background="@drawable/primary_button"-->
-<!--                    android:fontFamily="@font/googlesansmedium"-->
-<!--                    android:text="Kembali"-->
-<!--                    android:textAllCaps="false"-->
-<!--                    android:textColor="@android:color/background_light"-->
-<!--                    android:textSize="18sp" />-->
+                <!--                <Button-->
+                <!--                    android:id="@+id/btn_kembali"-->
+                <!--                    android:layout_width="150dp"-->
+                <!--                    android:layout_height="50dp"-->
+                <!--                    android:layout_alignParentLeft="true"-->
+                <!--                    android:layout_marginLeft="36dp"-->
+                <!--                    android:layout_marginTop="40dp"-->
+                <!--                    android:layout_marginRight="220dp"-->
+                <!--                    android:layout_marginBottom="20dp"-->
+                <!--                    android:background="@drawable/primary_button"-->
+                <!--                    android:fontFamily="@font/googlesansmedium"-->
+                <!--                    android:text="Kembali"-->
+                <!--                    android:textAllCaps="false"-->
+                <!--                    android:textColor="@android:color/background_light"-->
+                <!--                    android:textSize="18sp" />-->
 
                 <Button
                     android:id="@+id/btn_terapkan"
@@ -456,7 +447,6 @@
             </RelativeLayout>
 
             <!--  end Button  -->
-
 
         </LinearLayout>
 

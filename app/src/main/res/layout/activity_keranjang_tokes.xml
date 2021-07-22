@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     tools:context=".Keranjang_tokes">
 
     <!-- filter berdasarkan -->
@@ -75,9 +76,9 @@
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:layout_marginRight="30dp"
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -127,7 +128,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -206,7 +207,8 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="8dp"
                             android:layout_marginRight="10dp"
-                            android:background="@drawable/divider_card_dokter"
+                            android:backgroundTint="@color/deskripsi"
+                            android:background="@drawable/divider_search"
                             android:orientation="horizontal">
                         </LinearLayout>
 
@@ -219,43 +221,62 @@
                             android:layout_marginRight="10dp">
 
                             <LinearLayout
-                                android:layout_width="120dp"
-                                android:layout_height="40dp"
-                                android:layout_marginLeft="4dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/label_blue"
+                                android:layout_marginLeft="8dp"
                                 android:layout_marginTop="8dp"
                                 android:layout_marginBottom="8dp"
-                                android:background="@drawable/label_blue"
                                 android:orientation="horizontal">
 
-
-                                <ImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+                                <Button
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
                                     android:layout_gravity="center"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:src="@drawable/ic_outline_indeterminate_check_box" />
+                                    android:importantForAccessibility="no"
+                                    android:contentDescription="@string/kurangi_obat"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/stroke_button"
+                                    android:onClick="decreament"
+                                    android:text="-"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/background_all"
+                                    android:textSize="18dp" />
+
 
                                 <TextView
-                                    android:id="@+id/tahun_detail"
+                                    android:id="@+id/jumlah_obat"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:layout_marginLeft="8dp"
-                                    android:layout_marginTop="4dp"
                                     android:layout_marginRight="8dp"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:lineSpacingExtra="7sp"
-                                    android:text="2"
+                                    android:text="0"
                                     android:textColor="@color/judul"
                                     android:textSize="20sp" />
 
-                                <ImageView
-                                    android:layout_width="32dp"
-                                    android:layout_height="32dp"
+
+                                <Button
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
                                     android:layout_gravity="center"
-                                    android:layout_marginLeft="8dp"
-                                    android:layout_marginRight="8dp"
-                                    android:src="@drawable/ic_baseline_add_box" />
+                                    android:importantForAccessibility="no"
+                                    android:contentDescription="@string/jumlah_obat"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/stroke_button"
+                                    android:onClick="increament"
+                                    android:text="+"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/background_all"
+                                    android:textSize="18dp"></Button>
 
 
                             </LinearLayout>
@@ -285,7 +306,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="8dp"
-                    android:background="@drawable/phonecode"
+                    android:background="@drawable/divider_search"
                     android:orientation="horizontal">
                 </LinearLayout>
 
@@ -302,7 +323,7 @@
                         android:layout_marginLeft="20dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="12dp"
                         android:text="Butuh yang lain?"
                         android:textColor="#404345"
                         android:textSize="18sp"
@@ -313,7 +334,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="36dp"
                         android:layout_marginBottom="8dp"
                         android:fontFamily="@font/googlesansregular"
                         android:text="Tambahkan item lainya, jika kamu mau"
@@ -325,10 +346,11 @@
 
                     <ImageView
                         android:id="@+id/additem"
-                        android:layout_width="48dp"
+                        android:layout_width="38dp"
                         android:minHeight="48dp"
                         android:minWidth="48dp"
                         android:contentDescription="@string/gambar_tambah"
+                        android:importantForAccessibility="no"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
@@ -340,29 +362,30 @@
 
                 <!--       end         -->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/divider_pembayaran"
-                    android:orientation="horizontal">
-                </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="8dp"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:background="@drawable/divider_pembayaran"-->
+<!--                    android:orientation="horizontal">-->
+<!--                </LinearLayout>-->
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:background="@color/judul">
+                    android:layout_height="332dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_address">
 
                     <TextView
                         android:id="@+id/kirim"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="28dp"
                         android:fontFamily="@font/googlesansmedium"
                         android:gravity="center"
                         android:text="Mengirim Ke"
-                        android:textColor="@color/white"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -381,7 +404,7 @@
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="62dp"
                                 android:layout_marginBottom="8dp"
-                                android:background="@drawable/ic_baseline_location_on" />
+                                android:background="@drawable/ic_baseline_location" />
 
                             <TextView
                                 android:id="@+id/alamat"
@@ -393,7 +416,7 @@
                                 android:fontFamily="@font/googlesansregular"
                                 android:gravity="center"
                                 android:text="Jl. Sukabirus"
-                                android:textColor="@color/white"
+                                android:textColor="@color/judul"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -409,7 +432,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="20dp"
                         android:fontFamily="@font/googlesansmedium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/judul"
                         android:layout_marginTop="110dp"
                         android:textSize="18sp"/>
 
@@ -447,42 +470,42 @@
                         android:layout_alignParentRight="true"
                         android:textAlignment="viewEnd"
                         android:fontFamily="@font/googlesansmedium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/deskripsi"
                         android:layout_marginTop="200dp"
                         android:textSize="14sp"
                         android:layout_gravity="end" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginTop="230dp"
-                        android:background="@drawable/phonecode"
-                        android:orientation="horizontal">
-                    </LinearLayout>
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="4dp"-->
+<!--                        android:layout_marginLeft="20dp"-->
+<!--                        android:layout_marginRight="20dp"-->
+<!--                        android:layout_marginTop="230dp"-->
+<!--                        android:background="@drawable/phonecode"-->
+<!--                        android:orientation="horizontal">-->
+<!--                    </LinearLayout>-->
 
 
                     <Button
                         android:id="@+id/btn_ubah"
-                        android:layout_width="82dp"
-                        android:layout_height="68dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_width="90dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@drawable/primary_button"
+                        android:background="@drawable/button_secondary"
                         android:fontFamily="@font/googlesansmedium"
                         android:text="Ubah"
                         android:textAllCaps="false"
-                        android:textColor="@android:color/background_light"
+                        android:textColor="@color/background_all"
                         android:textSize="20sp"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/judul"
-                        android:layout_marginTop="244dp">
+                        android:layout_marginTop="235dp">
 
                         <TextView
                             android:id="@+id/lainya_akhir"
@@ -490,25 +513,23 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="16dp"
-                            android:fontFamily="@font/googlesansregular"
+                            android:fontFamily="@font/googlesansmedium"
                             android:gravity="center"
                             android:text="Total Pembayaran"
                             android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp"/>
 
                         <TextView
                             android:id="@+id/akhir_deskripsi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:layout_marginTop="44dp"
-                            android:fontFamily="@font/googlesansregular"
+                            android:layout_marginTop="42dp"
+                            android:fontFamily="@font/googlesansmedium"
                             android:gravity="center"
                             android:text="Rp 400.000"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textSize="16sp"/>
 
                         <TextView
                             android:id="@+id/akhir_deskripsi_kirim"
@@ -518,17 +539,17 @@
                             android:layout_marginTop="68dp"
                             android:fontFamily="@font/googlesansregular"
                             android:gravity="center"
+                            android:layout_marginBottom="12dp"
                             android:text="(termasuk biaya pengiriman)"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                         <Button
                             android:id="@+id/btn_bayar"
-                            android:layout_width="150dp"
-                            android:layout_height="70dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
                             android:layout_alignParentRight="true"
+                            android:layout_marginTop="26dp"
                             android:layout_marginRight="20dp"
                             android:layout_marginBottom="16dp"
                             android:background="@drawable/primary_button"
@@ -536,7 +557,7 @@
                             android:text="Bayar"
                             android:textAllCaps="false"
                             android:textColor="@android:color/background_light"
-                            android:textSize="20sp"/>
+                            android:textSize="20sp" />
 
 
                     </RelativeLayout>

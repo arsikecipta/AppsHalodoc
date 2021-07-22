@@ -18,10 +18,12 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class Keranjang_tokes extends AppCompatActivity {
 
-    public TextView tv_nama_obat, tv_jenis, tv_harga_obat;
+    public TextView tv_nama_obat, tv_jenis, tv_harga_obat, tv_jumlah_obat, value_jumlah;
     private ImageView tv_image;
     private Button btn_bayar, btn_ubah;
     private ImageView tv_additem;
+
+    int count= 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class Keranjang_tokes extends AppCompatActivity {
         tv_jenis = (TextView) findViewById(R.id.jenis);
         tv_harga_obat =(TextView)findViewById(R.id.harga_obat);
         tv_image = (ImageView) findViewById(R.id.image_obat);
+        tv_jumlah_obat = (TextView) findViewById(R.id.jumlah_obat);
+        value_jumlah = (TextView) findViewById(R.id.jumlah_obat);
 
         btn_ubah=(Button)findViewById(R.id.btn_ubah);
         btn_ubah.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +66,7 @@ public class Keranjang_tokes extends AppCompatActivity {
         String NamaObat1 = intent.getExtras().getString("NamaObat1");
         String Jenis1 = intent.getExtras().getString("Jenis1");
         String HargaObat1 = intent.getExtras().getString("HargaObat1");
+        String JumlahObat = intent.getExtras().getString("JumlahObat");
         int ImageObat1 = intent.getExtras().getInt("ImageObat1");
 
         //setting values
@@ -69,6 +74,7 @@ public class Keranjang_tokes extends AppCompatActivity {
         tv_jenis.setText(Jenis1);
         tv_harga_obat.setText(HargaObat1);
         tv_image.setImageAlpha(ImageObat1);
+        tv_jumlah_obat.setText(JumlahObat);
 
         btn_bayar =(Button) findViewById(R.id.btn_bayar);
         btn_bayar.setOnClickListener(new View.OnClickListener() {
@@ -147,7 +153,6 @@ public class Keranjang_tokes extends AppCompatActivity {
 //        tv_harga_obat.setText(HargaObat6);
 
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
@@ -161,5 +166,16 @@ public class Keranjang_tokes extends AppCompatActivity {
                 return true;
         }
         return true;
+    }
+    public void increament(View view) {
+        count++;
+        value_jumlah.setText(""+count);
+    }
+
+    public void decreament(View view) {
+        if (count <=0) count = 0;
+        else
+            count--;
+        value_jumlah.setText(""+count);
     }
 }

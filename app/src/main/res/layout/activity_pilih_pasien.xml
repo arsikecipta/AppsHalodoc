@@ -218,7 +218,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="280dp"
-                android:src="@drawable/ic_baseline_check_circle_green"
+                android:src="@drawable/ic_baseline_radio_button"
                 ></ImageView>
 
             <LinearLayout
@@ -233,17 +233,16 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="60dp"
                     android:fontFamily="@font/googlesansmedium"
-                    android:textColor="@color/judul"
-                    android:textSize="16sp"
                     android:text="Anggota Keluarga lainnya  "
-                 ></TextView>
+                    android:textColor="@color/judul"
+                    android:textSize="16sp"></TextView>
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="280dp"
                     android:layout_marginTop="-25dp"
-                    android:src="@drawable/ic_check"></ImageView>
+                    android:src="@drawable/ic_baseline_radio_button_unchecked"></ImageView>
 
             </LinearLayout>
 

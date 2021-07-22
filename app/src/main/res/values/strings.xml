@@ -33,5 +33,9 @@
     <string name="jenis_layanan">Jenis</string>
     <string name="icon_profil">icon_profil</string>
     <string name="nama_login">Masuk/Daftar</string>
+    <string name="bayar_dokter">Rp 25.000</string>
+    <string name="ringkas_bayar_dokter">Bayar</string>
+    <string name="jumlah_obat">+</string>
+    <string name="kurangi_obat">-</string>
     <!-- End Sherly  -->
 </resources>

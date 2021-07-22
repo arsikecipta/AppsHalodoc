@@ -15,9 +15,11 @@ import java.util.ArrayList;
 
 public class Detail_produk_tokes extends AppCompatActivity {
     private TextView tv_nama_obat, tv_jenis, tv_harga_obat,
-            tv_indikasi, tv_frekuensi, tv_aturan, tv_noregist;
+            tv_indikasi, tv_frekuensi, tv_aturan, tv_noregist, value;
     public ImageView image_obat;
     public Button btn_keranjang;
+
+    int count= 0;
 
 
     @Override
@@ -35,6 +37,7 @@ public class Detail_produk_tokes extends AppCompatActivity {
         tv_frekuensi=(TextView)findViewById(R.id.frekuensi);
         tv_aturan=(TextView)findViewById(R.id.aturan);
         tv_noregist=(TextView)findViewById(R.id.noregist);
+        value = (TextView) findViewById(R.id.value);
 
         btn_keranjang =(Button) findViewById(R.id.btn_keranjang);
         btn_keranjang.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +52,7 @@ public class Detail_produk_tokes extends AppCompatActivity {
                 intent.putExtra("Jenis1", tv_jenis.getText());
                 intent.putExtra("HargaObat1", tv_harga_obat.getText());
                 intent.putExtra("ImageObat1", image_obat.getImageAlpha());
+                intent.putExtra("JumlahObat", value.getText());
                 startActivity(intent);
 
             }
@@ -205,5 +209,17 @@ public class Detail_produk_tokes extends AppCompatActivity {
                 return true;
         }
         return true;
+    }
+
+    public void increament(View view) {
+        count++;
+        value.setText(""+count);
+    }
+
+    public void decreament(View view) {
+        if (count <=0) count = 0;
+        else
+        count--;
+        value.setText(""+count);
     }
 }

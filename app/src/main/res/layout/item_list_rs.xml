@@ -69,7 +69,7 @@
                     android:minWidth="48dp"
                     android:maxWidth="48dp"
                     android:layout_gravity="right"
-                    android:background="@drawable/primary_button"
+                    android:background="@drawable/stroke_button"
                     android:layout_marginTop="15dp"
                     android:contentDescription="null"
                     android:fontFamily="@font/googlesansmedium"
@@ -78,8 +78,8 @@
                     android:textSize="14sp"
                     android:importantForAccessibility="no"
                     android:hint="@string/txt_btn_buatjanji"
-                    android:textColor="@color/colorWhite"
-                    android:layout_width="140dp"
+                    android:textColor="@color/background_all"
+                    android:layout_width="100dp"
                     android:textAllCaps="false"
                     android:layout_height="wrap_content"></Button>
             </LinearLayout>

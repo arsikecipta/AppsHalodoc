@@ -160,10 +160,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
                     android:fontFamily="@font/googlesansregular"
                     android:text="21 Tahun"
-                    android:textColor="@color/deskripsi"
-                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/judul"
                     android:textSize="16dp"></TextView>
 
             </LinearLayout>
@@ -195,7 +195,7 @@
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/googlesansregular"
                     android:text="53 Kg"
-                    android:textColor="@color/deskripsi"
+                    android:textColor="@color/judul"
                     android:textSize="16dp"></TextView>
 
             </LinearLayout>
@@ -228,7 +228,7 @@
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/googlesansregular"
                     android:text="162 cm"
-                    android:textColor="@color/deskripsi"
+                    android:textColor="@color/judul"
                     android:textSize="16dp"></TextView>
 
             </LinearLayout>
@@ -519,15 +519,18 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
+    <Button
         android:id="@+id/judul_riwayat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="@drawable/primary_button"
         android:fontFamily="@font/googlesansbold"
         android:layout_gravity="center_horizontal"
         android:text="Keluar"
-        android:textColor="@color/background_all"
+        android:importantForAccessibility="yes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="18sp"/>
 
     <TextView

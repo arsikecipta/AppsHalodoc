@@ -36,7 +36,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/googlesansbold"
                     android:text="Konsultasi Untuk"
-                    android:textColor="#404345"
+                    android:textColor="@color/judul"
                     android:textSize="22sp"
                     android:textStyle="bold"></TextView>
 
@@ -53,7 +53,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Pribadi"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
                         android:layout_height="32dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -88,7 +88,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Anggota Keluarga Lainya"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/googlesansbold"
                     android:text="Ringkasan Pembayaran"
-                    android:textColor="#404345"
+                    android:textColor="@color/judul"
                     android:textSize="22sp"
                     android:textStyle="bold"></TextView>
 
@@ -144,7 +144,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Nama Dokter"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -188,7 +188,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Kategori"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -233,7 +233,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Tanggal"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -278,7 +278,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Harga Total"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -292,6 +292,8 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Rp 25.000"
+                        android:importantForAccessibility="no"
+                        android:contentDescription="25.000"
                         android:textColor="@color/deskripsi"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -320,8 +322,10 @@
                         android:layout_marginLeft="20dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
-                        android:text="Bayar"
-                        android:textColor="#404345"
+                        android:text="@string/ringkas_bayar_dokter"
+                        android:importantForAccessibility="no"
+                        android:contentDescription="@string/ringkas_bayar_dokter"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -370,7 +374,7 @@
                     android:layout_marginBottom="8dp"
                     android:text="Metode Pembayaran"
                     android:fontFamily="@font/googlesansbold"
-                    android:textColor="#404345"
+                    android:textColor="@color/judul"
                     android:textSize="22sp"
                     android:textStyle="bold">
                 </TextView>
@@ -389,7 +393,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Saldo Halodoc"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -403,7 +407,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Rp 0"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -413,7 +417,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_disable" />
+                        android:src="@drawable/ic_baseline_radio_button_unchecked" />
 
                 </RelativeLayout>
 
@@ -441,7 +445,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Saldo Gopay"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -465,7 +469,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="30dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/ic_baseline_check_circle_green" />
+                        android:src="@drawable/ic_baseline_radio_button" />
 
                 </RelativeLayout>
 
@@ -493,7 +497,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Pilihan Lainya"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -507,7 +511,7 @@
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Kartu kredit / Kartu debit"
-                        android:textColor="#404345"
+                        android:textColor="@color/judul"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -532,7 +536,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="20dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
                         android:text="Total Pembayaran"
@@ -545,18 +549,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="52dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginBottom="10dp"
                         android:fontFamily="@font/googlesansregular"
                         android:gravity="center"
-                        android:text="Rp 25.000"
+                        android:text="@string/bayar_dokter"
+                        android:importantForAccessibility="no"
+                        android:contentDescription="@string/bayar_dokter"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_bayar"
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
+                        android:layout_width="120dp"
+                        android:layout_height="52dp"
                         android:layout_marginTop="16dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"

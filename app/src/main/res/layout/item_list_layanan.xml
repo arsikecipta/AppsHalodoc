@@ -11,8 +11,8 @@
         android:layout_height="190dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="#FFFFFF"
-        >
+        app:cardBackgroundColor="#FFFFFF">
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -24,6 +24,7 @@
                 android:layout_width="140dp"
                 android:layout_height="190dp">
             </ImageView>
+
             <LinearLayout
                 android:layout_weight="1"
 
@@ -93,7 +94,7 @@
                 <Button
                     android:id="@+id/btn_janji"
                     android:layout_gravity="right"
-                    android:background="@drawable/primary_button"
+                    android:background="@drawable/stroke_button"
                     android:layout_marginTop="12dp"
                     android:textSize="14dp"
                     android:fontFamily="@font/googlesansmedium"
@@ -101,8 +102,8 @@
                     android:layout_marginRight="10dp"
                     android:text="Buat Janji"
                     android:importantForAccessibility="no"
-                    android:textColor="@color/colorWhite"
-                    android:layout_width="150dp"
+                    android:textColor="@color/background_all"
+                    android:layout_width="100dp"
                     android:textAllCaps="false"
                     android:minHeight="48dp"
                     android:minWidth="48dp"

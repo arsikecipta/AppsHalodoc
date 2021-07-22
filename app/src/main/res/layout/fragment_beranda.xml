@@ -202,35 +202,28 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-
-                            android:layout_marginLeft="10dp"
-                            >
+                            android:layout_marginTop="18dp">
 
                             <TextView
                                 android:id="@+id/judul2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
                                 android:layout_marginRight="55dp"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="16dp"
-                                android:text="Selengkapnya"
                                 android:fontFamily="@font/googlesansmedium"
+                                android:text="Selengkapnya"
                                 android:textColor="@color/background_all"
-                                android:textSize="14sp"/>
+                                android:textSize="14sp" />
 
 
                             <ImageView
                                 android:id="@+id/selanjutnya2"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:layout_marginRight="20dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="8dp"
                                 android:layout_alignParentRight="true"
-                                android:src="@drawable/ic_next_pink"
-                                ></ImageView>
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_next_pink"></ImageView>
 
                         </RelativeLayout>
 
@@ -266,7 +259,6 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
@@ -299,9 +291,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-
-                            android:layout_marginLeft="10dp"
-                            >
+                            android:layout_marginLeft="10dp">
 
                             <TextView
                                 android:id="@+id/judul3"
@@ -309,7 +299,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_marginRight="55dp"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="16dp"
                                 android:text="Selengkapnya"
                                 android:fontFamily="@font/googlesansmedium"
@@ -322,7 +312,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_marginRight="20dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_marginTop="16dp"
                                 android:layout_marginBottom="8dp"
                                 android:layout_alignParentRight="true"
                                 android:src="@drawable/ic_next_pink"

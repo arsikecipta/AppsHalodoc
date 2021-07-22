@@ -9,19 +9,20 @@
         android:id="@+id/card_layanan"
         android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         app:cardElevation="3dp"
         app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="#FFFFFF"
-        >
+        app:cardBackgroundColor="#FFFFFF">
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageview_layanan"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="120dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
@@ -30,7 +31,9 @@
                 android:src="@drawable/tescovid"
                 app:shapeAppearanceOverlay="@style/RoundedSquare"
                 app:strokeColor="#eeeeee"
-                app:strokeWidth="2dp"></com.google.android.material.imageview.ShapeableImageView>
+                app:strokeWidth="2dp">
+            </com.google.android.material.imageview.ShapeableImageView>
+
             <LinearLayout
                 android:layout_weight="1"
                 android:orientation="vertical"

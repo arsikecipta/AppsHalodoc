@@ -120,8 +120,7 @@
         android:id="@+id/frame_loc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        app:cardBackgroundColor="@color/mitra_halodoc"
+        app:cardBackgroundColor="@color/bluelabel"
         android:elevation="2dp">
 
         <ImageView
@@ -137,7 +136,7 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="48dp"
             android:layout_height="wrap_content">
 
             <TextView
