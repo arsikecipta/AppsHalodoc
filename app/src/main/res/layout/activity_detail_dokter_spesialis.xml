@@ -129,7 +129,7 @@
                             android:lineSpacingExtra="7sp"
                             android:layout_gravity="center"
                             android:text="@string/_5_tahun"
-                            android:textColor="@color/deskripsi"
+                            android:textColor="@color/judul"
                             android:textSize="13sp" />
 
                     </LinearLayout>
@@ -163,7 +163,7 @@
                             android:lineSpacingExtra="7sp"
                             android:layout_gravity="center"
                             android:text="99 %"
-                            android:textColor="@color/deskripsi"
+                            android:textColor="@color/judul"
                             android:textSize="13sp" />
 
                     </LinearLayout>
