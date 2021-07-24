@@ -170,7 +170,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Semua Layanan"
+                    android:text="Pilihan Layanan"
                     android:layout_margin="10dp"
                     android:textSize="18dp"
                     android:fontFamily="@font/googlesansbold"
@@ -213,7 +213,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_layanan"
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="120dp"

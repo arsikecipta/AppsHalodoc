@@ -416,6 +416,7 @@ public class BerandaFragmentNew extends Fragment {
         lookUnselected(button3);
         lookUnselected(button4);
         lookUnselected(button5);
+        lookUnselected(button6);
 
     }
     private void lookSelected(Button parsedButton){
