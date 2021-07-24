@@ -22,7 +22,7 @@
         android:textSize="16dp"
         android:fontFamily="@font/googlesansbold"
         android:layout_marginTop="16dp"
-        android:text="Jalan Sukabirus">
+        android:text="Jalan Sigura gura Raya">
     </TextView>
     <ImageView
         android:layout_width="wrap_content"

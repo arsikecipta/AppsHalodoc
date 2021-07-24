@@ -42,5 +42,8 @@
     <string name="radiobutton_keluarga">radio_keluarga</string>
     <string name="pengiriman_instant">instant</string>
     <string name="pengiriman_reg">reguler</string>
+    <string name="topik_corona">Coronavirus</string>
+    <string name="topik_parestesia">Parestesia</string>
+    <string name="topik">Topik</string>
     <!-- End Sherly  -->
 </resources>

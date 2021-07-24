@@ -85,7 +85,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:background="@drawable/stroke"
-            android:text="Parestesia"
+            android:text="@string/topik_parestesia"
+            android:contentDescription="@string/topik_parestesia"
             android:onClick="Button5"
             android:textAllCaps="false"
             android:textColor="@color/background_all"></Button>
@@ -95,9 +96,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:background="@drawable/stroke"
-            android:text="Coronavirus"
+            android:text="@string/topik_corona"
             android:onClick="Button3"
             android:textAllCaps="false"
+            android:contentDescription="@string/topik_corona"
             android:textColor="@color/background_all">
 
         </Button>
