@@ -45,5 +45,7 @@
     <string name="topik_corona">Coronavirus</string>
     <string name="topik_parestesia">Parestesia</string>
     <string name="topik">Topik</string>
+    <string name="artikel_semua">Semua</string>
+    <string name="artikel_kecantikan">Kecantikan</string>
     <!-- End Sherly  -->
 </resources>
