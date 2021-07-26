@@ -9,7 +9,6 @@
     android:background="@color/colorWhite"
     tools:context=".Detail_dokter">
 
-
     <!-- filter berdasarkan -->
 
     <ScrollView
