@@ -246,7 +246,7 @@
                         android:layout_marginRight="30dp"
                         android:fontFamily="@font/googlesansregular"
                         android:textAlignment="viewEnd"
-                        android:text="Hari ini,\n 26 Juli 2021"
+                        android:text="Hari ini,\n 5 Agustus 2021"
                         android:textColor="@color/deskripsi"
                         android:textSize="18sp"
                         android:textStyle="bold"
